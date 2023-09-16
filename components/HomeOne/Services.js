@@ -1,7 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
-const Services = () => {
+const Services = ({ data }) => {
+  if (data == undefined || data == null) {
+    return <>Loading...</>
+  }
+
+  let [cards, setCards] = useState([])
+
+  const { locale } = useRouter();
+
+  const produceCardsData = () => {
+    const cardsData = data.data.solution_cards.map(card => {
+
+      const translatedCard = card.solutions_card_id.translations.filter(d => d.languages_code == locale)[0]
+      
+      return {
+        title: translatedCard.title,
+        description: translatedCard.description,
+        icon: card.solutions_card_id.icon.id
+      }
+    })
+
+    setCards(cardsData)
+  }
+
+  useEffect(() => {
+    produceCardsData()
+  }, [])
+
+  useEffect(() => {
+    produceCardsData()
+  }, [locale])
+
   return (
     <>
       <section className="services-area bg-f2f6f9 ptb-110">
@@ -13,136 +45,30 @@ const Services = () => {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
+          
+          {cards.map(card => (
+            <div className="row justify-content-center">
+              <div
+                className="col-lg-4 col-sm-6"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="100"
+              >
+                <div className="single-services-box">
+                  <div className="icon">
+                    <i className="flaticon-income"></i>
+                  </div>
 
-          <div className="row justify-content-center">
-            <div 
-              className="col-lg-4 col-sm-6"
-              data-aos="fade-in"
-              data-aos-duration="1200"
-              data-aos-delay="100"
-            >
-              <div className="single-services-box">
-                <div className="icon">
-                  <i className="flaticon-income"></i>
+                  <h3>
+                    <Link href="/service-details">{card.title}</Link>
+                  </h3>
+                  <p>
+                    {card.description}
+                  </p>
                 </div>
-
-                <h3>
-                  <Link href="/service-details">Data Analysts</Link>
-                </h3>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
               </div>
             </div>
-
-            <div 
-              className="col-lg-4 col-sm-6"
-              data-aos="fade-in"
-              data-aos-duration="1200"
-              data-aos-delay="200"
-            >
-              <div className="single-services-box">
-                <div className="icon">
-                  <i className="flaticon-automatic"></i>
-                </div>
-
-                <h3>
-                  <Link href="/service-details">Automatic Optimization</Link>
-                </h3>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
-              </div>
-            </div>
-
-            <div 
-              className="col-lg-4 col-sm-6"
-              data-aos="fade-in"
-              data-aos-duration="1200"
-              data-aos-delay="300"
-            >
-              <div className="single-services-box">
-                <div className="icon">
-                  <i className="flaticon-locked"></i>
-                </div>
-
-                <h3>
-                  <Link href="/service-details">Security & Surveillance</Link>
-                </h3>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
-              </div>
-            </div>
-
-            <div 
-              className="col-lg-4 col-sm-6"
-              data-aos="fade-in"
-              data-aos-duration="1200"
-              data-aos-delay="400"
-            >
-              <div className="single-services-box">
-                <div className="icon">
-                  <i className="flaticon-molecular"></i>
-                </div>
-
-                <h3>
-                  <Link href="/service-details">
-                    Healthcare & Manufacturing
-                  </Link>
-                </h3>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
-              </div>
-            </div>
-
-            <div 
-              className="col-lg-4 col-sm-6"
-              data-aos="fade-in"
-              data-aos-duration="1200"
-              data-aos-delay="500"
-            >
-              <div className="single-services-box">
-                <div className="icon">
-                  <i className="flaticon-gear"></i>
-                </div>
-
-                <h3>
-                  <Link href="/service-details">Software Engineers</Link>
-                </h3>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
-              </div>
-            </div>
-
-            <div 
-              className="col-lg-4 col-sm-6"
-              data-aos="fade-in"
-              data-aos-duration="1200"
-              data-aos-delay="600"
-            >
-              <div className="single-services-box">
-                <div className="icon">
-                  <i className="flaticon-ceo"></i>
-                </div>
-
-                <h3>
-                  <Link href="/service-details">IT Professionals</Link>
-                </h3>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Shape Images */}

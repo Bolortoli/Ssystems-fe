@@ -22,7 +22,8 @@ const Index = () => {
   const [homeData, setHomeData] = useState(null)
 
   const fetchData = async () => {
-    const data = (await axios.get(`http://0.0.0.0:8055/items/home_page_contents?fields=*.*.*`)).data
+    const data = (await axios.get(`http://0.0.0.0:8055/items/home_content?fields=*.*.*.*`)).data
+    console.log(data)
     setHomeData(data)
   }
 
@@ -38,7 +39,7 @@ const Index = () => {
 
       <About data={homeData}/>
 
-      <Services />
+      <Services data={homeData} />
 
       <Webinar />
 

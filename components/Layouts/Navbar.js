@@ -8,7 +8,6 @@ const Navbar = () => {
   // Add active class
   const [currentPath, setCurrentPath] = useState("");
   const router = useRouter();
-  console.log(locale)
 
   useEffect(() => {
     setCurrentPath(router.asPath);

@@ -10,7 +10,7 @@ const About = ({ data }) => {
 
   const { locale } = useRouter();
 
-  const translationData = data.data.translations_home_page.filter(d => d.languages_code.code == locale)[0]
+  const translationData = data.data.translations.filter(d => d.languages_code.code == locale)[0]
 
   return (
     <>
