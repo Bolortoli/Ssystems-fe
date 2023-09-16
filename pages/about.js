@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import NavbarTwo from "../components/Layouts/NavbarTwo";
-import Navbar from "../components/Layouts/Navbar";
+import NavbarFour from "../components/Layouts/NavbarFour";
 import PageBanner from "../components/Common/PageBanner";
 import AboutContact from "../components/About/AboutContent";
 import Services from "../components/HomeOne/Services";
@@ -10,21 +10,39 @@ import FeedbackSlider from "../components/Common/FeedbackSlider";
 import PricingCard from "../components/Common/PricingCard";
 import FreeTrialForm from "../components/Common/FreeTrialForm";
 import Footer from "../components/Layouts/Footer";
+import { useRouter } from "next/router";
+import axios from "axios"
 
 const About = () => {
+
+  const { locale } = useRouter();
+
+  console.log(locale)
+  const [aboutUsdata, setAboutUsData] = useState(null)
+
+  const fetchData = async () => {
+    const data = (await axios.get(`http://0.0.0.0:8055/items/aboutus?fields=*.*.*`)).data
+    console.log(data)
+    setAboutUsData(data)
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+  
   return (
     <>
-      <Navbar />
+      <NavbarFour />
 
-      <PageBanner
+      {/* <PageBanner
         pageTitle="About Us"
         homePageUrl="/"
         homePageText="Home"
         activePageText="About Us"
         bgImgClass="item-bg1"
-      />
+      /> */}
 
-      <AboutContact />
+      <AboutContact data={aboutUsdata} />
 
       <Services />
 

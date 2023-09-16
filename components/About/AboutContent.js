@@ -1,6 +1,17 @@
 import React from "react";
+import { useRouter } from "next/router";
+import axios from "axios";
 
-const AboutContact = () => {
+const AboutContact = ({ data }) => {
+  if (data == undefined || data == null) {
+    return <>Loading...</>
+  }
+  const { locale } = useRouter();
+
+  const translationData = data.data.translations.filter(d => d.languages_code.code == locale)[0]
+
+  console.log(translationData)
+
   return (
     <>
       <section className="about-area ptb-110">
@@ -15,7 +26,7 @@ const AboutContact = () => {
 
             <div className="col-lg-6 col-md-12">
               <div className="about-content">
-                <h2>Engaging New Audiences Through Smart Approach</h2>
+                <h2>{translationData.section1_title}</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -23,11 +34,10 @@ const AboutContact = () => {
                   laboris nisi ut aliquip ex ea commodo.
                 </p>
                 <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable. If you are going to use a passage of
-                  Lorem Ipsum, you need to be sure there isn't anything.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo.
                 </p>
               </div>
             </div>

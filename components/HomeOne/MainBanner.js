@@ -8,11 +8,7 @@ const MainBanner = ({ data }) => {
     return <>Loading...</>
   }
 
-  console.log(
-    "hre",
-    data
-  )
-  
+ 
   const { locale } = useRouter();
 
   const translationData = data.data.translations.filter(d => d.languages_code.code == locale)[0]

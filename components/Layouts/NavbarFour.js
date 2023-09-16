@@ -7,6 +7,8 @@ const NavbarFour = () => {
   const [currentPath, setCurrentPath] = useState("");
   const router = useRouter();
   // console.log(router.asPath)
+  const { locale } = useRouter();
+
 
   useEffect(() => {
     setCurrentPath(router.asPath);
@@ -76,98 +78,8 @@ const NavbarFour = () => {
                       href="#"
                       className={`nav-link ${currentPath == "/" && "active"}`}
                     >
-                      Home <i className="fas fa-chevron-down"></i>
+                      Home
                     </Link>
-
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <Link
-                          href="/"
-                          className={`nav-link ${
-                            currentPath == "/" && "active"
-                          }`}
-                        >
-                          Home Demo - 1
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/index-2/"
-                          className={`nav-link ${
-                            currentPath == "/index-2/" && "active"
-                          }`}
-                        >
-                          Home Demo - 2
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/index-3/"
-                          className={`nav-link ${
-                            currentPath == "/index-3/" && "active"
-                          }`}
-                        >
-                          Home Demo - 3
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/index-4/"
-                          className={`nav-link ${
-                            currentPath == "/index-4/" && "active"
-                          }`}
-                        >
-                          Home Demo - 4
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/index-5/"
-                          className={`nav-link ${
-                            currentPath == "/index-5/" && "active"
-                          }`}
-                        >
-                          Home Demo - 5
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/index-6/"
-                          className={`nav-link ${
-                            currentPath == "/index-6/" && "active"
-                          }`}
-                        >
-                          Home Demo - 6
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/index-7/"
-                          className={`nav-link ${
-                            currentPath == "/index-7/" && "active"
-                          }`}
-                        >
-                          Home Demo - 7
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/index-8/"
-                          className={`nav-link ${
-                            currentPath == "/index-8/" && "active"
-                          }`}
-                        >
-                          Home Demo - 8
-                        </Link>
-                      </li>
-                    </ul>
                   </li>
 
                   <li className="nav-item">
@@ -176,7 +88,7 @@ const NavbarFour = () => {
                       className="nav-link"
                       onClick={(e) => e.preventDefault()}
                     >
-                      Pages <i className="fas fa-chevron-down"></i>
+                      Services <i className="fas fa-chevron-down"></i>
                     </Link>
 
                     <ul className="dropdown-menu">
@@ -187,7 +99,7 @@ const NavbarFour = () => {
                             currentPath == "/about/" && "active"
                           }`}
                         >
-                          About Us
+                          Co location
                         </Link>
                       </li>
 
@@ -198,7 +110,7 @@ const NavbarFour = () => {
                             currentPath == "/about-two/" && "active"
                           }`}
                         >
-                          About Us Two
+                          Storage
                         </Link>
                       </li>
 
@@ -209,7 +121,7 @@ const NavbarFour = () => {
                             currentPath == "/team/" && "active"
                           }`}
                         >
-                          Team
+                          Dedicated server
                         </Link>
                       </li>
 
@@ -220,7 +132,7 @@ const NavbarFour = () => {
                             currentPath == "/pricing/" && "active"
                           }`}
                         >
-                          Pricing
+                          Profesional Consulting & Service Maintenance
                         </Link>
                       </li>
 
@@ -231,45 +143,8 @@ const NavbarFour = () => {
                             currentPath == "/feedback/" && "active"
                           }`}
                         >
-                          Feedback
+                          Internet
                         </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/partner/"
-                          className={`nav-link ${
-                            currentPath == "/partner/" && "active"
-                          }`}
-                        >
-                          Partner
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/faq/"
-                          className={`nav-link ${
-                            currentPath == "/faq/" && "active"
-                          }`}
-                        >
-                          Faq
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/coming-soon/"
-                          className={`nav-link ${
-                            currentPath == "/coming-soon/" && "active"
-                          }`}
-                        >
-                          Coming Soon
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link href="/404/">404 Error</Link>
                       </li>
                     </ul>
                   </li>
@@ -281,65 +156,8 @@ const NavbarFour = () => {
                         currentPath == "/services/" && "active"
                       }`}
                     >
-                      Services <i className="fas fa-chevron-down"></i>
+                      About Us
                     </Link>
-
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <Link
-                          href="/services/"
-                          className={`nav-link ${
-                            currentPath == "/services/" && "active"
-                          }`}
-                        >
-                          Services Style One
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/services-two/"
-                          className={`nav-link ${
-                            currentPath == "/services-two/" && "active"
-                          }`}
-                        >
-                          Services Style Two
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/services-three/"
-                          className={`nav-link ${
-                            currentPath == "/services-three/" && "active"
-                          }`}
-                        >
-                          Services Style Three
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/services-four/"
-                          className={`nav-link ${
-                            currentPath == "/services-four/" && "active"
-                          }`}
-                        >
-                          Services Style Four
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/service-details/"
-                          className={`nav-link ${
-                            currentPath == "/service-details/" && "active"
-                          }`}
-                        >
-                          Service Details
-                        </Link>
-                      </li>
-                    </ul>
                   </li>
 
                   <li className="nav-item">
@@ -349,35 +167,33 @@ const NavbarFour = () => {
                         currentPath == "/projects/" && "active"
                       }`}
                     >
-                      Projects <i className="fas fa-chevron-down"></i>
+                      Careers
                     </Link>
-
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <Link
-                          href="/projects/"
-                          className={`nav-link ${
-                            currentPath == "/projects/" && "active"
-                          }`}
-                        >
-                          Projects
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/projects-details/"
-                          className={`nav-link ${
-                            currentPath == "/projects-details/" && "active"
-                          }`}
-                        >
-                          Projects Details
-                        </Link>
-                      </li>
-                    </ul>
                   </li>
 
                   <li className="nav-item">
+                    <Link
+                      href="/projects/"
+                      className={`nav-link ${
+                        currentPath == "/projects/" && "active"
+                      }`}
+                    >
+                      Contact Us
+                    </Link>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link
+                      href="/projects/"
+                      className={`nav-link ${
+                        currentPath == "/projects/" && "active"
+                      }`}
+                    >
+                      FAQs
+                    </Link>
+                  </li>
+
+                  {/* <li className="nav-item">
                     <Link
                       href="/shop/"
                       className={`nav-link ${
@@ -432,9 +248,9 @@ const NavbarFour = () => {
                         </Link>
                       </li>
                     </ul>
-                  </li>
+                  </li> */}
 
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link
                       href="/blog/"
                       className={`nav-link ${
@@ -478,7 +294,7 @@ const NavbarFour = () => {
                         </Link>
                       </li>
                     </ul>
-                  </li>
+                  </li> */}
 
                   <li className="nav-item">
                     <Link
@@ -487,27 +303,25 @@ const NavbarFour = () => {
                         currentPath == "/contact/" && "active"
                       }`}
                     >
-                      Contact
+                      Newsroom
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      href={locale == "mn-MN" ? `/en-US${router.route}` : `/mn-MN${router.route}`}
+                      className={`nav-link`}
+                      locale={locale == "mn-MN" ? `en-US` : `mn-MN`}
+                    >
+                      {locale == "mn-MN" ? `EN` : `MN`}
                     </Link>
                   </li>
                 </ul>
 
                 {/* others-options */}
                 <div className="others-options">
-                  <Link href="/cart" className="cart-btn">
-                    <i className="flaticon-commerce-and-shopping"></i>
-                    <span>1</span>
-                  </Link>
-
-                  <div className="option-item">
-                    <i
-                      className="search-btn flaticon-search"
-                      onClick={handleToggleSearchModal}
-                    ></i>
-                  </div>
 
                   <Link href="/contact" className="btn btn-primary">
-                    Schedule a Demo
+                    Contact us
                   </Link>
                 </div>
               </div>
