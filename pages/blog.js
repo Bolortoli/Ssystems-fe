@@ -10,7 +10,7 @@ const Blog = () => {
   const [blogData, setBlogData] = useState(null)
 
   const fetchData = async () => {
-    const data = (await axios.get(`http://0.0.0.0:8055/items/blog?fields=*.*.*`)).data
+    const data = (await axios.get(`http://0.0.0.0:8055/items/blog?fields=*.*.*.*`)).data
     setBlogData(data)
   }
 

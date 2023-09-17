@@ -2,137 +2,27 @@ import React from "react";
 import Link from "next/link";
 import BlogCommentsArea from "./BlogCommentsArea";
 import BlogSidebar from "./BlogSidebar";
+import { useRouter } from "next/router";
+import axios from "axios";
 
-const BlogDetailsContent = () => {
+const BlogDetailsContent = ({ data }) => {
+
+  const { locale } = useRouter()
+  const router = useRouter()
+
+  const date = new Date(data.fullData.date_created)
+
   return (
     <>
       <section className="blog-details-area ptb-110">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-md-12">
-              <div className="blog-details">
-                {/* <div className="article-image">
-                  <img src="/images/blog/blog-details.jpg" alt="image" />
-                </div> */}
-
-                <div className="article-content">
-                  <div className="entry-meta">
-                    <ul>
-                      <li>
-                        <span>Posted On:</span>
-                        September 14, 2020
-                      </li>
-                      <li>
-                        <span>Posted By:</span>
-                        <Link href="#">John Anderson</Link>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <h2>Here are the 5 most telling signs of micromanagement</h2>
-
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry’s
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
-                  </p>
-
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry’s
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took.
-                  </p>
-
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry’s
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
-                  </p>
-
-                  <blockquote className="wp-block-quote">
-                    <p>
-                      It is a long established fact that a reader will be
-                      distracted by the readable content of a page when looking
-                      at its layout.
-                    </p>
-
-                    <cite>Tom Cruise</cite>
-                  </blockquote>
-
-                  <p>
-                    Equidem impedit officiis quo te. Illud partem sententiae mel
-                    eu, euripidis urbanitas et sit. Mediocrem reprimique an vim,
-                    veniam tibique omittantur duo ut, agam graeci in vim. Quot
-                    appetere patrioque te mea, animal aliquip te pri. Ad vis
-                    animal ceteros percipitur, eos tollit civibus percipitur no.
-                  </p>
-
-                  <ul className="wp-block-gallery columns-3">
-                    <li className="blocks-gallery-item">
-                      <figure>
-                        <img src="/images/blog/blog1.jpg" alt="image" />
-                      </figure>
-                    </li>
-
-                    <li className="blocks-gallery-item">
-                      <figure>
-                        <img src="/images/blog/blog2.jpg" alt="image" />
-                      </figure>
-                    </li>
-
-                    <li className="blocks-gallery-item">
-                      <figure>
-                        <img src="/images/blog/blog3.jpg" alt="image" />
-                      </figure>
-                    </li>
-                  </ul>
-
-                  <h3>10 Tactics for marketing your company</h3>
-
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry’s
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took.
-                  </p>
-
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry’s
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
-                  </p>
-
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry’s
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took.
-                  </p>
-
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry’s
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
-                  </p>
+              <div className="col-lg-3"></div>
+              <div className="blog-details col-lg-5 col-md-12 mx-auto">
+                <div className="article-image">
+                  <img src={`http://localhost:8055/assets/${data.cover_image}`} alt="image" />
                 </div>
-
                 <div className="article-footer">
                   <div className="article-tags">
                     <span>
@@ -169,6 +59,26 @@ const BlogDetailsContent = () => {
                     </ul>
                   </div>
                 </div>
+
+                <div className="article-content">
+                  <div className="entry-meta">
+                    <ul>
+                      <li>
+                        <span>Posted On:</span>
+                        {`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}
+                      </li>
+                    </ul>
+                  </div>
+
+                  <h2>{data.translationData.title}</h2>
+
+                  <p>
+                    {data.translationData.short_description}
+                  </p>
+                  
+                  <div dangerouslySetInnerHTML={{ __html: data.translationData.content }} />
+                </div>
+
               </div>
 
               {/* Blog Comments Area */}

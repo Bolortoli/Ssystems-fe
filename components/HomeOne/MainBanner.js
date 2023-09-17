@@ -8,13 +8,10 @@ const MainBanner = ({ data }) => {
     return <>Loading...</>
   }
 
- 
   const { locale } = useRouter();
 
   const translationData = data.data.translations.filter(d => d.languages_code.code == locale)[0]
 
-
-  console.log(translationData)
   return (
     <>
       <div className="main-banner" style={{ backgroundImage: `url(http://localhost:8055/assets/${data.data.hero_image.id  })` }}>

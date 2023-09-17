@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -8,7 +8,40 @@ const BlogThreeGrid = ({ data }) => {
     return <>Loading...</>
   }
 
+  let [translatedData, setTranslatedData] = useState([])
+
   const { locale } = useRouter();
+
+  const blogTranslation = () => {
+    let translation = data.data.map(d => {
+      let categories = d.category.map(cat => {
+        let categoryTranslation = cat.blog_category_id.translations.find(trans => trans.languages_code == locale)
+
+        return {
+          id: cat.id,
+          name: categoryTranslation.name,
+          short_description: categoryTranslation.short_description,
+          icon: cat.blog_category_id.icon
+        }
+      })
+      let content = d.translations.find(trans => trans.languages_code.code == locale)
+
+      return {
+        id: d.id,
+        categories,
+        cover_image: d.cover_image.id,
+        content
+      }
+    })
+    console.log(translation)
+    setTranslatedData(translation)
+  }
+
+  useEffect(() => {
+    blogTranslation()
+  }, [])
+
+  // const translationData = data.data.translations.filter(d => d.languages_code.code == locale)[0]
 
   return (
     <>
@@ -16,41 +49,38 @@ const BlogThreeGrid = ({ data }) => {
         <div className="container">
           <div className="row">
 
-            {data.data.map(blog => (<div className="col-lg-4 col-md-6">
+            {translatedData.map(blog => (<div className="col-lg-3 col-md-4">
               <div className="single-blog-post">
                 <div className="entry-thumbnail">
-                  <Link href="/blog-details">
-                    <img src="/images/blog/blog1.jpg" alt="image" />
+                  <Link href={`/blog-detail/${blog.id}`}>
+                    <img src={`http://0.0.0.0:8055/assets/${blog.cover_image}`} alt="image" />
                   </Link>
                 </div>
 
                 <div className="entry-post-content">
                   <div className="entry-meta">
                     <ul>
-                      <li>
-                        <Link href="#">Admin</Link>
-                      </li>
-                      <li>March 10, 2020</li>
+                      {blog.categories.map(cat => (<li>{cat.name}</li>))}
                     </ul>
                   </div>
 
                   <h3>
-                    <Link href="/blog-details">
-                      Making Peace With The Feast Or Famine Of Freelancing
+                    <Link href={`/blog-detail/${blog.id}`}>
+                      {blog.content.title}
                     </Link>
                   </h3>
 
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod...
+                    {blog.content.short_description}
                   </p>
 
-                  <Link href="/blog-details" className="learn-more-btn">
+                  <Link href={`/blog-detail/${blog.id}`} className="learn-more-btn">
                     Read More <i className="flaticon-add"></i>
                   </Link>
                 </div>
               </div>
             </div>))}
+
 
             {/* Pagination */}
             <div className="col-lg-12 col-sm-12">
@@ -84,9 +114,6 @@ const BlogThreeGrid = ({ data }) => {
         </div>
 
         {/* Shape Images */}
-        <div className="shape-img2">
-          <img src="/images/shape/shape2.svg" alt="image" />
-        </div>
         <div className="shape-img3">
           <img src="/images/shape/shape3.png" alt="image" />
         </div>
