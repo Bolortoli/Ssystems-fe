@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
-const PricingCard = () => {
+const PricingCard = ({data}) => {
   const openTabSection = (evt, tabNmae) => {
     let i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabs-item");
@@ -18,16 +19,23 @@ const PricingCard = () => {
     evt.currentTarget.className += "current";
   };
 
+  if (data == undefined || data == null) {
+    return <>Loading...</>;
+  }
+
+  const { locale } = useRouter();
+
+  const translationData = data.data.translations.filter(
+    (d) => d.languages_code.code == locale
+  )[0];
+
   return (
     <>
       <section className="pricing-area ptb-110 bg-fafafa">
         <div className="container">
           <div className="section-title">
-            <h2>Our Pricing Plan</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <h2>{translationData.section7_title}</h2>
+            <p>{translationData.section7_text}</p>
           </div>
 
           <div className="tab pricing-tab">
@@ -37,11 +45,11 @@ const PricingCard = () => {
                 className="current"
                 onClick={(e) => openTabSection(e, "tab1")}
               >
-                Monthly Plan
+                {translationData.section7_buttonMonth}
               </li>
 
               <li onClick={(e) => openTabSection(e, "tab2")}>
-                Yearly Plan
+              {translationData.section7_buttonYear}
               </li>
             </ul>
 

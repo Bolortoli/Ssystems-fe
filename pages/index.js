@@ -46,7 +46,7 @@ const Index = () => {
 
       <FeedbackSlider data={homeData} />
 
-      <PricingCard />
+      <PricingCard data={homeData}/>
 
       <BlogPost />
 

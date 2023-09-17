@@ -15,8 +15,7 @@ const Webinar = ({ data }) => {
   const translationData = data.data.translations.filter(
     (d) => d.languages_code.code == locale
   )[0];
-
-  // console.log(translationData);
+  
   return (
     <>
       <FsLightbox

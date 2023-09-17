@@ -17,12 +17,12 @@ const FeedbackSlider = ({ data }) => {
       const translatedCard = card.FeedbackSlider_card_id.translations.filter(
         (d) => d.languages_code == locale
       )[0];
-
+      const imageCard = card.FeedbackSlider_card_id.section6_image.id
       return {
         text: translatedCard.section6_text,
         name: translatedCard.section6_name,
         job: translatedCard.section6_job,
-        image: translatedCard.section6_image,
+        image: imageCard,
       };
     });
     setCards(cardsData);
@@ -59,7 +59,7 @@ const FeedbackSlider = ({ data }) => {
 
                       <div className="client-info">
                         <div className="client-pic">
-                          <img src="/images/clients/client1.jpg" alt="image" />
+                          <img style={{backgroundImage: `url(http://localhost:8055/assets/${card.image})`}} alt="image" />
                         </div>
 
                         <h3>{card.name}</h3>
@@ -70,7 +70,7 @@ const FeedbackSlider = ({ data }) => {
 
                   <div className="col-lg-6 col-md-12 p-0">
                     <div className="client-image bg1">
-                      <img src="/images/clients/client1.jpg" alt="image" />
+                      <img style={{backgroundImage: `url(http://localhost:8055/assets/${card.image})`}} alt="image" />
                     </div>
                   </div>
                 </div>
