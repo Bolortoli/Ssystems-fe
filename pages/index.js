@@ -40,11 +40,11 @@ const Index = () => {
 
       <Services />
 
-      <Webinar />
+      <Webinar data={homeData} />
 
-      <PartnerContent />
+      <PartnerContent data={homeData} />
 
-      <FeedbackSlider />
+      <FeedbackSlider data={homeData} />
 
       <PricingCard />
 

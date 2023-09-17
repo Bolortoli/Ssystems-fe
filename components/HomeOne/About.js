@@ -3,14 +3,15 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const About = ({ data }) => {
-
   if (data == undefined || data == null) {
-    return <>Loading...</>
+    return <>Loading...</>;
   }
 
   const { locale } = useRouter();
 
-  const translationData = data.data.translations.filter(d => d.languages_code.code == locale)[0]
+  const translationData = data.data.translations.filter(
+    (d) => d.languages_code.code == locale
+  )[0];
 
   return (
     <>
@@ -37,16 +38,14 @@ const About = ({ data }) => {
             </div>
 
             <div className="col-lg-6 col-md-12">
-              <div 
+              <div
                 className="about-content"
                 data-aos="fade-in"
                 data-aos-duration="1200"
                 data-aos-delay="600"
               >
                 <h2>{translationData.second_section_title}</h2>
-                <p>
-                  {translationData.second_section_text}
-                </p>
+                <p>{translationData.second_section_text}</p>
 
                 <Link href="/about" className="btn btn-primary">
                   Discover More

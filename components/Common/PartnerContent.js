@@ -1,20 +1,28 @@
 import React from "react";
+import { useRouter } from "next/router";
 
-const PartnerContent = () => {
+const PartnerContent = ({ data }) => {
+  if (data == undefined || data == null) {
+    return <>Loading...</>;
+  }
+
+  const { locale } = useRouter();
+
+  const translationData = data.data.translations.filter(
+    (d) => d.languages_code.code == locale
+  )[0];
+
   return (
     <>
       <div className="partner-area ptb-110 bg-f2f6f9">
         <div className="container">
           <div className="section-title">
-            <h2>Featured Customers & Partners</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <h2>{translationData.section5_title}</h2>
+            <p>{translationData.section5_text}</p>
           </div>
 
           <div className="customers-partner-list">
-            <div 
+            <div
               className="partner-item"
               data-aos="fade-in"
               data-aos-duration="1200"
@@ -25,7 +33,7 @@ const PartnerContent = () => {
               </a>
             </div>
 
-            <div 
+            <div
               className="partner-item"
               data-aos="fade-in"
               data-aos-duration="1200"
@@ -36,7 +44,7 @@ const PartnerContent = () => {
               </a>
             </div>
 
-            <div 
+            <div
               className="partner-item"
               data-aos="fade-in"
               data-aos-duration="1200"
@@ -47,7 +55,7 @@ const PartnerContent = () => {
               </a>
             </div>
 
-            <div 
+            <div
               className="partner-item"
               data-aos="fade-in"
               data-aos-duration="1200"
@@ -58,7 +66,7 @@ const PartnerContent = () => {
               </a>
             </div>
 
-            <div 
+            <div
               className="partner-item"
               data-aos="fade-in"
               data-aos-duration="1200"
@@ -69,7 +77,7 @@ const PartnerContent = () => {
               </a>
             </div>
 
-            <div 
+            <div
               className="partner-item"
               data-aos="fade-in"
               data-aos-duration="1200"
@@ -80,7 +88,7 @@ const PartnerContent = () => {
               </a>
             </div>
 
-            <div 
+            <div
               className="partner-item"
               data-aos="fade-in"
               data-aos-duration="1200"
@@ -91,7 +99,7 @@ const PartnerContent = () => {
               </a>
             </div>
 
-            <div 
+            <div
               className="partner-item"
               data-aos="fade-in"
               data-aos-duration="1200"
@@ -102,7 +110,7 @@ const PartnerContent = () => {
               </a>
             </div>
 
-            <div 
+            <div
               className="partner-item"
               data-aos="fade-in"
               data-aos-duration="1200"

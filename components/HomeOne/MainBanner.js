@@ -1,20 +1,28 @@
-import React  from "react";
+import React from "react";
 import Link from "next/link";
 import FeaturedServices from "./FeaturedServices";
 import { useRouter } from "next/router";
 
 const MainBanner = ({ data }) => {
   if (data == undefined || data == null) {
-    return <>Loading...</>
+    return <>Loading...</>;
   }
 
   const { locale } = useRouter();
 
-  const translationData = data.data.translations.filter(d => d.languages_code.code == locale)[0]
+  const translationData = data.data.translations.filter(
+    (d) => d.languages_code.code == locale
+  )[0];
 
+  // console.log(translationData)
   return (
     <>
-      <div className="main-banner" style={{ backgroundImage: `url(http://localhost:8055/assets/${data.data.hero_image.id  })` }}>
+      <div
+        className="main-banner"
+        style={{
+          backgroundImage: `url(http://localhost:8055/assets/${data.data.hero_image.id})`,
+        }}
+      >
         <div className="d-table">
           <div className="d-table-cell">
             <div className="container-fluid">
@@ -41,7 +49,10 @@ const MainBanner = ({ data }) => {
                   data-aos-duration="1200"
                   data-aos-delay="300"
                 >
-                  <Link href={String(data.hero_button_link)} className="btn btn-primary">
+                  <Link
+                    href={String(data.hero_button_link)}
+                    className="btn btn-primary"
+                  >
                     {translationData.hero_button_text}
                   </Link>
 
