@@ -1,17 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 const About = ({ data }) => {
   if (data == undefined || data == null) {
     return <>Loading...</>;
   }
-
-  const { locale } = useRouter();
-
-  const translationData = data.data.translations.filter(
-    (d) => d.languages_code.code == locale
-  )[0];
 
   return (
     <>
@@ -44,11 +37,11 @@ const About = ({ data }) => {
                 data-aos-duration="1200"
                 data-aos-delay="600"
               >
-                <h2>{translationData.second_section_title}</h2>
-                <p>{translationData.second_section_text}</p>
+                <h2>{data[1].second_section_title}</h2>
+                <p>{data[1].second_section_text}</p>
 
                 <Link href="/about" className="btn btn-primary">
-                  Discover More
+                  {data[1].second_section_button}
                 </Link>
               </div>
             </div>

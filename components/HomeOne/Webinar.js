@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 const Webinar = ({ data }) => {
   const [toggler, setToggler] = useState(false);
@@ -10,12 +9,6 @@ const Webinar = ({ data }) => {
     return <>Loading...</>;
   }
 
-  const { locale } = useRouter();
-
-  const translationData = data.data.translations.filter(
-    (d) => d.languages_code.code == locale
-  )[0];
-  
   return (
     <>
       <FsLightbox
@@ -27,11 +20,11 @@ const Webinar = ({ data }) => {
         <div className="row m-0">
           <div className="col-lg-6 p-0">
             <div className="webinar-content">
-              <h2>{translationData.section4_title}</h2>
-              <p>{translationData.section4_text}</p>
+              <h2>{data[1].section4_title}</h2>
+              <p>{data[1].section4_text}</p>
 
               <Link href="#" className="btn btn-primary">
-                {translationData.section4_button}
+                {data[1].section4_button}
               </Link>
             </div>
           </div>

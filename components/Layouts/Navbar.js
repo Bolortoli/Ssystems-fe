@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 const Navbar = () => {
-
   const { locale, locales } = useRouter();
   // Add active class
   const [currentPath, setCurrentPath] = useState("");
@@ -99,8 +98,9 @@ const Navbar = () => {
                       <li className="nav-item">
                         <Link
                           href="/about/"
-                          className={`nav-link ${currentPath == "/about/" && "active"
-                            }`}
+                          className={`nav-link ${
+                            currentPath == "/about/" && "active"
+                          }`}
                         >
                           Co location
                         </Link>
@@ -109,8 +109,9 @@ const Navbar = () => {
                       <li className="nav-item">
                         <Link
                           href="/about-two/"
-                          className={`nav-link ${currentPath == "/about-two/" && "active"
-                            }`}
+                          className={`nav-link ${
+                            currentPath == "/about-two/" && "active"
+                          }`}
                         >
                           Storage
                         </Link>
@@ -119,8 +120,9 @@ const Navbar = () => {
                       <li className="nav-item">
                         <Link
                           href="/team/"
-                          className={`nav-link ${currentPath == "/team/" && "active"
-                            }`}
+                          className={`nav-link ${
+                            currentPath == "/team/" && "active"
+                          }`}
                         >
                           Dedicated server
                         </Link>
@@ -129,8 +131,9 @@ const Navbar = () => {
                       <li className="nav-item">
                         <Link
                           href="/pricing/"
-                          className={`nav-link ${currentPath == "/pricing/" && "active"
-                            }`}
+                          className={`nav-link ${
+                            currentPath == "/pricing/" && "active"
+                          }`}
                         >
                           Profesional consulting & service maintennace
                         </Link>
@@ -139,8 +142,9 @@ const Navbar = () => {
                       <li className="nav-item">
                         <Link
                           href="/feedback/"
-                          className={`nav-link ${currentPath == "/feedback/" && "active"
-                            }`}
+                          className={`nav-link ${
+                            currentPath == "/feedback/" && "active"
+                          }`}
                         >
                           Internet
                         </Link>
@@ -186,50 +190,34 @@ const Navbar = () => {
                   </li>
 
                   <li className="nav-item">
-                    <Link
-                      href="#"
-                      className={`nav-link`}
-                    >
+                    <Link href="#" className={`nav-link`}>
                       About Us
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link
-                      href="#"
-                      className={`nav-link`}
-                    >
+                    <Link href="#" className={`nav-link`}>
                       Careers
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link
-                      href="#"
-                      className={`nav-link`}
-                    >
+                    <Link href="#" className={`nav-link`}>
                       Contact Us
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link
-                      href="#"
-                      className={`nav-link`}
-                    >
+                    <Link href="#" className={`nav-link`}>
                       FAQs
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link
-                      href="#"
-                      className={`nav-link`}
-                    >
+                    <Link href="#" className={`nav-link`}>
                       Newsroom
                     </Link>
                   </li>
-
 
                   {/* <li className="nav-item">
                     <Link
@@ -450,7 +438,11 @@ const Navbar = () => {
 
                   <li className="nav-item">
                     <Link
-                      href={locale == "mn-MN" ? `/en-US${router.route}` : `/mn-MN${router.route}`}
+                      href={
+                        locale == "mn-MN"
+                          ? `/en-US${router.route}`
+                          : `/mn-MN${router.route}`
+                      }
                       className={`nav-link`}
                       locale={locale == "mn-MN" ? `en-US` : `mn-MN`}
                     >

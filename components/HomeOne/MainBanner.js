@@ -1,26 +1,18 @@
 import React from "react";
 import Link from "next/link";
 import FeaturedServices from "./FeaturedServices";
-import { useRouter } from "next/router";
 
 const MainBanner = ({ data }) => {
-  if (data == undefined || data == null) {
+  if (!data || data.length === 0) {
     return <>Loading...</>;
   }
 
-  const { locale } = useRouter();
-
-  const translationData = data.data.translations.filter(
-    (d) => d.languages_code.code == locale
-  )[0];
-
-  // console.log(translationData)
   return (
     <>
       <div
         className="main-banner"
         style={{
-          backgroundImage: `url(http://localhost:8055/assets/${data.data.hero_image.id})`,
+          backgroundImage: `url(http://localhost:8055/assets/${data[1].home_content_id.hero_image})`,
         }}
       >
         <div className="d-table">
@@ -32,7 +24,7 @@ const MainBanner = ({ data }) => {
                   data-aos-duration="1200"
                   data-aos-delay="100"
                 >
-                  {translationData.hero_heading}
+                  {data[1].hero_heading}
                 </h1>
 
                 <p
@@ -40,7 +32,7 @@ const MainBanner = ({ data }) => {
                   data-aos-duration="1200"
                   data-aos-delay="200"
                 >
-                  {translationData.hero_description}
+                  {data[1].hero_description}
                 </p>
 
                 <div
@@ -49,23 +41,18 @@ const MainBanner = ({ data }) => {
                   data-aos-duration="1200"
                   data-aos-delay="300"
                 >
-                  <Link
-                    href={String(data.hero_button_link)}
-                    className="btn btn-primary"
-                  >
-                    {translationData.hero_button_text}
+                  <Link href="/contact" className="btn btn-primary">
+                    {data[1].hero_button_text}
                   </Link>
 
-                  {/* <Link href="/contact" className="optional-btn">
+                  <Link href="/contact" className="optional-btn">
                     Get Started Free
-                  </Link> */}
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        {/* Featured Services */}
         <FeaturedServices />
       </div>
     </>

@@ -1,12 +1,16 @@
 import React from "react";
 
-const FreeTrialForm = () => {
+const FreeTrialForm = ({ data }) => {
+  if (data == undefined || data == null) {
+    return <>Loading...</>;
+  }
+
   return (
     <>
       <section className="free-trial-area">
         <div className="row m-0">
           <div className="col-lg-6 col-md-12 p-0">
-            <div 
+            <div
               className="free-trial-image"
               data-aos="fade-in"
               data-aos-duration="1200"
@@ -17,27 +21,24 @@ const FreeTrialForm = () => {
           </div>
 
           <div className="col-lg-6 col-md-12 p-0">
-            <div 
+            <div
               className="free-trial-content"
               data-aos="fade-in"
               data-aos-duration="1200"
               data-aos-delay="400"
             >
-              <h2>Start your free trial</h2>
+              <h2>{data[1].section9_title}</h2>
 
               <form className="newsletter-form">
                 <input
                   type="email"
                   className="input-newsletter"
-                  placeholder="Enter your business email here"
+                  placeholder={data[1].section9_placeholder}
                 />
-                <button type="submit">Sign Up Free</button>
+                <button type="submit">{data[1].section9_button}</button>
               </form>
 
-              <p>
-                Test out the Machine Learning features for 14 days, no credit
-                card required.
-              </p>
+              <p>{data[1].section9_text}</p>
             </div>
           </div>
         </div>

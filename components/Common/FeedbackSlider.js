@@ -1,46 +1,36 @@
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Autoplay } from "swiper";
 
 const FeedbackSlider = ({ data }) => {
   if (data == undefined || data == null) {
     return <>Loading...</>;
   }
 
-  let [cards, setCards] = useState([]);
+  // let [cards, setCards] = useState([]);
 
-  const { locale } = useRouter();
+  // const produceCardsData = () => {
+  //   const cardsData = data.data.FeedbackSlider_card.map((card) => {
+  //     const imageCard = card.FeedbackSlider_card_id.section6_image.id
+  //     return {
+  //       text: translatedCard.section6_text,
+  //       name: translatedCard.section6_name,
+  //       job: translatedCard.section6_job,
+  //       image: imageCard,
+  //     };
+  //   });
+  //   setCards(cardsData);
+  // };
 
-  const produceCardsData = () => {
-    const cardsData = data.data.FeedbackSlider_card.map((card) => {
-      const translatedCard = card.FeedbackSlider_card_id.translations.filter(
-        (d) => d.languages_code == locale
-      )[0];
-      const imageCard = card.FeedbackSlider_card_id.section6_image.id
-      return {
-        text: translatedCard.section6_text,
-        name: translatedCard.section6_name,
-        job: translatedCard.section6_job,
-        image: imageCard,
-      };
-    });
-    setCards(cardsData);
-  };
-
-  useEffect(() => {
-    produceCardsData();
-  }, []);
-
-  useEffect(() => {
-    produceCardsData();
-  }, [locale]);
+  // useEffect(() => {
+  //   produceCardsData();
+  // }, []);
 
   return (
     <>
       <div className="feedback-area">
         <div className="container-flauid p-0">
-          <Swiper
+          {/* <Swiper
             navigation={true}
             autoplay={{
               delay: 6000,
@@ -76,7 +66,7 @@ const FeedbackSlider = ({ data }) => {
                 </div>
               </SwiperSlide>
             ))}
-          </Swiper>
+          </Swiper> */}
         </div>
       </div>
     </>

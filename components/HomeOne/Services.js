@@ -1,33 +1,20 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 const Services = ({ data }) => {
   if (data == undefined || data == null) {
     return <>Loading...</>;
   }
-
   let [cards, setCards] = useState([]);
 
-  const { locale } = useRouter();
-
-  const translationData = data.data.translations.filter(
-    (d) => d.languages_code.code == locale
-  )[0];
-
   const produceCardsData = () => {
-    const cardsData = data.data.solution_cards.map((card) => {
-      const translatedCard = card.solutions_card_id.translations.filter(
-        (d) => d.languages_code == locale
-      )[0];
-
+    const cardsData = data[0].data.solution_cards.map((card) => {
       return {
-        title: translatedCard.title,
-        description: translatedCard.description,
-        icon: card.solutions_card_id.icon.id,
+        title: card.title,
+        description: card.description,
+        icon: card.icon,
       };
     });
-
     setCards(cardsData);
   };
 
@@ -35,17 +22,13 @@ const Services = ({ data }) => {
     produceCardsData();
   }, []);
 
-  useEffect(() => {
-    produceCardsData();
-  }, [locale]);
-
   return (
     <>
       <section className="services-area bg-f2f6f9 ptb-110">
         <div className="container">
           <div className="section-title">
-            <h2>{translationData.section3_title}</h2>
-            <p>{translationData.section3_text}</p>
+            <h2>{data[1].section3_title}</h2>
+            <p>{data[1].section3_text}</p>
           </div>
 
           {cards.map((card) => (

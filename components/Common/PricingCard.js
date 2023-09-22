@@ -1,8 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
-const PricingCard = ({data}) => {
+const PricingCard = ({ data }) => {
+  if (data == undefined || data == null) {
+    return <>Loading...</>;
+  }
+
   const openTabSection = (evt, tabNmae) => {
     let i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabs-item");
@@ -18,24 +21,13 @@ const PricingCard = ({data}) => {
     document.getElementById(tabNmae).style.display = "block";
     evt.currentTarget.className += "current";
   };
-
-  if (data == undefined || data == null) {
-    return <>Loading...</>;
-  }
-
-  const { locale } = useRouter();
-
-  const translationData = data.data.translations.filter(
-    (d) => d.languages_code.code == locale
-  )[0];
-
   return (
     <>
       <section className="pricing-area ptb-110 bg-fafafa">
         <div className="container">
           <div className="section-title">
-            <h2>{translationData.section7_title}</h2>
-            <p>{translationData.section7_text}</p>
+            <h2>{data[1].section7_title}</h2>
+            <p>{data[1].section7_text}</p>
           </div>
 
           <div className="tab pricing-tab">
@@ -45,19 +37,21 @@ const PricingCard = ({data}) => {
                 className="current"
                 onClick={(e) => openTabSection(e, "tab1")}
               >
-                {translationData.section7_buttonMonth}
+                {data[1].section7_buttonMonth}
               </li>
 
               <li onClick={(e) => openTabSection(e, "tab2")}>
-              {translationData.section7_buttonYear}
+                {data[1].section7_buttonYear}
               </li>
             </ul>
 
             <div className="tab_content">
               <div id="tab1" className="tabs-item">
                 <div className="row justify-content-center">
+                  {" "}
+                  {/* Card.map [1 ,2 ,3] */}
                   {/* Single pricing table */}
-                  <div 
+                  <div
                     className="col-lg-4 col-md-6"
                     data-aos="fade-in"
                     data-aos-duration="1200"
@@ -110,9 +104,8 @@ const PricingCard = ({data}) => {
                       </ul>
                     </div>
                   </div>
-
                   {/* Single pricing table */}
-                  <div 
+                  <div
                     className="col-lg-4 col-md-6"
                     data-aos="fade-in"
                     data-aos-duration="1200"
@@ -165,9 +158,8 @@ const PricingCard = ({data}) => {
                       </ul>
                     </div>
                   </div>
-
                   {/* Single pricing table */}
-                  <div 
+                  <div
                     className="col-lg-4 col-md-6"
                     data-aos="fade-in"
                     data-aos-duration="1200"
@@ -226,7 +218,7 @@ const PricingCard = ({data}) => {
               <div id="tab2" className="tabs-item">
                 <div className="row justify-content-center">
                   {/* Single pricing table */}
-                  <div 
+                  <div
                     className="col-lg-4 col-md-6"
                     data-aos="fade-in"
                     data-aos-duration="1200"
@@ -281,7 +273,7 @@ const PricingCard = ({data}) => {
                   </div>
 
                   {/* Single pricing table */}
-                  <div 
+                  <div
                     className="col-lg-4 col-md-6"
                     data-aos="fade-in"
                     data-aos-duration="1200"
@@ -336,7 +328,7 @@ const PricingCard = ({data}) => {
                   </div>
 
                   {/* Single pricing table */}
-                  <div 
+                  <div
                     className="col-lg-4 col-md-6"
                     data-aos="fade-in"
                     data-aos-duration="1200"

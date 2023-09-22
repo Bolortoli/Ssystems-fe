@@ -1,24 +1,17 @@
 import React from "react";
-import { useRouter } from "next/router";
 
 const PartnerContent = ({ data }) => {
   if (data == undefined || data == null) {
     return <>Loading...</>;
   }
 
-  const { locale } = useRouter();
-
-  const translationData = data.data.translations.filter(
-    (d) => d.languages_code.code == locale
-  )[0];
-
   return (
     <>
       <div className="partner-area ptb-110 bg-f2f6f9">
         <div className="container">
           <div className="section-title">
-            <h2>{translationData.section5_title}</h2>
-            <p>{translationData.section5_text}</p>
+            <h2>{data[1].section5_title}</h2>
+            <p>{data[1].section5_title}</p>
           </div>
 
           <div className="customers-partner-list">

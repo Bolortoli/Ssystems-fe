@@ -1,21 +1,22 @@
 import React from "react";
 import Link from "next/link";
 
-const BlogPost = () => {
+const BlogPost = ({ data }) => {
+  if (data == undefined || data == null) {
+    return <>Loading...</>;
+  }
+
   return (
     <>
       <section className="blog-area ptb-110">
         <div className="container">
           <div className="section-title">
-            <h2>Our Recent News</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <h2>{data[1].section8_title}</h2>
+            <p>{data[1].section8_text}</p>
           </div>
 
           <div className="row justify-content-center">
-            <div 
+            <div
               className="col-lg-4 col-md-6"
               data-aos="fade-in"
               data-aos-duration="1200"
@@ -27,7 +28,7 @@ const BlogPost = () => {
                     <img src="/images/blog/blog1.jpg" alt="image" />
                   </Link>
                 </div>
-
+                {/* Card.map [1 ,2 ,3] */}
                 <div className="entry-post-content">
                   <div className="entry-meta">
                     <ul>
@@ -56,7 +57,7 @@ const BlogPost = () => {
               </div>
             </div>
 
-            <div 
+            <div
               className="col-lg-4 col-md-6"
               data-aos="fade-in"
               data-aos-duration="1200"
@@ -96,7 +97,7 @@ const BlogPost = () => {
               </div>
             </div>
 
-            <div 
+            <div
               className="col-lg-4 col-md-6"
               data-aos="fade-in"
               data-aos-duration="1200"

@@ -10,51 +10,50 @@ import PricingCard from "../components/Common/PricingCard";
 import BlogPost from "../components/Common/BlogPost";
 import FreeTrialForm from "../components/Common/FreeTrialForm";
 import Footer from "../components/Layouts/Footer";
-import axios from "axios"
-import { useRouter } from "next/router";
-import 'dotenv/config'
+import axios from "axios";
+// import { useRouter } from "next/router";
+import "dotenv/config";
 
-const Index = () => {
-
-  const { locale } = useRouter();
-
-  console.log(locale)
-  const [homeData, setHomeData] = useState(null)
-
-  const fetchData = async () => {
-    const data = (await axios.get(`http://0.0.0.0:8055/items/home_page_contents?fields=*.*.*`)).data
-    setHomeData(data)
-  }
-
-  useEffect(() => {
-    fetchData()
-  }, [])
-
+const Index = ({ data }) => {
   return (
     <>
       <Navbar />
-
-      <MainBanner data={homeData} />
-
-      <About data={homeData}/>
-
-      <Services />
-
-      <Webinar data={homeData} />
-
-      <PartnerContent data={homeData} />
-
-      <FeedbackSlider data={homeData} />
-
-      <PricingCard data={homeData}/>
-
-      <BlogPost />
-
-      <FreeTrialForm />
-
+      <MainBanner data={data} />
+      <About data={data} />
+      <Services data={data} />
+      <Webinar data={data} />
+      <PartnerContent data={data} />
+      <FeedbackSlider data={data} />
+      <PricingCard data={data} />
+      <BlogPost data={data} />
+      <FreeTrialForm data={data} />
       <Footer />
     </>
   );
 };
+
+export async function getServerSideProps(context) {
+  try {
+    const { locale } = context;
+
+    const response = await axios.get(
+      `http://0.0.0.0:8055/items/home_content?fields=*.*.*`
+    );
+
+    const data = response.data;
+
+    const translationData = data.data.translations.find(
+      (d) => d.languages_code.code === locale
+    );
+
+    return {
+      props: {
+        data: [data, translationData],
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
 
 export default Index;
