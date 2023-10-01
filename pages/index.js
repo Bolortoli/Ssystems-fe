@@ -35,7 +35,6 @@ const Index = ({ data }) => {
 export async function getServerSideProps(context) {
   try {
     const { locale } = context;
-    console.log(process.env.CMS_ENDPOINT)
 
     const response = await axios.get(
       `${process.env.CMS_ENDPOINT}/items/home_content?fields=*.*.*.*`
@@ -63,6 +62,11 @@ export async function getServerSideProps(context) {
     };
   } catch (error) {
     console.error("Error fetching data:", error);
+    return {
+      props: {
+        message: "error"
+      }
+    }
   }
 }
 

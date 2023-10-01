@@ -29,26 +29,37 @@ const BlogDetails = ({ data }) => {
 };
 
 export async function getServerSideProps(context) {
-  const { params } = context;
-  const { id } = params;
-  const { locale } = context;
 
-  const data = (await axios.get(`${process.env.CMS_ENDPOINT}/items/blog/${id}?fields=*.*.*`).catch(e => console.log(e))).data
+  try {
+    const { params } = context;
+    const { id } = params;
+    const { locale } = context;
 
-  console.log(locale)
+    const data = (await axios.get(`${process.env.CMS_ENDPOINT}/items/blog/${id}?fields=*.*.*`).catch(e => console.log(e))).data
 
-  const translationData = data?.data?.translations?.filter(d => d.languages_code.code == locale)[0]
+    console.log(locale)
 
-  return {
-    props: {
-      data: {
-        translationData,
-        id: data.data.id,
-        cover_image: data.data.cover_image.id,
-        fullData: data.data,
+    const translationData = data?.data?.translations?.filter(d => d.languages_code.code == locale)[0]
+
+    return {
+      props: {
+        data: {
+          translationData,
+          id: data.data.id,
+          cover_image: data.data.cover_image.id,
+          fullData: data.data,
+        }
       }
-    }
-  };
+    };
+  } catch (error) {
+    return {
+      props: {
+        message: "error"
+      }
+    };
+  }
+
+
 }
 
 export default BlogDetails;
