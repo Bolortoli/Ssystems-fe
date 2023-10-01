@@ -18,7 +18,7 @@ const Index2 = () => {
     <>
       <NavbarThree />
 
-      <MainBanner />
+      {/* <MainBanner />
 
       <OurFeaturedSolutions />
 
@@ -32,14 +32,14 @@ const Index2 = () => {
 
       <OurPricingPlan />
 
-      <Testimonials />
+      <Testimonials /> */}
 
-      <BlogPost />
+      {/* <BlogPost /> */}
 
-      <FreeTrialArea />
+      {/* <FreeTrialArea /> */}
 
-      <PartnerSlider />
-      
+      {/* <PartnerSlider /> */}
+
       <Footer />
     </>
   );

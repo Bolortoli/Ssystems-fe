@@ -17,6 +17,7 @@ import Head from "next/head";
 import GoTop from "../components/Shared/GoTop";
 import { useRouter } from "next/router";
 import { IntlProvider } from "react-intl";
+import { appWithTranslation } from 'next-i18next';
 
 function MyApp({ Component, pageProps }) {
   const { locale } = useRouter();
@@ -41,4 +42,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

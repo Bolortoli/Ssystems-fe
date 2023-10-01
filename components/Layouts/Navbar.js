@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useTranslation } from 'next-i18next';
 
 const Navbar = () => {
   const { locale, locales } = useRouter();
   // Add active class
   const [currentPath, setCurrentPath] = useState("");
   const router = useRouter();
+  const { t } = useTranslation("common");
 
   useEffect(() => {
     setCurrentPath(router.asPath);
@@ -39,6 +41,8 @@ const Navbar = () => {
   const handleToggleSearchModal = () => {
     setActiveSearchModal(!isActiveSearchModal);
   };
+
+  console.log(t("page_names"))
 
   return (
     <>
@@ -436,7 +440,7 @@ const Navbar = () => {
                     </Link>
                   </li> */}
 
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link
                       href={
                         locale == "mn-MN"
@@ -448,7 +452,7 @@ const Navbar = () => {
                     >
                       {locale == "mn-MN" ? `EN` : `MN`}
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
 
                 {/* others-options */}

@@ -25,7 +25,7 @@ const Index = ({ data }) => {
       <PartnerContent data={data} />
       <FeedbackSlider data={data} />
       <PricingCard data={data} />
-      <BlogPost data={data} />
+      <BlogPost />
       <FreeTrialForm data={data} />
       <Footer />
     </>
@@ -35,14 +35,15 @@ const Index = ({ data }) => {
 export async function getServerSideProps(context) {
   try {
     const { locale } = context;
+    console.log(process.env.CMS_ENDPOINT)
 
     const response = await axios.get(
-      `http://0.0.0.0:8055/items/home_content?fields=*.*.*`
+      `${process.env.CMS_ENDPOINT}/items/home_content?fields=*.*.*.*`
     );
 
     const data = response.data;
 
-    const translationData = data.data.translations.find(
+    const translationData = data?.data?.translations?.find(
       (d) => d.languages_code.code === locale
     );
 

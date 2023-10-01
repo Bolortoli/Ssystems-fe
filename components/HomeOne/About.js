@@ -14,14 +14,14 @@ const About = ({ data }) => {
             <div className="col-lg-6 col-md-12">
               <div className="about-image">
                 <img
-                  src="/images/about/about1.jpg"
+                  src={`http://localhost:8055/assets/${data[1].home_content_id.second_section_image1.id}`}
                   alt="image"
                   data-aos="fade-in"
                   data-aos-duration="1200"
                   data-aos-delay="200"
                 />
                 <img
-                  src="/images/about/about2.jpg"
+                  src={`http://localhost:8055/assets/${data[1].home_content_id.second_section_image2.id}`}
                   alt="image"
                   data-aos="fade-in"
                   data-aos-duration="1200"

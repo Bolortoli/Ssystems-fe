@@ -173,9 +173,9 @@ const NavbarFour = () => {
 
                   <li className="nav-item">
                     <Link
-                      href="/projects/"
+                      href="/contact"
                       className={`nav-link ${
-                        currentPath == "/projects/" && "active"
+                        currentPath == "/contact" && "active"
                       }`}
                     >
                       Contact Us
@@ -184,12 +184,23 @@ const NavbarFour = () => {
 
                   <li className="nav-item">
                     <Link
-                      href="/projects/"
+                      href="/faq"
+                      className={`nav-link ${
+                        currentPath == "/faq" && "active"
+                      }`}
+                    >
+                      FAQs
+                    </Link>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link
+                      href="/service-pricing"
                       className={`nav-link ${
                         currentPath == "/projects/" && "active"
                       }`}
                     >
-                      FAQs
+                      Pricing
                     </Link>
                   </li>
 

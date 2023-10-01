@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import "dotenv/config";
 
 const BlogThreeGrid = ({ data }) => {
 
@@ -29,7 +30,7 @@ const BlogThreeGrid = ({ data }) => {
       return {
         id: d.id,
         categories,
-        cover_image: d.cover_image.id,
+        cover_image: d?.cover_image?.id,
         content
       }
     })
@@ -53,7 +54,7 @@ const BlogThreeGrid = ({ data }) => {
               <div className="single-blog-post">
                 <div className="entry-thumbnail">
                   <Link href={`/blog-detail/${blog.id}`}>
-                    <img src={`http://0.0.0.0:8055/assets/${blog.cover_image}`} alt="image" />
+                    <img src={`${process.env.CMS_ENDPOINT}/assets/${blog?.cover_image}`} alt="image" />
                   </Link>
                 </div>
 

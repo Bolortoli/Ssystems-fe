@@ -12,7 +12,7 @@ const MainBanner = ({ data }) => {
       <div
         className="main-banner"
         style={{
-          backgroundImage: `url(http://localhost:8055/assets/${data[1].home_content_id.hero_image})`,
+          backgroundImage: `url(http://localhost:8055/assets/${data[1].home_content_id.hero_image.id})`,
         }}
       >
         <div className="d-table">

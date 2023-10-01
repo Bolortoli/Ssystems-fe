@@ -10,7 +10,7 @@ const BlogDetailsContent = ({ data }) => {
   const { locale } = useRouter()
   const router = useRouter()
 
-  const date = new Date(data.fullData.date_created)
+  const date = new Date(data?.fullData?.date_created)
 
   return (
     <>
@@ -21,7 +21,7 @@ const BlogDetailsContent = ({ data }) => {
               <div className="col-lg-3"></div>
               <div className="blog-details col-lg-5 col-md-12 mx-auto">
                 <div className="article-image">
-                  <img src={`http://localhost:8055/assets/${data.cover_image}`} alt="image" />
+                  <img src={`http://localhost:8055/assets/${data?.cover_image}`} alt="image" />
                 </div>
                 <div className="article-footer">
                   <div className="article-tags">
@@ -70,13 +70,13 @@ const BlogDetailsContent = ({ data }) => {
                     </ul>
                   </div>
 
-                  <h2>{data.translationData.title}</h2>
+                  <h2>{data?.translationData?.title}</h2>
 
                   <p>
-                    {data.translationData.short_description}
+                    {data?.translationData?.short_description}
                   </p>
                   
-                  <div dangerouslySetInnerHTML={{ __html: data.translationData.content }} />
+                  <div dangerouslySetInnerHTML={{ __html: data?.translationData?.content }} />
                 </div>
 
               </div>

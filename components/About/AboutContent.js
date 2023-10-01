@@ -8,9 +8,7 @@ const AboutContact = ({ data }) => {
   }
   const { locale } = useRouter();
 
-  const translationData = data.data.translations.filter(d => d.languages_code.code == locale)[0]
-
-  console.log(translationData)
+  const translationData = data?.data?.translations?.filter(d => d.languages_code.code == locale)[0]
 
   return (
     <>
@@ -26,7 +24,7 @@ const AboutContact = ({ data }) => {
 
             <div className="col-lg-6 col-md-12">
               <div className="about-content">
-                <h2>{translationData.section1_title}</h2>
+                <h2>{translationData?.section1_title}</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.

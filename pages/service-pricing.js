@@ -5,6 +5,8 @@ import Services from "../components/HomeTwo/Services";
 import Footer from "../components/Layouts/Footer";
 import { useRouter } from "next/router";
 import axios from "axios";
+import { useTranslation } from 'react-i18next';
+import "dotenv/config";
 
 const ServicesTwo = () => {
 
@@ -12,9 +14,10 @@ const ServicesTwo = () => {
   const [translatedData, setTranslatedData] = useState(null)
 
   const { locale } = useRouter();
+  const { t } = useTranslation();
 
   const fetchData = async () => {
-    const data = (await axios.get(`http://0.0.0.0:8055/items/pricing?fields=*.*.*`)).data
+    const data = (await axios.get(`${process.env.CMS_ENDPOINT}/items/pricing?fields=*.*.*`)).data
     setPricingData(data)
   }
 
@@ -24,7 +27,7 @@ const ServicesTwo = () => {
 
   useEffect(() => {
     if (pricingData != null) {
-      const translationData = pricingData.data.translations.filter(d => d.languages_code.code == locale)[0]
+      const translationData = pricingData?.data?.translations?.filter(d => d.languages_code.code == locale)[0]
       setTranslatedData(translationData)
     }
   }, [pricingData])
@@ -32,7 +35,7 @@ const ServicesTwo = () => {
   useEffect(() => {
     if (pricingData != null) {
       console.log(locale)
-      const translationData = pricingData.data.translations.filter(d => d.languages_code.code == locale)[0]
+      const translationData = pricingData?.data?.translations?.filter(d => d.languages_code.code == locale)[0]
       setTranslatedData(translationData)
     }
   }, [locale])
@@ -40,7 +43,7 @@ const ServicesTwo = () => {
   return (
     <>
       <NavbarFour />
-
+      {t()}
       {/* <PageBanner
         pageTitle="Services Two"
         homePageUrl="/"
