@@ -36,17 +36,17 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const url = `${baseUrl}/api/contact`;
-      const { name, email, number, subject, text } = contact;
-      const payload = { name, email, number, subject, text };
-      const response = await axios.post(url, payload);
-      console.log(response);
-      setContact(INITIAL_STATE);
-      alertContent();
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   const url = `${baseUrl}/api/contact`;
+    //   const { name, email, number, subject, text } = contact;
+    //   const payload = { name, email, number, subject, text };
+    //   const response = await axios.post(url, payload);
+    //   console.log(response);
+    //   setContact(INITIAL_STATE);
+    //   alertContent();
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   return (

@@ -21,7 +21,7 @@ const About = () => {
   const [aboutUsdata, setAboutUsData] = useState(null)
 
   const fetchData = async () => {
-    const data = (await axios.get(`http://0.0.0.0:8055/items/aboutus?fields=*.*.*`)).data
+    const data = (await axios.get(`http://0.0.0.0:8055/items/aboutus?fields=*.*.*`).catch(e => console.log(e))).data
     console.log(data)
     setAboutUsData(data)
   }

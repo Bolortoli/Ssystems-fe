@@ -17,7 +17,7 @@ const ServicesTwo = () => {
   const { t } = useTranslation();
 
   const fetchData = async () => {
-    const data = (await axios.get(`${process.env.CMS_ENDPOINT}/items/pricing?fields=*.*.*`)).data
+    const data = (await axios.get(`${process.env.CMS_ENDPOINT}/items/pricing?fields=*.*.*`).catch(e => console.log(e))).data
     setPricingData(data)
   }
 

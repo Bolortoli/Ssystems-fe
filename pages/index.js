@@ -39,7 +39,15 @@ export async function getServerSideProps(context) {
 
     const response = await axios.get(
       `${process.env.CMS_ENDPOINT}/items/home_content?fields=*.*.*.*`
-    );
+    ).catch((e) => {
+      
+    })
+
+    if (!response) return {
+      props: {
+        message: "error"
+      }
+    };
 
     const data = response.data;
 
@@ -50,6 +58,7 @@ export async function getServerSideProps(context) {
     return {
       props: {
         data: [data, translationData],
+        message: "success"
       },
     };
   } catch (error) {
