@@ -19,7 +19,7 @@ const Index = ({ data }) => {
     <>
       <Navbar />
       <MainBanner data={data} />
-      <About data={data} />
+      {/* <About data={data} /> */}
       <Services data={data} />
       <Webinar data={data} />
       <PartnerContent data={data} />

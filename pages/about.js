@@ -22,7 +22,7 @@ const About = () => {
 
   const fetchData = async () => {
     try {
-      const data = (await axios.get(`http://0.0.0.0:8055/items/aboutus?fields=*.*.*`).catch(e => console.log(e))).data
+      const data = (await axios.get(`http://0.0.0.0:8055/items/aboutus?fields=*.*.*`).catch(e => console.log(e)))?.data
       console.log(data)
       setAboutUsData(data)
     } catch (error) {
