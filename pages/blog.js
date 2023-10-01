@@ -11,8 +11,13 @@ const Blog = () => {
   const [blogData, setBlogData] = useState(null)
 
   const fetchData = async () => {
-    const data = (await axios.get(`${process.env.CMS_ENDPOINT}/items/blog?fields=*.*.*.*`).catch(e => console.log(e))).data
-    setBlogData(data)
+    try {
+      const data = (await axios.get(`${process.env.CMS_ENDPOINT}/items/blog?fields=*.*.*.*`).catch(e => console.log(e))).data
+      setBlogData(data)
+    } catch (error) {
+      console.log(error)
+    }
+
   }
 
   useEffect(() => {
