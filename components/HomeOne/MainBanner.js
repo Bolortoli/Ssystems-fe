@@ -12,7 +12,7 @@ const MainBanner = ({ data }) => {
       <div
         className="main-banner"
         style={{
-          backgroundImage: `url(http://localhost:8055/assets/${data[1].home_content_id.hero_image.id})`,
+          backgroundImage: `url(${process.env.CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.hero_image.id})`,
         }}
       >
         <div className="d-table">
@@ -24,7 +24,7 @@ const MainBanner = ({ data }) => {
                   data-aos-duration="1200"
                   data-aos-delay="100"
                 >
-                  {data[1].hero_heading}
+                  {data.hero_heading}
                 </h1>
 
                 <p
@@ -32,7 +32,7 @@ const MainBanner = ({ data }) => {
                   data-aos-duration="1200"
                   data-aos-delay="200"
                 >
-                  {data[1].hero_description}
+                  {data.hero_description}
                 </p>
 
                 <div
@@ -42,7 +42,7 @@ const MainBanner = ({ data }) => {
                   data-aos-delay="300"
                 >
                   <Link href="/contact" className="btn btn-primary">
-                    {data[1].hero_button_text}
+                    {data.hero_button_text}
                   </Link>
 
                   <Link href="/contact" className="optional-btn">

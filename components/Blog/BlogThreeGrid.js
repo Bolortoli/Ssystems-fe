@@ -54,7 +54,7 @@ const BlogThreeGrid = ({ data }) => {
               <div className="single-blog-post">
                 <div className="entry-thumbnail">
                   <Link href={`/blog-detail/${blog.id}`}>
-                    <img src={`${process.env.CMS_ENDPOINT}/assets/${blog?.cover_image}`} alt="image" />
+                    <img src={`${process.env.CMS_ENDPOINT_PUBLIC}/assets/${blog?.cover_image}`} alt="image" />
                   </Link>
                 </div>
 

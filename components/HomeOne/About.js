@@ -14,14 +14,14 @@ const About = ({ data }) => {
             <div className="col-lg-6 col-md-12">
               <div className="about-image">
                 <img
-                  src={`http://localhost:8055/assets/${data[1].home_content_id.second_section_image1.id}`}
+                  src={`${process.env.CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.second_section_image1.id}`}
                   alt="image"
                   data-aos="fade-in"
                   data-aos-duration="1200"
                   data-aos-delay="200"
                 />
                 <img
-                  src={`http://localhost:8055/assets/${data[1].home_content_id.second_section_image2.id}`}
+                  src={`${process.env.CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.second_section_image2.id}`}
                   alt="image"
                   data-aos="fade-in"
                   data-aos-duration="1200"
@@ -37,11 +37,11 @@ const About = ({ data }) => {
                 data-aos-duration="1200"
                 data-aos-delay="600"
               >
-                <h2>{data[1].second_section_title}</h2>
-                <p>{data[1].second_section_text}</p>
+                <h2>{data.second_section_title}</h2>
+                <p>{data.second_section_text}</p>
 
                 <Link href="/about" className="btn btn-primary">
-                  {data[1].second_section_button}
+                  {data.second_section_button}
                 </Link>
               </div>
             </div>

@@ -5,6 +5,8 @@ import Link from "next/link";
 const Webinar = ({ data }) => {
   const [toggler, setToggler] = useState(false);
 
+  console.log(data.home_content_id.section4_image.id)
+
   if (data == undefined || data == null) {
     return <>Loading...</>;
   }
@@ -20,18 +22,20 @@ const Webinar = ({ data }) => {
         <div className="row m-0">
           <div className="col-lg-6 p-0">
             <div className="webinar-content">
-              <h2>{data[1].section4_title}</h2>
-              <p>{data[1].section4_text}</p>
+              <h2>{data.section4_title}</h2>
+              <p>{data.section4_text}</p>
 
               <Link href="#" className="btn btn-primary">
-                {data[1].section4_button}
+                {data.section4_button_name}
               </Link>
             </div>
           </div>
 
           <div className="col-lg-6 p-0">
-            <div className="webinar-video-image">
-              <img src="/images/woman.jpg" alt="image" />
+            <div className="webinar-video-image" style={{
+              backgroundImage: `url(${process.env.CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.section4_image.id})`,
+            }}>
+              <img src={`${process.env.CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.section4_image.id}`} alt="image" />
 
               <div
                 onClick={() => setToggler(!toggler)}

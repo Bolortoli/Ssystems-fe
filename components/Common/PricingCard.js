@@ -26,8 +26,8 @@ const PricingCard = ({ data }) => {
       <section className="pricing-area ptb-110 bg-fafafa">
         <div className="container">
           <div className="section-title">
-            <h2>{data[1].section7_title}</h2>
-            <p>{data[1].section7_text}</p>
+            <h2>{data.section7_title}</h2>
+            <p>{data.section7_text}</p>
           </div>
 
           <div className="tab pricing-tab">
@@ -37,11 +37,11 @@ const PricingCard = ({ data }) => {
                 className="current"
                 onClick={(e) => openTabSection(e, "tab1")}
               >
-                {data[1].section7_buttonMonth}
+                {data.section7_buttonMonth}
               </li>
 
               <li onClick={(e) => openTabSection(e, "tab2")}>
-                {data[1].section7_buttonYear}
+                {data.section7_buttonYear}
               </li>
             </ul>
 

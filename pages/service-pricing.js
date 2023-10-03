@@ -18,7 +18,7 @@ const ServicesTwo = () => {
 
   const fetchData = async () => {
     try {
-      const data = (await axios.get(`${process.env.CMS_ENDPOINT}/items/pricing?fields=*.*.*`)).data
+      const data = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/pricing?fields=*.*.*`)).data
       setPricingData(data)
     } catch (error) {
       console.log(error)

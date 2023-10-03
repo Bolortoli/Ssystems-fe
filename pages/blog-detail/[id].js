@@ -35,7 +35,7 @@ export async function getServerSideProps(context) {
     const { id } = params;
     const { locale } = context;
 
-    const data = (await axios.get(`${process.env.CMS_ENDPOINT}/items/blog/${id}?fields=*.*.*`).catch(e => console.log(e))).data
+    const data = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/blog/${id}?fields=*.*.*`).catch(e => console.log(e))).data
 
     console.log(locale)
 

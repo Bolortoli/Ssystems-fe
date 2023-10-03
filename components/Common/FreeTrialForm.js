@@ -27,18 +27,18 @@ const FreeTrialForm = ({ data }) => {
               data-aos-duration="1200"
               data-aos-delay="400"
             >
-              <h2>{data[1].section9_title}</h2>
+              <h2>{data.section9_title}</h2>
 
               <form className="newsletter-form">
                 <input
                   type="email"
                   className="input-newsletter"
-                  placeholder={data[1].section9_placeholder}
+                  placeholder={data.section9_placeholder}
                 />
-                <button type="submit">{data[1].section9_button}</button>
+                <button type="submit">{data.section9_button}</button>
               </form>
 
-              <p>{data[1].section9_text}</p>
+              <p>{data.section9_text}</p>
             </div>
           </div>
         </div>

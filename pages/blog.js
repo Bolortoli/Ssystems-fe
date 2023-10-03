@@ -12,7 +12,7 @@ const Blog = () => {
 
   const fetchData = async () => {
     try {
-      const data = (await axios.get(`${process.env.CMS_ENDPOINT}/items/blog?fields=*.*.*.*`).catch(e => console.log(e))).data
+      const data = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/blog?fields=*.*.*.*`).catch(e => console.log(e))).data
       setBlogData(data)
     } catch (error) {
       console.log(error)

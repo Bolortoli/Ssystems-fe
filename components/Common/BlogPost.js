@@ -11,8 +11,8 @@ const BlogPost = ({ data }) => {
       <section className="blog-area ptb-110">
         <div className="container">
           <div className="section-title">
-            <h2>{data[1].section8_title}</h2>
-            <p>{data[1].section8_text}</p>
+            <h2>{data.section8_title}</h2>
+            <p>{data.section8_text}</p>
           </div>
 
           <div className="row justify-content-center">

@@ -21,7 +21,7 @@ const BlogDetailsContent = ({ data }) => {
               <div className="col-lg-3"></div>
               <div className="blog-details col-lg-5 col-md-12 mx-auto">
                 <div className="article-image">
-                  <img src={`http://localhost:8055/assets/${data?.cover_image}`} alt="image" />
+                  <img src={`${process.env.CMS_ENDPOINT_PUBLIC}/assets/${data?.cover_image}`} alt="image" />
                 </div>
                 <div className="article-footer">
                   <div className="article-tags">
