@@ -18,6 +18,7 @@ import GoTop from "../components/Shared/GoTop";
 import { useRouter } from "next/router";
 import { IntlProvider } from "react-intl";
 import { appWithTranslation } from 'next-i18next';
+import ComingSoon from './index'
 
 function MyApp({ Component, pageProps }) {
   const { locale } = useRouter();
@@ -34,7 +35,8 @@ function MyApp({ Component, pageProps }) {
         <title>Data center SSystems</title>
       </Head>
 
-      <Component {...pageProps} />
+      <ComingSoon />
+      {/* <Component {...pageProps} /> */}
 
       {/* Go Top Button */}
       <GoTop scrollStepInPx="50" delayInMs="10.50" />

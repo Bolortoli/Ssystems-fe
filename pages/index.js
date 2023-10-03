@@ -81,7 +81,7 @@ export default function ComingSoon() {
                       Our website is Coming Soon, follow us for update now!
                     </h3>
 
-                    <form>
+                    {/* <form>
                       <div className="form-group">
                         <input
                           type="text"
@@ -110,7 +110,7 @@ export default function ComingSoon() {
                         And don’t worry, we hate spam too! You can unsubscribe
                         at anytime.
                       </p>
-                    </form>
+                    </form> */}
 
                     <div className="social">
                       <ul>
@@ -123,8 +123,18 @@ export default function ComingSoon() {
                           >
                             <i className="fab fa-twitter"></i>
                           </a>
-                        </li>
+                        </li> */}
                         <li>
+                          <a
+                            href="https://www.facebook.com/shunkhlaigroupmn"
+                            target="_blank"
+                            className="facebook"
+                            rel="noreferrer"
+                          >
+                            <i className="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
+                        {/* <li>
                           <a
                             href="https://www.youtube.com/"
                             target="_blank"
@@ -132,16 +142,6 @@ export default function ComingSoon() {
                             rel="noreferrer"
                           >
                             <i className="fab fa-youtube"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://www.facebook.com/"
-                            target="_blank"
-                            className="facebook"
-                            rel="noreferrer"
-                          >
-                            <i className="fab fa-facebook-f"></i>
                           </a>
                         </li>
                         <li>
