@@ -42,7 +42,7 @@ Default CSS
 body {
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Red Hat Display", sans-serif;
   font-size: 14px;
   color: #57647c;
 }
@@ -65,7 +65,7 @@ button {
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   color: #212529;
   font-weight: bold;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 
 .d-table {
@@ -130,7 +130,7 @@ textarea.form-control {
   margin-bottom: 5px;
   font-weight: 600;
   font-size: 15px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .section-title h2 {
   margin-bottom: 0;
@@ -157,7 +157,7 @@ textarea.form-control {
   z-index: 1;
   opacity: 1 !important;
   font-size: 16px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-weight: 600;
 }
 
@@ -183,7 +183,7 @@ textarea.form-control {
   letter-spacing: 0.5px;
   font-size: 15px;
   font-weight: 600;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .learn-more-btn i {
   margin-left: 2px;
@@ -361,7 +361,7 @@ Navbar Area CSS
   margin-bottom: 0;
 }
 .main-nav .navbar .navbar-nav {
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   margin-left: auto;
 }
 .main-nav .navbar .navbar-nav .nav-item {
@@ -1000,7 +1000,7 @@ Main Banner Area CSS
   color: #ffffff;
   position: relative;
   margin-left: 20px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 16px;
   font-weight: 700;
 }
@@ -1069,7 +1069,7 @@ Main Banner Area CSS
   color: #212529;
   position: relative;
   margin-left: 20px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 16px;
   font-weight: 700;
 }
@@ -1194,7 +1194,7 @@ Main Banner Area CSS
   color: #212529;
   position: relative;
   margin-left: 20px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 16px;
   font-weight: 700;
 }
@@ -1365,7 +1365,7 @@ About Area CSS
   position: relative;
   color: #212529;
   padding-left: 28px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-weight: 600;
   font-size: 17px;
 }
@@ -1779,7 +1779,7 @@ Services Details Area CSS
   margin-bottom: -1px;
   font-size: 15px;
   font-weight: 700;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .services-details-overview .services-details-desc .services-details-accordion .accordion .accordion-title i {
   position: absolute;
@@ -1979,7 +1979,7 @@ Team Area CSS
   margin-top: 8px;
   color: #ff4800;
   transition: 0.5s;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 15px;
   font-weight: 500;
 }
@@ -2223,7 +2223,7 @@ Pricing Area CSS
   color: #212529;
   font-size: 50px;
   font-weight: 700;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   margin-bottom: 10px;
 }
 .single-pricing-box .price span {
@@ -2312,7 +2312,7 @@ Pricing Area CSS
   padding: 10px 30px 11px;
   margin-left: -2px;
   margin-right: -2px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-weight: 600;
   font-size: 16px;
 }
@@ -2375,7 +2375,7 @@ Blog Area CSS
   position: relative;
   margin-right: 16px;
   color: #57647c;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 15px;
 }
 .single-blog-post .entry-post-content .entry-meta ul li::before {
@@ -2437,7 +2437,7 @@ Blog Details Area CSS
   padding-left: 0;
   margin-bottom: 0;
   list-style-type: none;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .blog-details .article-content .entry-meta ul li {
   position: relative;
@@ -2599,7 +2599,7 @@ blockquote, .blockquote {
   position: relative;
   text-align: center;
   z-index: 1;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -2668,7 +2668,7 @@ blockquote::before, .blockquote::before {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .comments-area .comment-body .reply a:hover {
   color: #ffffff;
@@ -2692,7 +2692,7 @@ blockquote::before, .blockquote::before {
 }
 .comments-area .comment-author .fn {
   font-weight: 700;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .comments-area .comment-author .says {
   display: none;
@@ -2747,7 +2747,7 @@ blockquote::before, .blockquote::before {
   margin-bottom: 5px;
   color: #212529;
   font-weight: 600;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .comments-area .comment-respond input[type=date], .comments-area .comment-respond input[type=time], .comments-area .comment-respond input[type=datetime-local], .comments-area .comment-respond input[type=week], .comments-area .comment-respond input[type=month], .comments-area .comment-respond input[type=text], .comments-area .comment-respond input[type=email], .comments-area .comment-respond input[type=url], .comments-area .comment-respond input[type=password], .comments-area .comment-respond input[type=search], .comments-area .comment-respond input[type=tel], .comments-area .comment-respond input[type=number], .comments-area .comment-respond textarea {
   display: block;
@@ -2811,7 +2811,7 @@ blockquote::before, .blockquote::before {
   border-radius: 0;
   text-transform: uppercase;
   transition: 0.5s;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-weight: 700;
   font-size: 14px;
 }
@@ -2890,7 +2890,7 @@ Free Trial Area CSS
   border-radius: 30px;
   transition: 0.5s;
   color: #ff4800;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 16px;
   font-weight: 600;
 }
@@ -3000,7 +3000,7 @@ Free Trial Area CSS
   border-radius: 30px;
   transition: 0.5s;
   color: #ffffff;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 16px;
   font-weight: 600;
 }
@@ -3055,7 +3055,7 @@ Page Title Area CSS
 .page-title-content ul {
   padding-left: 0;
   list-style-type: none;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   margin-top: 15px;
   margin-bottom: 0;
 }
@@ -3099,7 +3099,7 @@ Pagination Area CSS
 .pagination-area {
   margin-top: 40px;
   text-align: center;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .pagination-area .page-numbers {
   width: 40px;
@@ -3262,7 +3262,7 @@ Sidebar Area CSS
   text-transform: capitalize;
   font-weight: 700;
   font-size: 16px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .widget-area .widget_recent_entries ul li:last-child {
   margin-bottom: 0;
@@ -3303,7 +3303,7 @@ Sidebar Area CSS
   line-height: 1.5;
   font-size: 14.5px;
   font-weight: 600;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .widget-area .widget_recent_comments ul li:last-child {
   margin-bottom: 0;
@@ -3339,7 +3339,7 @@ Sidebar Area CSS
   color: #57647c;
   font-size: 14.5px;
   font-weight: 600;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .widget-area .widget_archive ul li:last-child {
   margin-bottom: 0;
@@ -3370,7 +3370,7 @@ Sidebar Area CSS
   color: #57647c;
   padding-left: 14px;
   font-size: 14.5px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-weight: 600;
 }
 .widget-area .widget_categories ul li:last-child {
@@ -3405,7 +3405,7 @@ Sidebar Area CSS
   color: #57647c;
   padding-left: 14px;
   font-size: 14.5px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-weight: 600;
 }
 .widget-area .widget_meta ul li:last-child {
@@ -3498,7 +3498,7 @@ FAQ Area CSS
   margin-bottom: 0;
 }
 .faq-accordion .accordion .accordion__button {
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   border-bottom: none;
   color: #333333;
   cursor: pointer;
@@ -3581,7 +3581,7 @@ FAQ Area CSS
   border: none;
   box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
   height: 50px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 16px;
 }
 .faq-contact-form form .row {
@@ -3768,7 +3768,7 @@ Coming Soon Area CSS
   margin-top: 15px;
   font-size: 45px;
   font-weight: 700;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .coming-soon-area .coming-soon-time #timer div span {
   text-transform: uppercase;
@@ -3811,7 +3811,7 @@ Contact Area CSS
   border: none;
   box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
   height: 50px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 16px;
 }
 .contact-form form .row {
@@ -4521,7 +4521,7 @@ Main Banner Area CSS
   color: #212529;
   position: relative;
   margin-left: 20px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 16px;
   font-weight: 700;
 }
@@ -4904,7 +4904,7 @@ Newsletter Area CSS
   color: #ffffff;
   background-color: #ff4800;
   font-size: 16px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-weight: 600;
 }
 .newsletter-inner .content form button:hover {
@@ -4935,7 +4935,7 @@ Fun Facts Area CSS
   font-weight: 700;
 }
 .single-funfacts h3 .odometer-auto-theme {
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .single-funfacts p {
   line-height: initial;
@@ -5095,7 +5095,7 @@ Pricing Area CSS
 .single-pricing-box .price {
   font-size: 50px;
   font-weight: 700;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   margin-bottom: 10px;
 }
 .single-pricing-box .price span {
@@ -5174,7 +5174,7 @@ Pricing Area CSS
   cursor: pointer;
   margin-left: -2px;
   margin-right: -2px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-weight: 600;
   font-size: 16px;
 }
@@ -5222,7 +5222,7 @@ Pricing Area CSS
   color: #212529;
   font-size: 50px;
   font-weight: 700;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   margin-bottom: 10px;
 }
 .pricing-box .price span {
@@ -5469,7 +5469,7 @@ Shop Area CSS
   margin-bottom: 40px;
 }
 .woocommerce-topbar .woocommerce-result-count p {
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 16px;
 }
 .woocommerce-topbar .woocommerce-topbar-ordering {
@@ -5485,7 +5485,7 @@ Shop Area CSS
   height: unset;
   line-height: initial;
   padding: 15px 35px 15px 20px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 16px;
 }
 
@@ -5522,7 +5522,7 @@ Shop Area CSS
   text-transform: uppercase;
   opacity: 0;
   visibility: hidden;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 15px;
   font-weight: 600;
 }
@@ -5548,7 +5548,7 @@ Shop Area CSS
   text-align: center;
   border-radius: 50%;
   text-transform: uppercase;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-weight: 600;
 }
 .single-product-box .product-content {
@@ -5561,7 +5561,7 @@ Shop Area CSS
 }
 .single-product-box .product-content .price {
   color: #212529;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-weight: 700;
 }
 .single-product-box .product-content .price .old {
@@ -5602,7 +5602,7 @@ Product Details Area CSS
 .product-details-desc .price {
   margin-bottom: 10px;
   color: #212529;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-weight: 700;
 }
 .product-details-desc .price .old-price {
@@ -5826,7 +5826,7 @@ Product Details Area CSS
   padding-right: 30px;
   padding-left: 48px;
   font-weight: 700;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .products-details-tab .tabs li .dot {
   position: absolute;
@@ -5905,7 +5905,7 @@ Product Details Area CSS
   display: inline-block;
   width: 30%;
   color: #212529;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 16px;
   font-weight: 600;
 }
@@ -5995,7 +5995,7 @@ Product Details Area CSS
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 600;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-form form .form-group textarea {
   padding-top: 15px;
@@ -6028,7 +6028,7 @@ Cart Area CSS
   text-transform: uppercase;
   border: none;
   font-weight: 700;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 15px;
 }
 .cart-table table tbody tr td {
@@ -6047,7 +6047,7 @@ Cart Area CSS
   width: 80px;
 }
 .cart-table table tbody tr td.product-name {
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 15px;
 }
 .cart-table table tbody tr td.product-name a {
@@ -6168,7 +6168,7 @@ Cart Area CSS
   color: #212529;
   overflow: hidden;
   font-weight: 700;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 15px;
 }
 .cart-totals ul li:first-child {
@@ -6181,7 +6181,7 @@ Cart Area CSS
   float: right;
   color: #57647c;
   font-weight: normal;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Red Hat Display", sans-serif;
   font-size: 14px;
 }
 
@@ -6237,7 +6237,7 @@ Checkout Area CSS
   margin-bottom: 7px;
   font-size: 14px;
   font-weight: 600;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .billing-details .form-group label .required {
   color: red;
@@ -6259,7 +6259,7 @@ Checkout Area CSS
 }
 .billing-details .form-check {
   margin-bottom: 20px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .billing-details .form-check .form-check-label {
   color: #57647c;
@@ -6287,7 +6287,7 @@ Checkout Area CSS
   padding-right: 20px;
   padding-bottom: 15px;
   font-weight: 700;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 15px;
 }
 .order-details .order-table table tbody tr td {
@@ -6298,7 +6298,7 @@ Checkout Area CSS
   padding-right: 20px;
 }
 .order-details .order-table table tbody tr td.product-name {
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 15px;
 }
 .order-details .order-table table tbody tr td.product-name a {
@@ -6310,7 +6310,7 @@ Checkout Area CSS
   color: #ff4800;
 }
 .order-details .order-table table tbody tr td.order-subtotal, .order-details .order-table table tbody tr td.order-shipping, .order-details .order-table table tbody tr td.total-price {
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 15px;
 }
 .order-details .order-table table tbody tr td.order-subtotal span, .order-details .order-table table tbody tr td.order-shipping span, .order-details .order-table table tbody tr td.total-price span {
@@ -6732,7 +6732,7 @@ Fun Facts Area CSS
   margin-bottom: 0;
 }
 .single-funfacts-card h3 .odometer-auto-theme {
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
 }
 .single-funfacts-card p {
   color: #ffffff;
@@ -7136,7 +7136,7 @@ AI Pricing Area CSS
   font-size: 40px;
   font-weight: bold;
   color: #ff4800;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   margin-top: 22px;
   margin-bottom: 22px;
 }
@@ -7425,7 +7425,7 @@ AI Subscribe Area CSS
   border-radius: 70px;
   transition: 0.5s;
   line-height: 55px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 15px;
   font-weight: 700;
 }
@@ -7623,7 +7623,7 @@ ML Main Banner Area CSS
   border-radius: 70px;
   transition: 0.5s;
   line-height: 55px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Red Hat Display";
   font-size: 15px;
   font-weight: 700;
 }
