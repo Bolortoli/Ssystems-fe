@@ -19,6 +19,7 @@ import { useRouter } from "next/router";
 import { IntlProvider } from "react-intl";
 import { appWithTranslation } from 'next-i18next';
 import ComingSoon from './index'
+import Messenger from "../components/Chatbot/messenger";
 
 function MyApp({ Component, pageProps }) {
   const { locale } = useRouter();
@@ -36,6 +37,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <ComingSoon />
+      <Messenger />
       {/* <Component {...pageProps} /> */}
 
       {/* Go Top Button */}
