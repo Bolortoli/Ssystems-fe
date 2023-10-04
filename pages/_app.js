@@ -36,9 +36,9 @@ function MyApp({ Component, pageProps }) {
         <title>Data center SSystems</title>
       </Head>
 
-      <ComingSoon />
-      <Messenger />
-      {/* <Component {...pageProps} /> */}
+      {/* <ComingSoon /> */}
+      {/* <Messenger /> */}
+      <Component {...pageProps} />
 
       {/* Go Top Button */}
       <GoTop scrollStepInPx="50" delayInMs="10.50" />
