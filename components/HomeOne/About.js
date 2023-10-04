@@ -17,14 +17,14 @@ const About = ({ data }) => {
                   src={`${process.env.CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.second_section_image1.id}`}
                   alt="image"
                   data-aos="fade-in"
-                  data-aos-duration="1200"
+                  data-aos-duration="120"
                   data-aos-delay="200"
                 />
                 <img
                   src={`${process.env.CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.second_section_image2.id}`}
                   alt="image"
                   data-aos="fade-in"
-                  data-aos-duration="1200"
+                  data-aos-duration="120"
                   data-aos-delay="400"
                 />
               </div>
@@ -34,8 +34,8 @@ const About = ({ data }) => {
               <div
                 className="about-content"
                 data-aos="fade-in"
-                data-aos-duration="1200"
-                data-aos-delay="600"
+                data-aos-duration="120"
+                data-aos-delay="100"
               >
                 <h2>{data.second_section_title}</h2>
                 <p>{data.second_section_text}</p>

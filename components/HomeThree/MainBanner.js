@@ -11,7 +11,7 @@ const MainBanner = () => {
               <div className="hero-banner-content">
                 <h1
                   data-aos="fade-in"
-                  data-aos-duration="1200"
+                  data-aos-duration="120"
                   data-aos-delay="200"
                 >
                   World’s Leading Machine Learning Company
@@ -19,7 +19,7 @@ const MainBanner = () => {
 
                 <p
                   data-aos="fade-in"
-                  data-aos-duration="1200"
+                  data-aos-duration="120"
                   data-aos-delay="400"
                 >
                   ML today are able to supply needful of help, information, and
@@ -31,8 +31,8 @@ const MainBanner = () => {
                 <div
                   className="btn-box"
                   data-aos="fade-in"
-                  data-aos-duration="1200"
-                  data-aos-delay="600"
+                  data-aos-duration="120"
+                  data-aos-delay="100"
                 >
                   <Link href="/contact" className="btn btn-primary">
                     Schedule a Demo

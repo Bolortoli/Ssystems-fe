@@ -1,10 +1,12 @@
 import React from "react";
 import Link from "next/link";
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, blogs }) => {
   if (data == undefined || data == null) {
     return <>Loading...</>;
   }
+
+  console.log(blogs)
 
   return (
     <>
@@ -16,126 +18,43 @@ const BlogPost = ({ data }) => {
           </div>
 
           <div className="row justify-content-center">
-            <div
-              className="col-lg-4 col-md-6"
-              data-aos="fade-in"
-              data-aos-duration="1200"
-              data-aos-delay="200"
-            >
-              <div className="single-blog-post">
-                <div className="entry-thumbnail">
-                  <Link href="/blog-details">
-                    <img src="/images/blog/blog1.jpg" alt="image" />
-                  </Link>
-                </div>
-                {/* Card.map [1 ,2 ,3] */}
-                <div className="entry-post-content">
-                  <div className="entry-meta">
-                    <ul>
-                      <li>
-                        <Link href="/blog">Admin</Link>
-                      </li>
-                      <li>March 10, 2020</li>
-                    </ul>
+            {blogs.map(blog => (
+              <div
+                className="col-lg-4 col-md-6"
+                data-aos="fade-in"
+                data-aos-duration="120"
+                data-aos-delay="100"
+              >
+                <div className="single-blog-post">
+                  <div className="entry-thumbnail">
+                    <Link href={`/blog-detail/${blog.id}`}>
+                      <img src={`${process.env.CMS_ENDPOINT_PUBLIC}/assets/${blog.cover_image}`} alt="image" />
+                    </Link>
                   </div>
 
-                  <h3>
-                    <Link href="/blog-details">
-                      Making Peace With The Feast Or Famine Of Freelancing
+                  <div className="entry-post-content">
+                    <div className="entry-meta">
+                      <ul>
+                        {blog.categories.map(cat => (<li>{cat.name}</li>))}
+                      </ul>
+                    </div>
+
+                    <h3>
+                      <Link href={`/blog-detail/${blog.id}`}>
+                        {blog.content.title}
+                      </Link>
+                    </h3>
+                    <p>
+                      {blog.content.short_description}
+                    </p>
+
+                    <Link href={`/blog-detail/${blog.id}`} className="learn-more-btn">
+                      Read More <i className="flaticon-add"></i>
                     </Link>
-                  </h3>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod...
-                  </p>
-
-                  <Link href="/blog-details" className="learn-more-btn">
-                    Read More <i className="flaticon-add"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-4 col-md-6"
-              data-aos="fade-in"
-              data-aos-duration="1200"
-              data-aos-delay="400"
-            >
-              <div className="single-blog-post">
-                <div className="entry-thumbnail">
-                  <Link href="/blog-details">
-                    <img src="/images/blog/blog2.jpg" alt="image" />
-                  </Link>
-                </div>
-
-                <div className="entry-post-content">
-                  <div className="entry-meta">
-                    <ul>
-                      <li>
-                        <Link href="/blog">Admin</Link>
-                      </li>
-                      <li>March 11, 2020</li>
-                    </ul>
                   </div>
-
-                  <h3>
-                    <Link href="/blog-details">
-                      I Used The Web For A Day On A 50 MB Budget
-                    </Link>
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod...
-                  </p>
-
-                  <Link href="/blog-details" className="learn-more-btn">
-                    Read More <i className="flaticon-add"></i>
-                  </Link>
                 </div>
               </div>
-            </div>
-
-            <div
-              className="col-lg-4 col-md-6"
-              data-aos="fade-in"
-              data-aos-duration="1200"
-              data-aos-delay="600"
-            >
-              <div className="single-blog-post">
-                <div className="entry-thumbnail">
-                  <Link href="/blog-details">
-                    <img src="/images/blog/blog3.jpg" alt="image" />
-                  </Link>
-                </div>
-
-                <div className="entry-post-content">
-                  <div className="entry-meta">
-                    <ul>
-                      <li>
-                        <Link href="/blog">Admin</Link>
-                      </li>
-                      <li>March 12, 2020</li>
-                    </ul>
-                  </div>
-
-                  <h3>
-                    <Link href="/blog-details">
-                      Here are the 5 most telling signs of micromanagement
-                    </Link>
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod...
-                  </p>
-
-                  <Link href="/blog-details" className="learn-more-btn">
-                    Read More <i className="flaticon-add"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 

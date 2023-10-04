@@ -1,178 +1,116 @@
-import React from "react";
-import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import Navbar from "../components/Layouts/Navbar";
+import MainBanner from "../components/HomeOne/MainBanner";
+import About from "../components/HomeOne/About";
+import Services from "../components/HomeOne/Services";
+import Webinar from "../components/HomeOne/Webinar";
+import PartnerContent from "../components/Common/PartnerContent";
+import FeedbackSlider from "../components/Common/FeedbackSlider";
+import PricingCard from "../components/Common/PricingCard";
+import BlogPost from "../components/Common/BlogPost";
+import FreeTrialForm from "../components/Common/FreeTrialForm";
+import Footer from "../components/Layouts/Footer";
+import axios from "axios";
+// import { useRouter } from "next/router";
+import "dotenv/config";
 
-export default function ComingSoon() {
-  const [days, setDays] = React.useState("");
-  const [hours, setHours] = React.useState("");
-  const [minutes, setMinutes] = React.useState("");
-  const [seconds, setSeconds] = React.useState("");
+const Index = (props) => {
 
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      commingSoonTime();
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const commingSoonTime = () => {
-    let endTime = new Date("October 23, 2023 17:00:00 PDT");
-    let endTimeParse = Date.parse(endTime) / 1000;
-    let now = new Date();
-    let nowParse = Date.parse(now) / 1000;
-    let timeLeft = endTimeParse - nowParse;
-    let days = Math.floor(timeLeft / 86400);
-    let hours = Math.floor((timeLeft - days * 86400) / 3600);
-    let minutes = Math.floor((timeLeft - days * 86400 - hours * 3600) / 60);
-    let seconds = Math.floor(
-      timeLeft - days * 86400 - hours * 3600 - minutes * 60
-    );
-    if (hours < "10") {
-      hours = "0" + hours;
-    }
-    if (minutes < "10") {
-      minutes = "0" + minutes;
-    }
-    if (seconds < "10") {
-      seconds = "0" + seconds;
-    }
-    setDays(days);
-    setHours(hours);
-    setMinutes(minutes);
-    setSeconds(seconds);
-  };
+  // console.log(props)
 
   return (
     <>
-      <div className="coming-soon-area">
-        <div className="container-fluid p-0">
-          <div className="row m-0">
-            <div className="col-lg-6 col-md-12 p-0">
-              <div className="coming-soon-time">
-                <img src="/images/coming-soon-bg.jpg" alt="image" />
-
-                <div id="timer">
-                  <div id="days">
-                    {days} <span>Days</span>
-                  </div>
-                  <div id="hours">
-                    {hours} <span>Hours</span>
-                  </div>
-                  <div id="minutes">
-                    {minutes} <span>Minutes</span>
-                  </div>
-                  <div id="seconds">
-                    {seconds} <span>Seconds</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-6 col-md-12 p-0">
-              <div className="coming-soon-content">
-                <div className="d-table">
-                  <div className="d-table-cell">
-                    <div className="logo">
-                      <Link href="/">
-                        <img src="/images/black-logo.png" alt="logo" />
-                      </Link>
-                    </div>
-
-                    <h3>
-                      Our website is Coming Soon, follow us for update now!
-                    </h3>
-
-                    {/* <form>
-                      <div className="form-group">
-                        <input
-                          type="text"
-                          className="form-control"
-                          name="name"
-                          id="name"
-                          placeholder="Your Name"
-                        />
-                      </div>
-
-                      <div className="form-group">
-                        <input
-                          type="email"
-                          className="form-control"
-                          name="email"
-                          id="email"
-                          placeholder="Your Email Address"
-                        />
-                      </div>
-
-                      <button type="submit" className="btn btn-primary">
-                        Subscribe
-                      </button>
-
-                      <p>
-                        And don’t worry, we hate spam too! You can unsubscribe
-                        at anytime.
-                      </p>
-                    </form> */}
-
-                    <div className="social">
-                      <ul>
-                        {/* <li>
-                          <a
-                            href="https://twitter.com/"
-                            target="_blank"
-                            className="twitter"
-                            rel="noreferrer"
-                          >
-                            <i className="fab fa-twitter"></i>
-                          </a>
-                        </li> */}
-                        <li>
-                          <a
-                            href="https://www.facebook.com/shunkhlaigroupmn"
-                            target="_blank"
-                            className="facebook"
-                            rel="noreferrer"
-                          >
-                            <i className="fab fa-facebook-f"></i>
-                          </a>
-                        </li>
-                        {/* <li>
-                          <a
-                            href="https://www.youtube.com/"
-                            target="_blank"
-                            className="youtube"
-                            rel="noreferrer"
-                          >
-                            <i className="fab fa-youtube"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://www.linkedin.com/"
-                            target="_blank"
-                            className="linkedin"
-                            rel="noreferrer"
-                          >
-                            <i className="fab fa-linkedin-in"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="instagram.com"
-                            target="_blank"
-                            className="instagram"
-                            rel="noreferrer"
-                          >
-                            <i className="fab fa-instagram"></i>
-                          </a>
-                        </li> */}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Navbar />
+      <MainBanner data={props.content.translation_data} />
+      <About data={props.content.translation_data} />
+      <Services cardsData={props.content.solution_cards} data={props.content.translation_data} />
+      <Webinar data={props.content.translation_data} />
+      <PartnerContent partners={props.content.partners} data={props.content.translation_data} />
+      <FeedbackSlider data={props.content.translation_data} />
+      {/* <PricingCard data={props.content.translation_data} /> */}
+      <BlogPost data={props.content.translation_data} blogs={props.content.blogs} />
+      <FreeTrialForm data={props.content.translation_data} />
+      <Footer />
     </>
   );
+};
+
+export async function getServerSideProps(context) {
+  try {
+    const { locale } = context;
+
+    const responseHome = await axios.get(
+      `${process.env.CMS_ENDPOINT_LOCAL}/items/home_content?fields=*.*.*.*`
+    )
+
+    const responsePartners = await axios.get(
+      `${process.env.CMS_ENDPOINT_LOCAL}/items/partners`
+    )
+
+    const responseBLogs = await axios.get(
+      `${process.env.CMS_ENDPOINT_LOCAL}/items/blog?fields=*.*.*.*&filter[featured_on_home][_eq]=true&limit=3`
+    )
+
+    if (!responseHome || !responsePartners) return {
+      props: {
+        message: "error"
+      }
+    };
+
+    const data = responseHome.data;
+
+    const translation_data = data?.data?.translations?.find(
+      (d) => d.languages_code.code === locale
+    );
+
+    const solution_cards = []
+
+    data.data.solution_cards.forEach(card => {
+      solution_cards.push(card.solutions_card_id.translations.find(translation => translation.languages_code == locale))
+    })
+
+    let blog_translation = responseBLogs.data.data.map(d => {
+      let categories = d.category.map(cat => {
+        let categoryTranslation = cat.blog_category_id.translations.find(trans => trans.languages_code == locale)
+
+        return {
+          id: cat.id,
+          name: categoryTranslation.name,
+          short_description: categoryTranslation.short_description,
+          icon: cat.blog_category_id.icon
+        }
+      })
+      let content = d.translations.find(trans => trans.languages_code.code == locale)
+
+      return {
+        id: d.id,
+        categories,
+        cover_image: d?.cover_image?.id,
+        content
+      }
+    })
+
+    return {
+      props: {
+        content: {
+          data,
+          translation_data,
+          solution_cards,
+          partners: responsePartners.data,
+          blogs: blog_translation
+        },
+        data: [data, translation_data],
+        message: "success"
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return {
+      props: {
+        message: JSON.stringify(error)
+      }
+    }
+  }
 }
+
+export default Index;

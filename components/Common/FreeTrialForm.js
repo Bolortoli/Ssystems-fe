@@ -13,7 +13,7 @@ const FreeTrialForm = ({ data }) => {
             <div
               className="free-trial-image"
               data-aos="fade-in"
-              data-aos-duration="1200"
+              data-aos-duration="120"
               data-aos-delay="200"
             >
               <img src="/images/woman2.jpg" alt="image" />
@@ -24,7 +24,7 @@ const FreeTrialForm = ({ data }) => {
             <div
               className="free-trial-content"
               data-aos="fade-in"
-              data-aos-duration="1200"
+              data-aos-duration="120"
               data-aos-delay="400"
             >
               <h2>{data.section9_title}</h2>

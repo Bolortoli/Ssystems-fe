@@ -10,7 +10,7 @@ const FreeTrialArea = () => {
               <div 
                 className="free-trial-img"
                 data-aos="fade-in"
-                data-aos-duration="1200"
+                data-aos-duration="120"
                 data-aos-delay="200"
               >
                 <img src="/images/free-trial-img.png" alt="image" />
@@ -21,7 +21,7 @@ const FreeTrialArea = () => {
               <div 
                 className="free-trial-text"
                 data-aos="fade-in"
-                data-aos-duration="1200"
+                data-aos-duration="120"
                 data-aos-delay="400"
               >
                 <h2>Start your free trial</h2>

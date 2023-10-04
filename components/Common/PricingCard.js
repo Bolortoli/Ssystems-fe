@@ -54,7 +54,7 @@ const PricingCard = ({ data }) => {
                   <div
                     className="col-lg-4 col-md-6"
                     data-aos="fade-in"
-                    data-aos-duration="1200"
+                    data-aos-duration="120"
                     data-aos-delay="200"
                   >
                     <div className="single-pricing-box">
@@ -108,7 +108,7 @@ const PricingCard = ({ data }) => {
                   <div
                     className="col-lg-4 col-md-6"
                     data-aos="fade-in"
-                    data-aos-duration="1200"
+                    data-aos-duration="120"
                     data-aos-delay="400"
                   >
                     <div className="single-pricing-box active">
@@ -162,8 +162,8 @@ const PricingCard = ({ data }) => {
                   <div
                     className="col-lg-4 col-md-6"
                     data-aos="fade-in"
-                    data-aos-duration="1200"
-                    data-aos-delay="600"
+                    data-aos-duration="120"
+                    data-aos-delay="100"
                   >
                     <div className="single-pricing-box">
                       <div className="pricing-header">
@@ -221,7 +221,7 @@ const PricingCard = ({ data }) => {
                   <div
                     className="col-lg-4 col-md-6"
                     data-aos="fade-in"
-                    data-aos-duration="1200"
+                    data-aos-duration="120"
                     data-aos-delay="200"
                   >
                     <div className="single-pricing-box">
@@ -276,7 +276,7 @@ const PricingCard = ({ data }) => {
                   <div
                     className="col-lg-4 col-md-6"
                     data-aos="fade-in"
-                    data-aos-duration="1200"
+                    data-aos-duration="120"
                     data-aos-delay="400"
                   >
                     <div className="single-pricing-box active">
@@ -331,8 +331,8 @@ const PricingCard = ({ data }) => {
                   <div
                     className="col-lg-4 col-md-6"
                     data-aos="fade-in"
-                    data-aos-duration="1200"
-                    data-aos-delay="600"
+                    data-aos-duration="120"
+                    data-aos-delay="100"
                   >
                     <div className="single-pricing-box">
                       <div className="pricing-header">

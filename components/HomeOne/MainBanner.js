@@ -21,7 +21,7 @@ const MainBanner = ({ data }) => {
               <div className="main-banner-content">
                 <h1
                   data-aos="fade-up"
-                  data-aos-duration="1200"
+                  data-aos-duration="120"
                   data-aos-delay="100"
                 >
                   {data.hero_heading}
@@ -29,7 +29,7 @@ const MainBanner = ({ data }) => {
 
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="1200"
+                  data-aos-duration="120"
                   data-aos-delay="200"
                 >
                   {data.hero_description}
@@ -38,7 +38,7 @@ const MainBanner = ({ data }) => {
                 <div
                   className="btn-box"
                   data-aos="fade-up"
-                  data-aos-duration="1200"
+                  data-aos-duration="120"
                   data-aos-delay="300"
                 >
                   <Link href="/contact" className="btn btn-primary">

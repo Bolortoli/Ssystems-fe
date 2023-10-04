@@ -19,7 +19,7 @@ const OurFeaturedSolutions = () => {
               <div
                 className="single-featured-solutions-box"
                 data-aos="fade-up"
-                data-aos-duration="1200"
+                data-aos-duration="120"
                 data-aos-delay="100"
               >
                 <div className="icon">
@@ -42,7 +42,7 @@ const OurFeaturedSolutions = () => {
               <div
                 className="single-featured-solutions-box"
                 data-aos="fade-up"
-                data-aos-duration="1200"
+                data-aos-duration="120"
                 data-aos-delay="200"
               >
                 <div className="icon">
@@ -65,7 +65,7 @@ const OurFeaturedSolutions = () => {
               <div
                 className="single-featured-solutions-box"
                 data-aos="fade-up"
-                data-aos-duration="1200"
+                data-aos-duration="120"
                 data-aos-delay="300"
               >
                 <div className="icon">

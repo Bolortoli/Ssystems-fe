@@ -19,7 +19,7 @@ const FunFacts = () => {
               <div 
                 className="single-funfacts"
                 data-aos="fade-up"
-                data-aos-duration="1200"
+                data-aos-duration="120"
                 data-aos-delay="100"
               >
                 <h3>
@@ -33,7 +33,7 @@ const FunFacts = () => {
               <div 
                 className="single-funfacts"
                 data-aos="fade-up"
-                data-aos-duration="1200"
+                data-aos-duration="120"
                 data-aos-delay="200"
               >
                 <h3>
@@ -47,7 +47,7 @@ const FunFacts = () => {
               <div 
                 className="single-funfacts"
                 data-aos="fade-up"
-                data-aos-duration="1200"
+                data-aos-duration="120"
                 data-aos-delay="300"
               >
                 <h3>
@@ -61,7 +61,7 @@ const FunFacts = () => {
               <div 
                 className="single-funfacts"
                 data-aos="fade-up"
-                data-aos-duration="1200"
+                data-aos-duration="120"
                 data-aos-delay="400"
               >
                 <h3>

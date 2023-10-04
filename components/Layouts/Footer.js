@@ -12,7 +12,7 @@ const Footer = () => {
               <div 
                 className="single-footer-widget"
                 data-aos="fade-in"
-                data-aos-duration="1200"
+                data-aos-duration="120"
                 data-aos-delay="100"
               >
                 <div className="logo">
@@ -55,7 +55,7 @@ const Footer = () => {
               <div 
                 className="single-footer-widget"
                 data-aos="fade-in"
-                data-aos-duration="1200"
+                data-aos-duration="120"
                 data-aos-delay="200"
               >
                 <h3>Services</h3>
@@ -84,7 +84,7 @@ const Footer = () => {
               <div 
                 className="single-footer-widget"
                 data-aos="fade-in"
-                data-aos-duration="1200"
+                data-aos-duration="120"
                 data-aos-delay="300"
               >
                 <h3>Quick Links</h3>
@@ -113,7 +113,7 @@ const Footer = () => {
               <div 
                 className="single-footer-widget"
                 data-aos="fade-in"
-                data-aos-duration="1200"
+                data-aos-duration="120"
                 data-aos-delay="400"
               >
                 <h3>Contacts</h3>

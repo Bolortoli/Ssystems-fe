@@ -21,7 +21,7 @@ const Services = ({ cardsData, data }) => {
               <div
                 className="col-lg-4 col-sm-6"
                 // data-aos="fade-in"
-                // data-aos-duration="1200"
+                // data-aos-duration="120"
                 // data-aos-delay="100"
               >
                 <div className="single-services-box">

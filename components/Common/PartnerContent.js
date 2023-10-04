@@ -2,11 +2,10 @@ import React from "react";
 import PartnerSlider from "../Common/PartnerSlider";
 
 
-const PartnerContent = ({ data }) => {
+const PartnerContent = ({ partners, data }) => {
   if (data == undefined || data == null) {
     return <>Loading...</>;
   }
-  const d = [1, 1, 1, 1, 1, 1, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
   return (
     <>
@@ -19,14 +18,14 @@ const PartnerContent = ({ data }) => {
 
           <div className="customers-partner-list">
 
-            {d.map(a => (<div
+            {partners.data.map(d => (<div
               className="partner-item"
               data-aos="fade-in"
-              data-aos-duration="1200"
+              data-aos-duration="120"
               data-aos-delay="100"
             >
-              <a href="#" target="_blank" rel="noreferrer">
-                <img src="/images/partner/partner1.png" alt="image" />
+              <a href={d.website_link} target="_blank" rel="noreferrer">
+                <img src={`${process.env.CMS_ENDPOINT_PUBLIC}/assets/${d.logo}`} alt="image" />
               </a>
             </div>))}
           </div>

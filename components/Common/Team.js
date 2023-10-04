@@ -17,7 +17,7 @@ const Team = () => {
             <div 
               className="col-lg-3 col-sm-6"
               data-aos="fade-in"
-              data-aos-duration="1200"
+              data-aos-duration="120"
               data-aos-delay="200"
             >
               <div className="single-team-box">
@@ -61,7 +61,7 @@ const Team = () => {
             <div 
               className="col-lg-3 col-sm-6"
               data-aos="fade-in"
-              data-aos-duration="1200"
+              data-aos-duration="120"
               data-aos-delay="300"
             >
               <div className="single-team-box">
@@ -105,7 +105,7 @@ const Team = () => {
             <div 
               className="col-lg-3 col-sm-6"
               data-aos="fade-in"
-              data-aos-duration="1200"
+              data-aos-duration="120"
               data-aos-delay="400"
             >
               <div className="single-team-box">
@@ -149,7 +149,7 @@ const Team = () => {
             <div 
               className="col-lg-3 col-sm-6"
               data-aos="fade-in"
-              data-aos-duration="1200"
+              data-aos-duration="120"
               data-aos-delay="500"
             >
               <div className="single-team-box">

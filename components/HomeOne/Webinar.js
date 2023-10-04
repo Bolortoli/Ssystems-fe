@@ -5,8 +5,6 @@ import Link from "next/link";
 const Webinar = ({ data }) => {
   const [toggler, setToggler] = useState(false);
 
-  console.log(data.home_content_id.section4_image.id)
-
   if (data == undefined || data == null) {
     return <>Loading...</>;
   }
@@ -15,7 +13,7 @@ const Webinar = ({ data }) => {
     <>
       <FsLightbox
         toggler={toggler}
-        sources={["https://www.youtube.com/embed/bk7McNUjWgw"]}
+        sources={[data.home_content_id.video_link]}
       />
 
       <section className="webinar-area">
@@ -40,9 +38,9 @@ const Webinar = ({ data }) => {
               <div
                 onClick={() => setToggler(!toggler)}
                 className="video-btn popup-youtube"
-                data-aos="zoom-in"
-                data-aos-duration="1200"
-                data-aos-delay="600"
+                // data-aos="zoom-in"
+                // data-aos-duration="120"
+                // data-aos-delay="100"
               >
                 <i className="flaticon-play-button"></i>
               </div>

@@ -11,7 +11,7 @@ const AboutUs = () => {
               <div 
                 className="about-img"
                 data-aos="fade-in"
-                data-aos-duration="1200"
+                data-aos-duration="120"
                 data-aos-delay="400"
               >
                 <img src="/images/about/about3.png" alt="image" />
@@ -22,8 +22,8 @@ const AboutUs = () => {
               <div 
                 className="about-content"
                 data-aos="fade-in"
-                data-aos-duration="1200"
-                data-aos-delay="600"
+                data-aos-duration="120"
+                data-aos-delay="100"
               >
                 <h2>Engaging New Audiences through Smart Approach</h2>
                 <p>
