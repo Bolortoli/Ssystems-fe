@@ -25,7 +25,7 @@ const PartnerContent = ({ partners, data }) => {
               data-aos-delay="100"
             >
               <a href={d.website_link} target="_blank" rel="noreferrer">
-                <img src={`${process.env.CMS_ENDPOINT_PUBLIC}/assets/${d.logo}`} alt="image" />
+                <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${d.logo}`} alt="image" />
               </a>
             </div>))}
           </div>

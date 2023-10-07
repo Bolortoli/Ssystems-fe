@@ -30,16 +30,44 @@ const BlogDetails = ({ data }) => {
 
 export async function getServerSideProps(context) {
 
-  try {
+  // try {
     const { params } = context;
     const { id } = params;
     const { locale } = context;
 
-    const data = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/blog/${id}?fields=*.*.*`).catch(e => console.log(e))).data
+    const global_config = await getGlobalConfigs(locale)
 
-    console.log(locale)
+    if (!global_config) return {
+      props: {
+        message: "error"
+      }
+    };
+
+    const data = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/blog/${id}?fields=*.*.*.*`).catch(e => console.log(e))).data
+
+    const blogs = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/blog?fields=*.*`).catch(e => console.log(e))).data
+
+    let related_blogs = [blogs.data[Math.floor((Math.random()*blogs.data.length))], blogs.data[Math.floor((Math.random()*blogs.data.length))]]
+
+    related_blogs = related_blogs.map(blog => {
+      let translation = blog.translations.filter(d => d.languages_code == locale)[0]
+
+      return {
+        id: blog.id,
+        title: translation.title
+      }
+    })
 
     const translationData = data?.data?.translations?.filter(d => d.languages_code.code == locale)[0]
+
+    const categories = data.data.category.map(c => {
+      let categoryTranslation = c.blog_category_id.translations.find(trans => trans.languages_code == locale)
+
+      return {
+        id: c.id,
+        name: categoryTranslation.name,
+      }
+    })
 
     return {
       props: {
@@ -47,19 +75,43 @@ export async function getServerSideProps(context) {
           translationData,
           id: data.data.id,
           cover_image: data.data.cover_image.id,
-          fullData: data.data,
+          date_created: data.data.date_created,
+          global_config,
+          related_blogs,
+          categories
         }
       }
     };
-  } catch (error) {
+  // } catch (error) {
+  //   return {
+  //     props: {
+  //       message: "error"
+  //     }
+  //   };
+  // }
+
+}
+
+async function getGlobalConfigs(locale) {
+  try {
+
+    const data = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/global_config?fields=*.*`).catch(e => console.log(e))).data
+
+    const translationData = data?.data?.translations?.filter(d => d.languages_code == locale)[0]
+
     return {
-      props: {
-        message: "error"
-      }
+      date_created: data.data.date_created,
+      facebook_link: data.data.facebook_link,
+      youtube_link: data.data.youtube_link,
+      email: data.data.email,
+      phone: data.data.phone,
+      footer_text: translationData.footer_text,
+      address: translationData.address,
+      languages_code: translationData.languages_code
     };
+  } catch (error) {
+    return null
   }
-
-
 }
 
 export default BlogDetails;

@@ -22,7 +22,7 @@ const About = () => {
 
   const fetchData = async () => {
     try {
-      const data = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/aboutus?fields=*.*.*`).catch(e => console.log(e)))?.data
+      const data = (await axios.get(`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/items/aboutus?fields=*.*.*`).catch(e => console.log(e)))?.data
       console.log(data)
       setAboutUsData(data)
     } catch (error) {

@@ -31,9 +31,9 @@ const Webinar = ({ data }) => {
 
           <div className="col-lg-6 p-0">
             <div className="webinar-video-image" style={{
-              backgroundImage: `url(${process.env.CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.section4_image.id})`,
+              backgroundImage: `url(${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.section4_image.id})`,
             }}>
-              <img src={`${process.env.CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.section4_image.id}`} alt="image" />
+              <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.section4_image.id}`} alt="image" />
 
               <div
                 onClick={() => setToggler(!toggler)}

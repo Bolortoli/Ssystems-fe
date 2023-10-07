@@ -2350,10 +2350,12 @@ Blog Area CSS
 }
 
 .single-blog-post {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   transition: 0.5s;
   border-radius: 5px;
   background-color: #f4faff;
+  min-height: 400px;
+  max-height: 100%;
 }
 .single-blog-post .entry-thumbnail a img {
   transition: 0.5s;

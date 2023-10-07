@@ -9,63 +9,29 @@ const BlogThreeGrid = ({ data }) => {
     return <>Loading...</>
   }
 
-  let [translatedData, setTranslatedData] = useState([])
-
-  const { locale } = useRouter();
-
-  const blogTranslation = () => {
-    let translation = data.data.map(d => {
-      let categories = d.category.map(cat => {
-        let categoryTranslation = cat.blog_category_id.translations.find(trans => trans.languages_code == locale)
-
-        return {
-          id: cat.id,
-          name: categoryTranslation.name,
-          short_description: categoryTranslation.short_description,
-          icon: cat.blog_category_id.icon
-        }
-      })
-      let content = d.translations.find(trans => trans.languages_code.code == locale)
-
-      return {
-        id: d.id,
-        categories,
-        cover_image: d?.cover_image?.id,
-        content
-      }
-    })
-    console.log(translation)
-    setTranslatedData(translation)
-  }
-
-  useEffect(() => {
-    blogTranslation()
-  }, [])
-
-  // const translationData = data.data.translations.filter(d => d.languages_code.code == locale)[0]
-
   return (
     <>
       <section className="blog-area ptb-110">
         <div className="container">
           <div className="row">
 
-            {translatedData.map(blog => (<div className="col-lg-3 col-md-4">
+            {data.map(blog => (
+            <div className="col-lg-3 col-md-4" style={{ marginBottom: 30 }}>
               <div className="single-blog-post">
                 <div className="entry-thumbnail">
                   <Link href={`/blog-detail/${blog.id}`}>
-                    <img src={`${process.env.CMS_ENDPOINT_PUBLIC}/assets/${blog?.cover_image}`} alt="image" />
+                    <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${blog?.cover_image}`} alt="image" />
                   </Link>
                 </div>
 
-                <div className="entry-post-content">
+                <div className="entry-post-content" style={{ padding: 15 }}>
                   <div className="entry-meta">
-                    <ul>
-                      {blog.categories.map(cat => (<li>{cat.name}</li>))}
+                    <ul >
+                      {blog.categories.map(cat => (<li style={{ fontSize: 14 }} >{cat.name}</li>))}
                     </ul>
                   </div>
 
-                  <h3>
+                  <h3 style={{ fontSize: '16px' }}>
                     <Link href={`/blog-detail/${blog.id}`}>
                       {blog.content.title}
                     </Link>
@@ -74,43 +40,11 @@ const BlogThreeGrid = ({ data }) => {
                   <p>
                     {blog.content.short_description}
                   </p>
-
-                  <Link href={`/blog-detail/${blog.id}`} className="learn-more-btn">
-                    Read More <i className="flaticon-add"></i>
-                  </Link>
                 </div>
+
               </div>
+
             </div>))}
-
-
-            {/* Pagination */}
-            <div className="col-lg-12 col-sm-12">
-              <div className="pagination-area">
-                <a href="#" className="prev page-numbers">
-                  <i className="fas fa-angle-double-left"></i>
-                </a>
-
-                <a href="#" className="page-numbers">
-                  1
-                </a>
-
-                <a href="#" className="page-numbers current">
-                  2
-                </a>
-
-                <a href="#" className="page-numbers">
-                  3
-                </a>
-
-                <a href="#" className="page-numbers">
-                  4
-                </a>
-
-                <a href="#" className="next page-numbers">
-                  <i className="fas fa-angle-double-right"></i>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
 

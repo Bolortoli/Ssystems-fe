@@ -13,8 +13,8 @@ const BlogPost = ({ data, blogs }) => {
       <section className="blog-area ptb-110">
         <div className="container">
           <div className="section-title">
-            <h2>{data.section8_title}</h2>
-            <p>{data.section8_text}</p>
+            <h2>{data.blog_title}</h2>
+            <p>{data.blog_text}</p>
           </div>
 
           <div className="row justify-content-center">
@@ -28,7 +28,7 @@ const BlogPost = ({ data, blogs }) => {
                 <div className="single-blog-post">
                   <div className="entry-thumbnail">
                     <Link href={`/blog-detail/${blog.id}`}>
-                      <img src={`${process.env.CMS_ENDPOINT_PUBLIC}/assets/${blog.cover_image}`} alt="image" />
+                      <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${blog.cover_image}`} alt="image" />
                     </Link>
                   </div>
 

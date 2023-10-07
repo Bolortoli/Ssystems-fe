@@ -142,7 +142,7 @@ const Footer = () => {
         </div>
 
         <div className="copyright-area">
-          <div className="container">
+          {/* <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-6 col-sm-6">
                 <p>
@@ -165,7 +165,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="circle-map">
