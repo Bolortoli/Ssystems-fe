@@ -16,16 +16,10 @@ const About = ({ data }) => {
                 <img
                   src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.second_section_image1.id}`}
                   alt="image"
-                  data-aos="fade-in"
-                  data-aos-duration="120"
-                  data-aos-delay="200"
                 />
                 <img
                   src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.second_section_image2.id}`}
                   alt="image"
-                  data-aos="fade-in"
-                  data-aos-duration="120"
-                  data-aos-delay="400"
                 />
               </div>
             </div>
@@ -33,9 +27,6 @@ const About = ({ data }) => {
             <div className="col-lg-6 col-md-12">
               <div
                 className="about-content"
-                data-aos="fade-in"
-                data-aos-duration="120"
-                data-aos-delay="100"
               >
                 <h2>{data.second_section_title}</h2>
                 <p>{data.second_section_text}</p>

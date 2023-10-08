@@ -4,11 +4,11 @@ import Link from "next/link";
 import { useTranslation } from 'next-i18next';
 
 const Navbar = () => {
-  const { locale, locales } = useRouter();
   // Add active class
   const [currentPath, setCurrentPath] = useState("");
   const router = useRouter();
-  const { t } = useTranslation("common");
+  const { locale } = useRouter();
+  const { t } = useTranslation();
 
   useEffect(() => {
     setCurrentPath(router.asPath);
@@ -41,8 +41,6 @@ const Navbar = () => {
   const handleToggleSearchModal = () => {
     setActiveSearchModal(!isActiveSearchModal);
   };
-
-  console.log(t("page_names"))
 
   return (
     <>
@@ -85,7 +83,8 @@ const Navbar = () => {
                       href="#"
                       className={`nav-link ${currentPath == "/" && "active"}`}
                     >
-                      Home
+                      Home 
+                      {/* {t('page')} */}
                     </Link>
                   </li>
 
@@ -102,9 +101,8 @@ const Navbar = () => {
                       <li className="nav-item">
                         <Link
                           href="/about/"
-                          className={`nav-link ${
-                            currentPath == "/about/" && "active"
-                          }`}
+                          className={`nav-link ${currentPath == "/about/" && "active"
+                            }`}
                         >
                           Co location
                         </Link>
@@ -113,9 +111,8 @@ const Navbar = () => {
                       <li className="nav-item">
                         <Link
                           href="/about-two/"
-                          className={`nav-link ${
-                            currentPath == "/about-two/" && "active"
-                          }`}
+                          className={`nav-link ${currentPath == "/about-two/" && "active"
+                            }`}
                         >
                           Storage
                         </Link>
@@ -124,9 +121,8 @@ const Navbar = () => {
                       <li className="nav-item">
                         <Link
                           href="/team/"
-                          className={`nav-link ${
-                            currentPath == "/team/" && "active"
-                          }`}
+                          className={`nav-link ${currentPath == "/team/" && "active"
+                            }`}
                         >
                           Dedicated server
                         </Link>
@@ -135,9 +131,8 @@ const Navbar = () => {
                       <li className="nav-item">
                         <Link
                           href="/pricing/"
-                          className={`nav-link ${
-                            currentPath == "/pricing/" && "active"
-                          }`}
+                          className={`nav-link ${currentPath == "/pricing/" && "active"
+                            }`}
                         >
                           Profesional consulting & service maintennace
                         </Link>
@@ -146,9 +141,8 @@ const Navbar = () => {
                       <li className="nav-item">
                         <Link
                           href="/feedback/"
-                          className={`nav-link ${
-                            currentPath == "/feedback/" && "active"
-                          }`}
+                          className={`nav-link ${currentPath == "/feedback/" && "active"
+                            }`}
                         >
                           Internet
                         </Link>
@@ -440,7 +434,7 @@ const Navbar = () => {
                     </Link>
                   </li> */}
 
-                  {/* <li className="nav-item">
+                  <li className="nav-item">
                     <Link
                       href={
                         locale == "mn-MN"
@@ -452,7 +446,7 @@ const Navbar = () => {
                     >
                       {locale == "mn-MN" ? `EN` : `MN`}
                     </Link>
-                  </li> */}
+                  </li>
                 </ul>
 
                 {/* others-options */}

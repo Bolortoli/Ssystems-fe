@@ -41,12 +41,12 @@ This files table contents are outlined below>>>>>
 Default CSS
 =================================================*/
 
-$main-font-family: 'Red Hat Display', sans-serif;
-$optional-font-family: 'Red Hat Display', sans-serif;
-$main-color: #ff4800;
-$optional-color: #4ac728;
+$main-font-family: 'Red Hat Display', 'Montserrat';
+$optional-font-family: 'Red Hat Display', 'Montserrat';
+$main-color: #ea560d;
+$optional-color: #11224e;
 $white-color: #ffffff;
-$black-color: #212529;
+$black-color: #111111;
 $paragraph-color: #57647c;
 $font-size: 14px;
 $transition: .5s;
@@ -6276,7 +6276,7 @@ Pricing Area CSS
         }
     }
     .price {
-        color: #212529;
+        color: #111111;
         font: {
             size: 50px;
             weight: 700;
@@ -7513,7 +7513,7 @@ Checkout Area CSS
             border-radius: 0;
             -webkit-transition: 0.5s;
             transition: 0.5s;
-            color: #212529;
+            color: #111111;
             line-height: normal;
             line-height: initial;
             padding-left: 13px;
@@ -8426,11 +8426,11 @@ AI Services Area CSS
         margin-bottom: 15.5px;
     }
     .read-btn {
-        background: #FF4800;
+        background: #ea560d;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        border-bottom: 1px solid #FF4800;
+        border-bottom: 1px solid #ea560d;
         font-size: 15px;
         font-weight: 600;
     }
@@ -8718,7 +8718,7 @@ AI Blog Area CSS
                 transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
                 padding: 0.1% 0px;
                 background: {
-                    image: linear-gradient(270deg, #ff4800 0%, #ff4800 100%);
+                    image: linear-gradient(270deg, #ea560d 0%, #ea560d 100%);
                     size: 0px 2px;
                     position: 0px 95%;
                     repeat: no-repeat;

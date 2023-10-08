@@ -128,12 +128,11 @@ const Footer = () => {
                     bariton@gmail.com
                   </li>
                   <li>
-                    <span>Phone:</span>
-                    +44 587 154756
+                    <span>Phone: +44 587 154756</span>
+                    
                   </li>
                   <li>
-                    <span>Fax:</span>
-                    +44 785 4578964
+                    <span>Fax: +44 785 4578964</span>
                   </li>
                 </ul>
               </div>

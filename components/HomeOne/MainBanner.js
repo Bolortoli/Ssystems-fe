@@ -12,12 +12,13 @@ const MainBanner = ({ data }) => {
       <div
         className="main-banner"
         style={{
+          height: '600px',
           backgroundImage: `url(${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.hero_image.id})`,
         }}
       >
         <div className="d-table">
           <div className="d-table-cell">
-            <div className="container-fluid">
+            <div className="container-fluid" style={{ marginTop: '100px' }}>
               <div className="main-banner-content">
                 <h1
                   data-aos="fade-up"
@@ -45,15 +46,15 @@ const MainBanner = ({ data }) => {
                     {data.hero_button_text}
                   </Link>
 
-                  <Link href="/contact" className="optional-btn">
-                    Get Started Free
-                  </Link>
+                  {/* <Link href="/contact" className="optional-btn">
+                    {data.hero_button_text}
+                  </Link> */}
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <FeaturedServices />
+        {/* <FeaturedServices /> */}
       </div>
     </>
   );

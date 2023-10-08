@@ -42,7 +42,7 @@ Default CSS
 body {
   padding: 0;
   margin: 0;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 14px;
   color: #57647c;
 }
@@ -51,11 +51,11 @@ a {
   display: inline-block;
   transition: 0.5s;
   text-decoration: none;
-  color: #212529;
+  color: #111111;
 }
 a:hover, a:focus {
   text-decoration: none;
-  color: #ff4800;
+  color: #ea560d;
 }
 
 button {
@@ -63,9 +63,9 @@ button {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  color: #212529;
+  color: #111111;
   font-weight: bold;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 
 .d-table {
@@ -125,12 +125,12 @@ textarea.form-control {
 }
 .section-title span {
   display: block;
-  color: #ff4800;
+  color: #ea560d;
   text-transform: uppercase;
   margin-bottom: 5px;
   font-weight: 600;
   font-size: 15px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .section-title h2 {
   margin-bottom: 0;
@@ -157,20 +157,20 @@ textarea.form-control {
   z-index: 1;
   opacity: 1 !important;
   font-size: 16px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-weight: 600;
 }
 
 .btn-primary {
   color: #ffffff;
-  background-color: #ff4800;
+  background-color: #ea560d;
 }
 .btn-primary.disabled, .btn-primary:disabled {
   color: #ffffff;
-  background-color: #ff4800;
+  background-color: #ea560d;
 }
 .btn-primary:hover, .btn-primary:focus {
-  background-color: #4ac728 !important;
+  background-color: #11224e !important;
   color: #ffffff !important;
   box-shadow: unset !important;
 }
@@ -179,11 +179,11 @@ textarea.form-control {
 .learn-more-btn {
   display: inline-block;
   position: relative;
-  color: #ff4800;
+  color: #ea560d;
   letter-spacing: 0.5px;
   font-size: 15px;
   font-weight: 600;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .learn-more-btn i {
   margin-left: 2px;
@@ -199,14 +199,14 @@ textarea.form-control {
   left: 0;
   bottom: 0;
   width: 0;
-  background: #ff4800;
+  background: #ea560d;
   height: 1px;
   opacity: 0;
   visibility: hidden;
   transition: 0.5s;
 }
 .learn-more-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .learn-more-btn:hover::before {
   width: 100%;
@@ -221,7 +221,7 @@ textarea.form-control {
   background-color: transparent;
   border-radius: 0;
   transition: 0.5s;
-  color: #212529;
+  color: #111111;
   line-height: initial;
   padding-left: 13px;
   font-size: 14px;
@@ -237,7 +237,7 @@ textarea.form-control {
 }
 .form-control:focus {
   box-shadow: unset;
-  border-color: #ff4800;
+  border-color: #ea560d;
 }
 
 /*================================================
@@ -297,7 +297,7 @@ Preloader Area CSS
   width: 100%;
   height: 60%;
   z-index: -1;
-  background: #ff4800;
+  background: #ea560d;
   transition: 0.9s;
 }
 .preloader::after {
@@ -361,7 +361,7 @@ Navbar Area CSS
   margin-bottom: 0;
 }
 .main-nav .navbar .navbar-nav {
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   margin-left: auto;
 }
 .main-nav .navbar .navbar-nav .nav-item {
@@ -384,7 +384,7 @@ Navbar Area CSS
   margin-right: 13px;
 }
 .main-nav .navbar .navbar-nav .nav-item a:hover, .main-nav .navbar .navbar-nav .nav-item a:focus, .main-nav .navbar .navbar-nav .nav-item a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .navbar-nav .nav-item a i {
   font-size: 10px;
@@ -396,7 +396,7 @@ Navbar Area CSS
   margin-left: 0;
 }
 .main-nav .navbar .navbar-nav .nav-item:hover a, .main-nav .navbar .navbar-nav .nav-item:focus a, .main-nav .navbar .navbar-nav .nav-item.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu {
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
@@ -424,11 +424,11 @@ Navbar Area CSS
   text-transform: capitalize;
   padding: 8px 15px;
   margin: 0;
-  color: #212529;
+  color: #111111;
   font-size: 16px;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus, .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
   left: 220px;
@@ -437,10 +437,10 @@ Navbar Area CSS
   visibility: hidden;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover, .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus, .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu {
   left: 220px;
@@ -449,11 +449,11 @@ Navbar Area CSS
   visibility: hidden;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
   text-transform: capitalize;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
   left: -250px;
@@ -462,11 +462,11 @@ Navbar Area CSS
   visibility: hidden;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
   text-transform: capitalize;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
   left: -250px;
@@ -475,11 +475,11 @@ Navbar Area CSS
   visibility: hidden;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
   text-transform: capitalize;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
   left: -250px;
@@ -488,11 +488,11 @@ Navbar Area CSS
   visibility: hidden;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
   text-transform: capitalize;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
   left: -250px;
@@ -501,14 +501,14 @@ Navbar Area CSS
   visibility: hidden;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
   text-transform: capitalize;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
   opacity: 1;
@@ -516,7 +516,7 @@ Navbar Area CSS
   top: -15px;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
   opacity: 1;
@@ -524,7 +524,7 @@ Navbar Area CSS
   top: -15px;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
   opacity: 1;
@@ -532,7 +532,7 @@ Navbar Area CSS
   top: -15px;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
   opacity: 1;
@@ -540,7 +540,7 @@ Navbar Area CSS
   top: -15px;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
   opacity: 1;
@@ -548,7 +548,7 @@ Navbar Area CSS
   top: -15px;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li:hover .dropdown-menu {
   opacity: 1;
@@ -570,11 +570,11 @@ Navbar Area CSS
   color: #ffffff;
 }
 .main-nav .navbar .others-options .cart-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .others-options .cart-btn span {
   position: absolute;
-  background-color: #ff4800;
+  background-color: #ea560d;
   height: 20px;
   width: 20px;
   text-align: center;
@@ -590,14 +590,14 @@ Navbar Area CSS
 }
 .main-nav .navbar .others-options .btn-primary {
   background-color: #ffffff;
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .others-options .btn-primary:hover {
   color: #ffffff !important;
-  background-color: #ff4800 !important;
+  background-color: #ea560d !important;
 }
 .main-nav .navbar .others-options .option-item {
-  color: #212529;
+  color: #111111;
   display: inline-block;
   position: relative;
   line-height: initial;
@@ -613,7 +613,7 @@ Navbar Area CSS
   font-size: 17px;
 }
 .main-nav .navbar .others-options .option-item .search-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .main-nav .navbar .others-options .option-item .close-btn {
   cursor: pointer;
@@ -627,7 +627,7 @@ Navbar Area CSS
   display: block;
 }
 .main-nav .navbar .others-options .option-item .close-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 
 .navbar-area {
@@ -657,102 +657,102 @@ Navbar Area CSS
   padding-bottom: 10px;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item a:hover, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item a:focus, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item:hover a, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item:focus a, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .others-options .cart-btn {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area.is-sticky .main-nav .navbar .others-options .cart-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .others-options .btn-primary {
-  background-color: #ff4800;
+  background-color: #ea560d;
   color: #ffffff;
 }
 .navbar-area.is-sticky .main-nav .navbar .others-options .btn-primary:hover {
   color: #ffffff !important;
-  background-color: #4ac728 !important;
+  background-color: #11224e !important;
 }
 .navbar-area.is-sticky .main-nav .navbar .others-options .option-item {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area.is-sticky .main-nav .navbar .others-options .option-item .search-btn {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area.is-sticky .main-nav .navbar .others-options .option-item .search-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .main-nav .navbar .others-options .option-item .close-btn {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area.is-sticky .main-nav .navbar .others-options .option-item .close-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area.is-sticky .navbar-brand {
   padding-top: 0;
@@ -836,7 +836,7 @@ Search Popup CSS
   transform: rotate(-45deg);
 }
 .search-overlay .search-overlay-close:hover .search-overlay-close-line {
-  background: #ff4800;
+  background: #ea560d;
   transform: rotate(180deg);
 }
 .search-overlay .search-overlay-form {
@@ -889,14 +889,14 @@ Search Popup CSS
   color: #ffffff;
   height: 50px;
   border-radius: 50%;
-  background-color: #ff4800;
+  background-color: #ea560d;
   transition: 0.5s;
   border: none;
   font-size: 20px;
   line-height: 50px;
 }
 .search-overlay .search-overlay-form form button:hover {
-  background-color: #212529;
+  background-color: #111111;
   color: #ffffff;
 }
 .search-overlay.search-overlay-active.search-overlay {
@@ -927,7 +927,7 @@ Search Popup CSS
 .navbar-toggler .icon-bar {
   width: 28px;
   transition: all 0.3s;
-  background: #ff4800;
+  background: #ea560d;
   height: 2px;
   display: block;
 }
@@ -1000,7 +1000,7 @@ Main Banner Area CSS
   color: #ffffff;
   position: relative;
   margin-left: 20px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 16px;
   font-weight: 700;
 }
@@ -1021,7 +1021,7 @@ Main Banner Area CSS
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #ff4800;
+  background-color: #ea560d;
   transition: 0.5s;
 }
 .main-banner-content .btn-box .optional-btn:hover {
@@ -1066,10 +1066,10 @@ Main Banner Area CSS
 }
 .banner-content .btn-box .optional-btn {
   display: inline-block;
-  color: #212529;
+  color: #111111;
   position: relative;
   margin-left: 20px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 16px;
   font-weight: 700;
 }
@@ -1080,7 +1080,7 @@ Main Banner Area CSS
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: #212529;
+  background-color: #111111;
   transition: 0.5s;
 }
 .banner-content .btn-box .optional-btn::after {
@@ -1090,11 +1090,11 @@ Main Banner Area CSS
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #ff4800;
+  background-color: #ea560d;
   transition: 0.5s;
 }
 .banner-content .btn-box .optional-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .banner-content .btn-box .optional-btn:hover::before {
   width: 0;
@@ -1191,10 +1191,10 @@ Main Banner Area CSS
 }
 .hero-banner-content .btn-box .optional-btn {
   display: inline-block;
-  color: #212529;
+  color: #111111;
   position: relative;
   margin-left: 20px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 16px;
   font-weight: 700;
 }
@@ -1205,7 +1205,7 @@ Main Banner Area CSS
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: #212529;
+  background-color: #111111;
   transition: 0.5s;
 }
 .hero-banner-content .btn-box .optional-btn::after {
@@ -1215,11 +1215,11 @@ Main Banner Area CSS
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #ff4800;
+  background-color: #ea560d;
   transition: 0.5s;
 }
 .hero-banner-content .btn-box .optional-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .hero-banner-content .btn-box .optional-btn:hover::before {
   width: 0;
@@ -1254,7 +1254,7 @@ Featured Services Area CSS
 }
 .single-featured-services-box .icon {
   margin-bottom: 5px;
-  color: #ff4800;
+  color: #ea560d;
   transition: 0.5s;
 }
 .single-featured-services-box .icon i {
@@ -1287,7 +1287,7 @@ Featured Services Area CSS
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #ff4800;
+  background-color: #ea560d;
   width: 2px;
   height: 100%;
   transition: 0.5s;
@@ -1363,9 +1363,9 @@ About Area CSS
 .about-content .features-list li span {
   display: block;
   position: relative;
-  color: #212529;
+  color: #111111;
   padding-left: 28px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-weight: 600;
   font-size: 17px;
 }
@@ -1379,7 +1379,7 @@ About Area CSS
   top: 4px;
   color: #ffffff;
   line-height: 16px;
-  background-color: #ff4800;
+  background-color: #ea560d;
   text-align: center;
   transition: 0.5s;
 }
@@ -1387,7 +1387,7 @@ About Area CSS
   font-size: 10px;
 }
 .about-content .features-list li span:hover i {
-  background-color: #4ac728;
+  background-color: #11224e;
 }
 
 .about-inner-area {
@@ -1620,7 +1620,7 @@ Services Area CSS
   height: 75px;
   transition: 0.5s;
   text-align: center;
-  color: #ff4800;
+  color: #ea560d;
 }
 .single-services-box .icon i {
   font-size: 35px;
@@ -1642,7 +1642,7 @@ Services Area CSS
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: #ff4800;
+  background-color: #ea560d;
   transition: 0.5s;
 }
 .single-services-box:hover {
@@ -1650,7 +1650,7 @@ Services Area CSS
   box-shadow: 0 0 40px 3px rgba(0, 0, 0, 0.05);
 }
 .single-services-box:hover .icon {
-  background-color: #ff4800;
+  background-color: #ea560d;
   color: #ffffff;
 }
 .single-services-box:hover::before {
@@ -1690,13 +1690,13 @@ Services Area CSS
   line-height: 55px;
   border-radius: 5px;
   margin-right: 12px;
-  color: #ff4800;
+  color: #ea560d;
 }
 .services-tab-list .tabs li i::before {
   font-size: 30px;
 }
 .services-tab-list .tabs li:hover {
-  background-color: #ff4800;
+  background-color: #ea560d;
   color: #ffffff;
 }
 .services-tab-list .tabs li span {
@@ -1704,7 +1704,7 @@ Services Area CSS
   top: -3px;
 }
 .services-tab-list .tabs li.current {
-  background-color: #ff4800;
+  background-color: #ea560d;
   color: #ffffff;
 }
 .services-tab-list .tabs li:last-child {
@@ -1773,13 +1773,13 @@ Services Details Area CSS
 }
 .services-details-overview .services-details-desc .services-details-accordion .accordion .accordion-title {
   padding: 12px 20px 12px 51px;
-  color: #212529;
+  color: #111111;
   position: relative;
   border-bottom: 1px solid transparent;
   margin-bottom: -1px;
   font-size: 15px;
   font-weight: 700;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .services-details-overview .services-details-desc .services-details-accordion .accordion .accordion-title i {
   position: absolute;
@@ -1788,7 +1788,7 @@ Services Details Area CSS
   width: 40px;
   text-align: center;
   height: 100%;
-  background: #ff4800;
+  background: #ea560d;
   color: #ffffff;
 }
 .services-details-overview .services-details-desc .services-details-accordion .accordion .accordion-title i::before {
@@ -1870,7 +1870,7 @@ Webinar Area CSS
   width: 90px;
   height: 90px;
   line-height: 90px;
-  background-color: #ff4800;
+  background-color: #ea560d;
   border-radius: 50%;
   color: #ffffff;
   z-index: 1;
@@ -1892,7 +1892,7 @@ Webinar Area CSS
   bottom: 0;
   left: 0;
   border-radius: 50%;
-  border: 1px solid #ff4800;
+  border: 1px solid #ea560d;
 }
 .webinar-video-image .video-btn::before {
   animation: ripple 2s linear infinite;
@@ -1901,7 +1901,7 @@ Webinar Area CSS
   animation: ripple 2s linear 1s infinite;
 }
 .webinar-video-image .video-btn:hover, .webinar-video-image .video-btn:focus {
-  background-color: #4ac728;
+  background-color: #11224e;
   color: #ffffff;
 }
 
@@ -1956,12 +1956,12 @@ Team Area CSS
 }
 .single-team-box .image .social a {
   display: inline-block;
-  color: #ff4800;
+  color: #ea560d;
   font-size: 17px;
   margin: 0 7px;
 }
 .single-team-box .image .social a:hover {
-  color: #4ac728;
+  color: #11224e;
 }
 .single-team-box .content {
   padding: 25px;
@@ -1977,9 +1977,9 @@ Team Area CSS
 .single-team-box .content span {
   display: block;
   margin-top: 8px;
-  color: #ff4800;
+  color: #ea560d;
   transition: 0.5s;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 15px;
   font-weight: 500;
 }
@@ -1995,7 +1995,7 @@ Team Area CSS
   visibility: visible;
 }
 .single-team-box:hover .content {
-  background-color: #ff4800;
+  background-color: #ea560d;
 }
 .single-team-box:hover .content h3 {
   color: #ffffff;
@@ -2044,14 +2044,14 @@ Partner Area CSS
 .partner-item a::before {
   left: 0;
   top: 0;
-  border-left: 3px solid #ff4800;
-  border-top: 3px solid #ff4800;
+  border-left: 3px solid #ea560d;
+  border-top: 3px solid #ea560d;
 }
 .partner-item a::after {
   right: 0;
   bottom: 0;
-  border-right: 3px solid #ff4800;
-  border-bottom: 3px solid #ff4800;
+  border-right: 3px solid #ea560d;
+  border-bottom: 3px solid #ea560d;
 }
 .partner-item a img {
   transition: 0.5s;
@@ -2147,7 +2147,7 @@ Feedback Area CSS
   left: 0;
   top: 0;
   content: "";
-  background-color: #ff4800;
+  background-color: #ea560d;
   z-index: -1;
   display: none;
 }
@@ -2220,10 +2220,10 @@ Pricing Area CSS
   margin-bottom: 0;
 }
 .single-pricing-box .price {
-  color: #212529;
+  color: #111111;
   font-size: 50px;
   font-weight: 700;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   margin-bottom: 10px;
 }
 .single-pricing-box .price span {
@@ -2262,7 +2262,7 @@ Pricing Area CSS
   margin-bottom: 0;
 }
 .single-pricing-box .pricing-features li i {
-  color: #ff4800;
+  color: #ea560d;
   font-size: 12px;
   position: absolute;
   left: 0;
@@ -2312,17 +2312,17 @@ Pricing Area CSS
   padding: 10px 30px 11px;
   margin-left: -2px;
   margin-right: -2px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-weight: 600;
   font-size: 16px;
 }
 .pricing-tab .tabs li span:hover {
   color: #ffffff;
-  background-color: #212529;
+  background-color: #111111;
 }
 .pricing-tab .tabs li.current span {
   color: #ffffff;
-  background-color: #212529;
+  background-color: #111111;
 }
 .pricing-tab .tabs li:nth-child(1) span {
   border-radius: 5px 0 0 5px;
@@ -2377,7 +2377,7 @@ Blog Area CSS
   position: relative;
   margin-right: 16px;
   color: #57647c;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 15px;
 }
 .single-blog-post .entry-post-content .entry-meta ul li::before {
@@ -2395,7 +2395,7 @@ Blog Area CSS
   color: #57647c;
 }
 .single-blog-post .entry-post-content .entry-meta ul li a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .single-blog-post .entry-post-content .entry-meta ul li:last-child {
   margin-right: 0;
@@ -2439,18 +2439,18 @@ Blog Details Area CSS
   padding-left: 0;
   margin-bottom: 0;
   list-style-type: none;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .blog-details .article-content .entry-meta ul li {
   position: relative;
   display: inline-block;
-  color: #212529;
+  color: #111111;
   margin-right: 25px;
   font-size: 15px;
 }
 .blog-details .article-content .entry-meta ul li span {
   display: inline-block;
-  color: #212529;
+  color: #111111;
   font-weight: 600;
   padding-right: 5px;
 }
@@ -2459,10 +2459,10 @@ Blog Details Area CSS
   color: #57647c;
 }
 .blog-details .article-content .entry-meta ul li a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .blog-details .article-content .entry-meta ul li i {
-  color: #ff4800;
+  color: #ea560d;
   margin-right: 2px;
 }
 .blog-details .article-content .entry-meta ul li::before {
@@ -2472,7 +2472,7 @@ Blog Details Area CSS
   right: -15px;
   width: 6px;
   height: 1px;
-  background: #ff4800;
+  background: #ea560d;
 }
 .blog-details .article-content .entry-meta ul li:last-child {
   margin-right: 0;
@@ -2539,7 +2539,7 @@ Blog Details Area CSS
 }
 .blog-details .article-footer .article-tags span {
   display: inline-block;
-  color: #212529;
+  color: #111111;
   font-size: 20px;
   margin-right: 10px;
   position: relative;
@@ -2563,7 +2563,7 @@ Blog Details Area CSS
   margin-right: 0;
 }
 .blog-details .article-footer .article-tags a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .blog-details .article-footer .article-share {
   flex: 0 0 50%;
@@ -2580,7 +2580,7 @@ Blog Details Area CSS
   margin-left: 6px;
 }
 .blog-details .article-footer .article-share .social li a {
-  color: #212529;
+  color: #111111;
   background-color: #f7f7f7;
   width: 33px;
   height: 33px;
@@ -2591,7 +2591,7 @@ Blog Details Area CSS
 }
 .blog-details .article-footer .article-share .social li a:hover {
   color: #ffffff;
-  background-color: #ff4800;
+  background-color: #ea560d;
 }
 
 blockquote, .blockquote {
@@ -2601,12 +2601,12 @@ blockquote, .blockquote {
   position: relative;
   text-align: center;
   z-index: 1;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   margin-bottom: 20px;
   margin-top: 20px;
 }
 blockquote p, .blockquote p {
-  color: #212529;
+  color: #111111;
   line-height: 1.6;
   margin-bottom: 0;
   font-style: italic;
@@ -2653,7 +2653,7 @@ blockquote::before, .blockquote::before {
 .comments-area .comment-body {
   border-bottom: 1px solid #eeeeee;
   padding-left: 65px;
-  color: #212529;
+  color: #111111;
   font-size: 14px;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -2670,12 +2670,12 @@ blockquote::before, .blockquote::before {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .comments-area .comment-body .reply a:hover {
   color: #ffffff;
-  background-color: #ff4800;
-  border-color: #ff4800;
+  background-color: #ea560d;
+  border-color: #ea560d;
 }
 .comments-area .comment-meta {
   margin-bottom: 0.8em;
@@ -2694,7 +2694,7 @@ blockquote::before, .blockquote::before {
 }
 .comments-area .comment-author .fn {
   font-weight: 700;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .comments-area .comment-author .says {
   display: none;
@@ -2710,7 +2710,7 @@ blockquote::before, .blockquote::before {
   color: #57647c;
 }
 .comments-area .comment-metadata a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .comments-area .comment-content p {
   font-size: 14px;
@@ -2747,9 +2747,9 @@ blockquote::before, .blockquote::before {
 .comments-area .comment-respond label {
   display: block;
   margin-bottom: 5px;
-  color: #212529;
+  color: #111111;
   font-weight: 600;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .comments-area .comment-respond input[type=date], .comments-area .comment-respond input[type=time], .comments-area .comment-respond input[type=datetime-local], .comments-area .comment-respond input[type=week], .comments-area .comment-respond input[type=month], .comments-area .comment-respond input[type=text], .comments-area .comment-respond input[type=email], .comments-area .comment-respond input[type=url], .comments-area .comment-respond input[type=password], .comments-area .comment-respond input[type=search], .comments-area .comment-respond input[type=tel], .comments-area .comment-respond input[type=number], .comments-area .comment-respond textarea {
   display: block;
@@ -2761,7 +2761,7 @@ blockquote::before, .blockquote::before {
   transition: 0.5s;
 }
 .comments-area .comment-respond input[type=date]:focus, .comments-area .comment-respond input[type=time]:focus, .comments-area .comment-respond input[type=datetime-local]:focus, .comments-area .comment-respond input[type=week]:focus, .comments-area .comment-respond input[type=month]:focus, .comments-area .comment-respond input[type=text]:focus, .comments-area .comment-respond input[type=email]:focus, .comments-area .comment-respond input[type=url]:focus, .comments-area .comment-respond input[type=password]:focus, .comments-area .comment-respond input[type=search]:focus, .comments-area .comment-respond input[type=tel]:focus, .comments-area .comment-respond input[type=number]:focus, .comments-area .comment-respond textarea:focus {
-  border-color: #ff4800;
+  border-color: #ea560d;
 }
 .comments-area .comment-respond .comment-form-author {
   float: left;
@@ -2803,7 +2803,7 @@ blockquote::before, .blockquote::before {
   width: 100%;
 }
 .comments-area .comment-respond .form-submit input {
-  background-color: #ff4800;
+  background-color: #ea560d;
   border: none;
   color: #ffffff;
   padding: 10.5px 25px;
@@ -2813,13 +2813,13 @@ blockquote::before, .blockquote::before {
   border-radius: 0;
   text-transform: uppercase;
   transition: 0.5s;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-weight: 700;
   font-size: 14px;
 }
 .comments-area .comment-respond .form-submit input:hover, .comments-area .comment-respond .form-submit input:focus {
   color: #ffffff;
-  background-color: #4ac728;
+  background-color: #11224e;
 }
 
 /*================================================
@@ -2870,7 +2870,7 @@ Free Trial Area CSS
   color: #ffffff;
   border: none;
   outline: 0;
-  background-color: #212529;
+  background-color: #111111;
   border-radius: 30px;
   padding-left: 20px;
 }
@@ -2891,13 +2891,13 @@ Free Trial Area CSS
   background-color: #ffffff;
   border-radius: 30px;
   transition: 0.5s;
-  color: #ff4800;
-  font-family: "Red Hat Display";
+  color: #ea560d;
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 16px;
   font-weight: 600;
 }
 .free-trial-content form button:hover {
-  background-color: #4ac728;
+  background-color: #11224e;
   color: #ffffff;
 }
 .free-trial-content p {
@@ -2912,7 +2912,7 @@ Free Trial Area CSS
   left: 0;
   top: 0;
   content: "";
-  background-color: #ff4800;
+  background-color: #ea560d;
   z-index: -1;
   display: none;
 }
@@ -2971,7 +2971,7 @@ Free Trial Area CSS
   color: #ffffff;
   border: none;
   outline: 0;
-  background-color: #212529;
+  background-color: #111111;
   border-radius: 30px;
   padding-left: 20px;
 }
@@ -2998,16 +2998,16 @@ Free Trial Area CSS
   border: none;
   padding: 0 30px;
   line-height: 45px;
-  background-color: #ff4800;
+  background-color: #ea560d;
   border-radius: 30px;
   transition: 0.5s;
   color: #ffffff;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 16px;
   font-weight: 600;
 }
 .free-trial-text form button:hover {
-  background-color: #4ac728;
+  background-color: #11224e;
   color: #ffffff;
 }
 .free-trial-text p {
@@ -3057,7 +3057,7 @@ Page Title Area CSS
 .page-title-content ul {
   padding-left: 0;
   list-style-type: none;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   margin-top: 15px;
   margin-bottom: 0;
 }
@@ -3071,10 +3071,10 @@ Page Title Area CSS
   font-size: 16px;
 }
 .page-title-content ul li a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .page-title-content ul li a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .page-title-content ul li::before {
   content: "\f054";
@@ -3101,7 +3101,7 @@ Pagination Area CSS
 .pagination-area {
   margin-top: 40px;
   text-align: center;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .pagination-area .page-numbers {
   width: 40px;
@@ -3110,13 +3110,13 @@ Pagination Area CSS
   display: inline-block;
   background-color: #ffffff;
   line-height: 40px;
-  color: #212529;
+  color: #111111;
   box-shadow: 0 2px 10px 0 #d8dde6;
   font-size: 16px;
   font-weight: 700;
 }
 .pagination-area .page-numbers.current, .pagination-area .page-numbers:hover, .pagination-area .page-numbers:focus {
-  background: #ff4800;
+  background: #ea560d;
   color: #ffffff;
   box-shadow: unset;
 }
@@ -3145,7 +3145,7 @@ Sidebar Area CSS
 .widget-area .widget .widget-title::before {
   content: "";
   position: absolute;
-  background: #ff4800;
+  background: #ea560d;
   bottom: -1px;
   left: 0;
   width: 50px;
@@ -3177,7 +3177,7 @@ Sidebar Area CSS
   transition: 0.5s;
 }
 .widget-area .widget_search form .search-field:focus {
-  border-color: #ff4800;
+  border-color: #ea560d;
 }
 .widget-area .widget_search form button {
   position: absolute;
@@ -3189,11 +3189,11 @@ Sidebar Area CSS
   z-index: 1;
   border: none;
   color: #ffffff;
-  background-color: #ff4800;
+  background-color: #ea560d;
   transition: 0.5s;
 }
 .widget-area .widget_search form button:hover {
-  background-color: #4ac728;
+  background-color: #11224e;
   color: #ffffff;
 }
 .widget-area .widget_posts_thumb {
@@ -3264,13 +3264,13 @@ Sidebar Area CSS
   text-transform: capitalize;
   font-weight: 700;
   font-size: 16px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .widget-area .widget_recent_entries ul li:last-child {
   margin-bottom: 0;
 }
 .widget-area .widget_recent_entries ul li::before {
-  background: #ff4800;
+  background: #ea560d;
   position: absolute;
   height: 7px;
   width: 7px;
@@ -3279,10 +3279,10 @@ Sidebar Area CSS
   top: 8px;
 }
 .widget-area .widget_recent_entries ul li a {
-  color: #212529;
+  color: #111111;
 }
 .widget-area .widget_recent_entries ul li a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .widget-area .widget_recent_entries ul li .post-date {
   display: block;
@@ -3300,18 +3300,18 @@ Sidebar Area CSS
 .widget-area .widget_recent_comments ul li {
   position: relative;
   margin-bottom: 12px;
-  color: #212529;
+  color: #111111;
   padding-left: 14px;
   line-height: 1.5;
   font-size: 14.5px;
   font-weight: 600;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .widget-area .widget_recent_comments ul li:last-child {
   margin-bottom: 0;
 }
 .widget-area .widget_recent_comments ul li::before {
-  background: #ff4800;
+  background: #ea560d;
   height: 7px;
   width: 7px;
   content: "";
@@ -3327,7 +3327,7 @@ Sidebar Area CSS
   display: inline-block;
 }
 .widget-area .widget_recent_comments ul li a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .widget-area .widget_archive ul {
   padding-left: 0;
@@ -3341,13 +3341,13 @@ Sidebar Area CSS
   color: #57647c;
   font-size: 14.5px;
   font-weight: 600;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .widget-area .widget_archive ul li:last-child {
   margin-bottom: 0;
 }
 .widget-area .widget_archive ul li::before {
-  background: #ff4800;
+  background: #ea560d;
   height: 7px;
   width: 7px;
   content: "";
@@ -3359,7 +3359,7 @@ Sidebar Area CSS
   color: #57647c;
 }
 .widget-area .widget_archive ul li a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .widget-area .widget_categories ul {
   padding-left: 0;
@@ -3372,14 +3372,14 @@ Sidebar Area CSS
   color: #57647c;
   padding-left: 14px;
   font-size: 14.5px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-weight: 600;
 }
 .widget-area .widget_categories ul li:last-child {
   margin-bottom: 0;
 }
 .widget-area .widget_categories ul li::before {
-  background: #ff4800;
+  background: #ea560d;
   height: 7px;
   width: 7px;
   content: "";
@@ -3391,7 +3391,7 @@ Sidebar Area CSS
   color: #57647c;
 }
 .widget-area .widget_categories ul li a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .widget-area .widget_categories ul li .post-count {
   float: right;
@@ -3407,14 +3407,14 @@ Sidebar Area CSS
   color: #57647c;
   padding-left: 14px;
   font-size: 14.5px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-weight: 600;
 }
 .widget-area .widget_meta ul li:last-child {
   margin-bottom: 0;
 }
 .widget-area .widget_meta ul li::before {
-  background: #ff4800;
+  background: #ea560d;
   height: 7px;
   width: 7px;
   content: "";
@@ -3426,7 +3426,7 @@ Sidebar Area CSS
   color: #57647c;
 }
 .widget-area .widget_meta ul li a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .widget-area .widget_tag_cloud .widget-title {
   margin-bottom: 12px;
@@ -3443,8 +3443,8 @@ Sidebar Area CSS
 }
 .widget-area .tagcloud a:hover, .widget-area .tagcloud a:focus {
   color: #ffffff;
-  background-color: #ff4800;
-  border-color: #ff4800;
+  background-color: #ea560d;
+  border-color: #ea560d;
 }
 
 /*================================================
@@ -3500,7 +3500,7 @@ FAQ Area CSS
   margin-bottom: 0;
 }
 .faq-accordion .accordion .accordion__button {
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   border-bottom: none;
   color: #333333;
   cursor: pointer;
@@ -3517,7 +3517,7 @@ FAQ Area CSS
   outline: 0;
 }
 .faq-accordion .accordion .accordion__button span::before {
-  background-color: #ff4800;
+  background-color: #ea560d;
   position: absolute;
   height: 100%;
   width: 40px;
@@ -3583,7 +3583,7 @@ FAQ Area CSS
   border: none;
   box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
   height: 50px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 16px;
 }
 .faq-contact-form form .row {
@@ -3703,7 +3703,7 @@ Coming Soon Area CSS
   line-height: 37px;
   border-radius: 50%;
   background-color: #dddddd;
-  color: #212529;
+  color: #111111;
   font-size: 14px;
 }
 .coming-soon-area .coming-soon-content .social ul li a.twitter {
@@ -3727,7 +3727,7 @@ Coming Soon Area CSS
   color: #ffffff;
 }
 .coming-soon-area .coming-soon-content .social ul li a:hover {
-  background-color: #ff4800;
+  background-color: #ea560d;
   color: #ffffff;
 }
 .coming-soon-area .coming-soon-time {
@@ -3770,7 +3770,7 @@ Coming Soon Area CSS
   margin-top: 15px;
   font-size: 45px;
   font-weight: 700;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .coming-soon-area .coming-soon-time #timer div span {
   text-transform: uppercase;
@@ -3813,7 +3813,7 @@ Contact Area CSS
   border: none;
   box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
   height: 50px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 16px;
 }
 .contact-form form .row {
@@ -3879,17 +3879,17 @@ Contact Area CSS
 }
 .contact-info .contact-info-content h2 .number {
   display: inline-block;
-  color: #ff4800;
+  color: #ea560d;
 }
 .contact-info .contact-info-content h2 .number:hover {
-  color: #4ac728;
+  color: #11224e;
 }
 .contact-info .contact-info-content h2 .email {
   display: inline-block;
-  color: #4ac728;
+  color: #11224e;
 }
 .contact-info .contact-info-content h2 .email:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .contact-info .contact-info-content h2 .or {
   display: block;
@@ -3922,8 +3922,8 @@ Contact Area CSS
 }
 .contact-info .contact-info-content .social li a:hover {
   color: #ffffff;
-  border-color: #ff4800;
-  background-color: #ff4800;
+  border-color: #ea560d;
+  background-color: #ea560d;
 }
 
 /*================================================
@@ -3968,7 +3968,7 @@ Footer Area CSS
 .single-footer-widget .social li a {
   width: 35px;
   height: 35px;
-  background-color: #212529;
+  background-color: #111111;
   line-height: 35px;
   border-radius: 50%;
   color: #ffffff;
@@ -3978,7 +3978,7 @@ Footer Area CSS
   font-size: 13px;
 }
 .single-footer-widget .social li a:hover {
-  background-color: #ff4800;
+  background-color: #ea560d;
   color: #ffffff;
 }
 .single-footer-widget h3 {
@@ -3996,7 +3996,7 @@ Footer Area CSS
   bottom: 0;
   width: 40px;
   height: 2px;
-  background: #ff4800;
+  background: #ea560d;
 }
 .single-footer-widget .footer-services-list {
   padding-left: 0;
@@ -4013,7 +4013,7 @@ Footer Area CSS
   color: #ffffff;
 }
 .single-footer-widget .footer-services-list li a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .single-footer-widget .footer-services-list li:last-child {
   margin-bottom: 0;
@@ -4033,7 +4033,7 @@ Footer Area CSS
   color: #ffffff;
 }
 .single-footer-widget .quick-links-list li a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .single-footer-widget .quick-links-list li:last-child {
   margin-bottom: 0;
@@ -4054,7 +4054,7 @@ Footer Area CSS
   color: #ffffff;
 }
 .single-footer-widget .footer-contact-list li a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .single-footer-widget .footer-contact-list li span {
   font-weight: 700;
@@ -4079,7 +4079,7 @@ Footer Area CSS
   font-weight: 600;
 }
 .copyright-area p a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .copyright-area ul {
   padding-left: 0;
@@ -4099,7 +4099,7 @@ Footer Area CSS
   color: #ffffff;
 }
 .copyright-area ul li a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .copyright-area ul li::before {
   content: "";
@@ -4187,7 +4187,7 @@ Go Top CSS
   bottom: 15px;
   right: 15px;
   color: #ffffff;
-  background: #ff4800;
+  background: #ea560d;
   z-index: 4;
   width: 40px;
   text-align: center;
@@ -4217,7 +4217,7 @@ Go Top CSS
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: #4ac728;
+  background: #11224e;
   opacity: 0;
   visibility: hidden;
   transition: 0.5s;
@@ -4263,7 +4263,7 @@ Navbar Area CSS
   position: relative;
 }
 .navbar-area.navbar-style-three.p-relative .main-nav .navbar .others-options .btn-primary {
-  background-color: #ff4800;
+  background-color: #ea560d;
   color: #ffffff;
 }
 .navbar-area.navbar-style-three.p-relative.is-sticky {
@@ -4278,190 +4278,190 @@ Navbar Area CSS
   display: inline-block !important;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item a:hover, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item a:focus, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item:hover a, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item:focus a, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
   text-transform: capitalize;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .others-options .cart-btn {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-three .main-nav .navbar .others-options .cart-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .others-options .option-item {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-three .main-nav .navbar .others-options .option-item .search-btn {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-three .main-nav .navbar .others-options .option-item .search-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-three .main-nav .navbar .others-options .option-item .close-btn {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-three .main-nav .navbar .others-options .option-item .close-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 
 .navbar-style-four .main-nav .navbar-brand img {
   display: inline-block !important;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item a:hover, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item a:focus, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item:hover a, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item:focus a, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
   text-transform: capitalize;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .others-options .cart-btn {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-four .main-nav .navbar .others-options .cart-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .others-options .option-item {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-four .main-nav .navbar .others-options .option-item .search-btn {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-four .main-nav .navbar .others-options .option-item .search-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-style-four .main-nav .navbar .others-options .option-item .close-btn {
-  color: #212529;
+  color: #111111;
 }
 .navbar-style-four .main-nav .navbar .others-options .option-item .close-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 
 /*================================================
@@ -4481,7 +4481,7 @@ Main Banner Area CSS
   margin-top: 30px;
 }
 .home-slides .swiper-button-next, .home-slides .swiper-button-prev {
-  color: #ff4800;
+  color: #ea560d;
 }
 
 .startup-banner-area {
@@ -4520,10 +4520,10 @@ Main Banner Area CSS
 }
 .startup-banner-content .btn-box .optional-btn {
   display: inline-block;
-  color: #212529;
+  color: #111111;
   position: relative;
   margin-left: 20px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 16px;
   font-weight: 700;
 }
@@ -4534,7 +4534,7 @@ Main Banner Area CSS
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: #212529;
+  background-color: #111111;
   transition: 0.5s;
 }
 .startup-banner-content .btn-box .optional-btn::after {
@@ -4544,11 +4544,11 @@ Main Banner Area CSS
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #ff4800;
+  background-color: #ea560d;
   transition: 0.5s;
 }
 .startup-banner-content .btn-box .optional-btn:hover {
-  color: #212529;
+  color: #111111;
 }
 .startup-banner-content .btn-box .optional-btn:hover::before {
   width: 0;
@@ -4576,7 +4576,7 @@ Main Services Area CSS
 .single-main-services-box .icon {
   margin-bottom: 22px;
   line-height: 1;
-  color: #ff4800;
+  color: #ea560d;
 }
 .single-main-services-box .icon i::before {
   font-size: 50px;
@@ -4589,11 +4589,11 @@ Main Services Area CSS
 .single-main-services-box .link-btn {
   display: inline-block;
   font-weight: 600;
-  color: #ff4800;
+  color: #ea560d;
 }
 .single-main-services-box:hover {
-  border-color: #ff4800;
-  box-shadow: 5px 5px #ff4800;
+  border-color: #ea560d;
+  box-shadow: 5px 5px #ea560d;
 }
 
 /*================================================
@@ -4716,7 +4716,7 @@ Solutions Area CSS
   line-height: 75px;
   transition: 0.5s;
   text-align: center;
-  color: #ff4800;
+  color: #ea560d;
 }
 .single-solutions-box .icon i::before {
   font-size: 35px;
@@ -4727,12 +4727,12 @@ Solutions Area CSS
   font-weight: 700;
 }
 .single-solutions-box.active, .single-solutions-box:hover {
-  border-color: #ff4800;
-  box-shadow: 5px 5px #ff4800;
+  border-color: #ea560d;
+  box-shadow: 5px 5px #ea560d;
   background-color: #ffffff;
 }
 .single-solutions-box.active .icon, .single-solutions-box:hover .icon {
-  background-color: #ff4800;
+  background-color: #ea560d;
   color: #ffffff;
 }
 
@@ -4762,7 +4762,7 @@ Testimonials Area CSS
   padding-left: 30px;
 }
 .testimonials-section .section-title .icon i {
-  color: #ff4800;
+  color: #ea560d;
   line-height: 1;
 }
 .testimonials-section .section-title .icon i::before {
@@ -4781,7 +4781,7 @@ Testimonials Area CSS
   margin-bottom: 30px;
 }
 .single-testimonials-box p {
-  color: #212529;
+  color: #111111;
   margin-bottom: 0;
   font-size: 22px;
 }
@@ -4794,7 +4794,7 @@ Testimonials Area CSS
   font-weight: 700;
 }
 .single-testimonials-box .client-info span {
-  color: #ff4800;
+  color: #ea560d;
 }
 
 /*================================================
@@ -4825,7 +4825,7 @@ Pricing Area CSS
   background-color: #ffefe9;
 }
 .pricing-bg-color.pricing-tab .tabs li.current, .pricing-bg-color.pricing-tab .tabs li:hover {
-  background-color: #212529;
+  background-color: #111111;
 }
 .pricing-bg-color .single-pricing-box {
   border: 1px solid #ffd1bf;
@@ -4834,8 +4834,8 @@ Pricing Area CSS
   text-align: center;
 }
 .pricing-bg-color .single-pricing-box.active, .pricing-bg-color .single-pricing-box:hover {
-  border-color: #ff4800;
-  box-shadow: 5px 5px #ff4800;
+  border-color: #ea560d;
+  box-shadow: 5px 5px #ea560d;
 }
 .pricing-bg-color .single-pricing-box .pricing-features {
   text-align: left;
@@ -4870,7 +4870,7 @@ Newsletter Area CSS
   height: 50px;
   border: none;
   background-color: #ffdacb !important;
-  color: #212529;
+  color: #111111;
   outline: 0 !important;
   box-shadow: unset !important;
   padding-left: 20px;
@@ -4904,18 +4904,18 @@ Newsletter Area CSS
   transition: 0.5s;
   padding: 13px 30px;
   color: #ffffff;
-  background-color: #ff4800;
+  background-color: #ea560d;
   font-size: 16px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-weight: 600;
 }
 .newsletter-inner .content form button:hover {
-  background-color: #4ac728;
+  background-color: #11224e;
   color: #ffffff;
 }
 .newsletter-inner:hover {
-  border-color: #ff4800;
-  box-shadow: 5px 5px #ff4800;
+  border-color: #ea560d;
+  box-shadow: 5px 5px #ea560d;
 }
 
 /*================================================
@@ -4931,13 +4931,13 @@ Fun Facts Area CSS
   text-align: center;
 }
 .single-funfacts h3 {
-  color: #ff4800;
+  color: #ea560d;
   margin-bottom: 0;
   font-size: 32px;
   font-weight: 700;
 }
 .single-funfacts h3 .odometer-auto-theme {
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .single-funfacts p {
   line-height: initial;
@@ -5013,7 +5013,7 @@ Projects Area CSS
   border-radius: 5px;
 }
 .single-projects-box .plus-icon a {
-  background-color: #ff4800;
+  background-color: #ea560d;
   width: 70px;
   height: 70px;
   position: absolute;
@@ -5050,14 +5050,14 @@ Projects Area CSS
   transform: translateY(-50%);
 }
 .single-projects-box .plus-icon a:hover {
-  background-color: #4ac728;
+  background-color: #11224e;
 }
 .single-projects-box:hover .plus-icon a {
   transform: scale(1);
 }
 
 .projects-slides .swiper-button-next, .projects-slides .swiper-button-prev {
-  color: #ff4800;
+  color: #ea560d;
 }
 
 .circle-shape1 {
@@ -5097,7 +5097,7 @@ Pricing Area CSS
 .single-pricing-box .price {
   font-size: 50px;
   font-weight: 700;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   margin-bottom: 10px;
 }
 .single-pricing-box .price span {
@@ -5136,7 +5136,7 @@ Pricing Area CSS
   margin-bottom: 0;
 }
 .single-pricing-box .pricing-features li i {
-  color: #ff4800;
+  color: #ea560d;
   font-size: 12px;
   position: absolute;
   left: 0;
@@ -5176,17 +5176,17 @@ Pricing Area CSS
   cursor: pointer;
   margin-left: -2px;
   margin-right: -2px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-weight: 600;
   font-size: 16px;
 }
 .pricing-tab .tabs li:hover {
   color: #ffffff;
-  background-color: #212529;
+  background-color: #111111;
 }
 .pricing-tab .tabs li.current {
   color: #ffffff;
-  background-color: #212529;
+  background-color: #111111;
 }
 .pricing-tab .tabs li:nth-child(1) {
   border-radius: 5px 0 0 5px;
@@ -5221,10 +5221,10 @@ Pricing Area CSS
   margin-bottom: 0;
 }
 .pricing-box .price {
-  color: #212529;
+  color: #111111;
   font-size: 50px;
   font-weight: 700;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   margin-bottom: 10px;
 }
 .pricing-box .price span {
@@ -5265,7 +5265,7 @@ Pricing Area CSS
   margin-bottom: 0;
 }
 .pricing-box .pricing-features li i {
-  color: #ff4800;
+  color: #ea560d;
   font-size: 12px;
   position: absolute;
   left: 0;
@@ -5284,12 +5284,12 @@ Pricing Area CSS
   background: linear-gradient(to left bottom, #dee4f3, #e7eaf6, #f0f1f9, #f8f8fc, #ffffff);
 }
 .pricing-tab.bg-color .tabs li:hover {
-  color: #212529;
+  color: #111111;
   background: linear-gradient(to left bottom, #dee4f3, #e7eaf6, #f0f1f9, #f8f8fc, #ffffff);
 }
 .pricing-tab.bg-color .tabs li.current {
   color: #ffffff;
-  background: #212529;
+  background: #111111;
 }
 
 .testimonials-area {
@@ -5330,7 +5330,7 @@ Pricing Area CSS
 }
 .single-testimonials-item .client-info span {
   display: block;
-  color: #ff4800;
+  color: #ea560d;
   margin-top: 5px;
   font-size: 13px;
 }
@@ -5400,7 +5400,7 @@ Pricing Area CSS
   height: 12px;
 }
 .testimonials-slides .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #ff4800;
+  background-color: #ea560d;
 }
 
 /*================================================
@@ -5441,10 +5441,10 @@ Projects Details Area CSS
   color: #57647c;
 }
 .projects-details-info ul li a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .projects-details-info ul li span {
-  color: #212529;
+  color: #111111;
   font-weight: 600;
   font-size: 16px;
 }
@@ -5471,7 +5471,7 @@ Shop Area CSS
   margin-bottom: 40px;
 }
 .woocommerce-topbar .woocommerce-result-count p {
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 16px;
 }
 .woocommerce-topbar .woocommerce-topbar-ordering {
@@ -5487,7 +5487,7 @@ Shop Area CSS
   height: unset;
   line-height: initial;
   padding: 15px 35px 15px 20px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 16px;
 }
 
@@ -5518,13 +5518,13 @@ Shop Area CSS
   bottom: -46px;
   left: 0;
   width: 100%;
-  background-color: #212529;
+  background-color: #111111;
   color: #ffffff;
   padding: 12px 20px;
   text-transform: uppercase;
   opacity: 0;
   visibility: hidden;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 15px;
   font-weight: 600;
 }
@@ -5535,7 +5535,7 @@ Shop Area CSS
   transform: translateY(-50%);
 }
 .single-product-box .product-image .add-to-cart-btn:hover {
-  background-color: #ff4800;
+  background-color: #ea560d;
   color: #ffffff;
 }
 .single-product-box .product-image .sale-btn {
@@ -5550,7 +5550,7 @@ Shop Area CSS
   text-align: center;
   border-radius: 50%;
   text-transform: uppercase;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-weight: 600;
 }
 .single-product-box .product-content {
@@ -5562,8 +5562,8 @@ Shop Area CSS
   font-weight: 700;
 }
 .single-product-box .product-content .price {
-  color: #212529;
-  font-family: "Red Hat Display";
+  color: #111111;
+  font-family: "Red Hat Display", 'Montserrat';
   font-weight: 700;
 }
 .single-product-box .product-content .price .old {
@@ -5603,8 +5603,8 @@ Product Details Area CSS
 }
 .product-details-desc .price {
   margin-bottom: 10px;
-  color: #212529;
-  font-family: "Red Hat Display";
+  color: #111111;
+  font-family: "Red Hat Display", 'Montserrat';
   font-weight: 700;
 }
 .product-details-desc .price .old-price {
@@ -5627,13 +5627,13 @@ Product Details Area CSS
 }
 .product-details-desc .product-review .rating-count {
   display: inline-block;
-  color: #212529;
-  border-bottom: 1px solid #212529;
+  color: #111111;
+  border-bottom: 1px solid #111111;
   line-height: initial;
 }
 .product-details-desc .product-review .rating-count:hover {
-  color: #ff4800;
-  border-color: #ff4800;
+  color: #ea560d;
+  border-color: #ea560d;
 }
 .product-details-desc .product-add-to-cart {
   margin-top: 20px;
@@ -5664,11 +5664,11 @@ Product Details Area CSS
   right: 0;
 }
 .product-details-desc .product-add-to-cart .input-counter span:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .product-details-desc .product-add-to-cart .input-counter input {
   height: 45px;
-  color: #212529;
+  color: #111111;
   outline: 0;
   display: block;
   border: none;
@@ -5679,10 +5679,10 @@ Product Details Area CSS
   font-weight: 600;
 }
 .product-details-desc .product-add-to-cart .input-counter input::-moz-placeholder {
-  color: #212529;
+  color: #111111;
 }
 .product-details-desc .product-add-to-cart .input-counter input::placeholder {
-  color: #212529;
+  color: #111111;
 }
 .product-details-desc .product-add-to-cart .btn {
   height: 45px;
@@ -5743,7 +5743,7 @@ Product Details Area CSS
   content: "";
   width: 100%;
   height: 100%;
-  background: #212529;
+  background: #111111;
   display: block;
   transform: scale(0);
   opacity: 1;
@@ -5755,11 +5755,11 @@ Product Details Area CSS
   color: #57647c;
 }
 .product-details-desc .buy-checkbox-btn .cbx:hover span:first-child {
-  border-color: #212529;
+  border-color: #111111;
 }
 .product-details-desc .buy-checkbox-btn .inp-cbx:checked + .cbx span:first-child {
-  background: #212529;
-  border-color: #212529;
+  background: #111111;
+  border-color: #111111;
   animation: wave 0.4s ease;
 }
 .product-details-desc .buy-checkbox-btn .inp-cbx:checked + .cbx span:first-child svg {
@@ -5821,14 +5821,14 @@ Product Details Area CSS
   cursor: pointer;
   position: relative;
   text-transform: uppercase;
-  color: #212529;
+  color: #111111;
   border: 1px dashed #eeeeee;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-right: 30px;
   padding-left: 48px;
   font-weight: 700;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .products-details-tab .tabs li .dot {
   position: absolute;
@@ -5837,7 +5837,7 @@ Product Details Area CSS
   left: 30px;
   width: 12px;
   height: 12px;
-  border: 1px solid #212529;
+  border: 1px solid #111111;
   transition: 0.5s;
   border-radius: 50%;
 }
@@ -5848,15 +5848,15 @@ Product Details Area CSS
   left: 0;
   right: 0;
   bottom: 0;
-  background: #212529;
+  background: #111111;
   margin: 2px;
   border-radius: 50%;
   transition: 0.5s;
 }
 .products-details-tab .tabs li:hover, .products-details-tab .tabs li:focus {
   color: #ffffff;
-  background-color: #ff4800;
-  border-color: #ff4800;
+  background-color: #ea560d;
+  border-color: #ea560d;
 }
 .products-details-tab .tabs li:hover .dot, .products-details-tab .tabs li:focus .dot {
   border-color: #ffffff;
@@ -5866,8 +5866,8 @@ Product Details Area CSS
 }
 .products-details-tab .tabs li.current {
   color: #ffffff;
-  background-color: #ff4800;
-  border-color: #ff4800;
+  background-color: #ea560d;
+  border-color: #ea560d;
 }
 .products-details-tab .tabs li.current .dot {
   border-color: #ffffff;
@@ -5906,8 +5906,8 @@ Product Details Area CSS
 .products-details-tab .tab_content .tabs_item .products-details-tab-content .additional-information li span {
   display: inline-block;
   width: 30%;
-  color: #212529;
-  font-family: "Red Hat Display";
+  color: #111111;
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 16px;
   font-weight: 600;
 }
@@ -5983,7 +5983,7 @@ Product Details Area CSS
   text-decoration: underline;
 }
 .products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-comments .review-item .review-report-link:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-form {
   margin-top: 30px;
@@ -5997,7 +5997,7 @@ Product Details Area CSS
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 600;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-form form .form-group textarea {
   padding-top: 15px;
@@ -6030,7 +6030,7 @@ Cart Area CSS
   text-transform: uppercase;
   border: none;
   font-weight: 700;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 15px;
 }
 .cart-table table tbody tr td {
@@ -6049,7 +6049,7 @@ Cart Area CSS
   width: 80px;
 }
 .cart-table table tbody tr td.product-name {
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 15px;
 }
 .cart-table table tbody tr td.product-name a {
@@ -6058,7 +6058,7 @@ Cart Area CSS
   display: inline-block;
 }
 .cart-table table tbody tr td.product-name a:hover {
-  color: #4ac728;
+  color: #11224e;
 }
 .cart-table table tbody tr td.product-price span {
   font-weight: 500;
@@ -6094,11 +6094,11 @@ Cart Area CSS
   right: 0;
 }
 .cart-table table tbody tr td.product-quantity .input-counter span:hover {
-  color: #4ac728;
+  color: #11224e;
 }
 .cart-table table tbody tr td.product-quantity .input-counter input {
   height: 45px;
-  color: #212529;
+  color: #111111;
   outline: 0;
   display: block;
   border: none;
@@ -6109,10 +6109,10 @@ Cart Area CSS
   font-weight: 600;
 }
 .cart-table table tbody tr td.product-quantity .input-counter input::-moz-placeholder {
-  color: #212529;
+  color: #111111;
 }
 .cart-table table tbody tr td.product-quantity .input-counter input::placeholder {
-  color: #212529;
+  color: #111111;
 }
 .cart-table table tbody tr td.product-subtotal {
   overflow: hidden;
@@ -6133,7 +6133,7 @@ Cart Area CSS
   right: 0;
   top: 0;
   height: 45px;
-  background: #ff4800;
+  background: #ea560d;
   color: #ffffff;
   border: none;
   padding: 0 25px;
@@ -6142,7 +6142,7 @@ Cart Area CSS
   transition: 0.5s;
 }
 .cart-buttons .shopping-coupon-code button:hover {
-  background-color: #4ac728;
+  background-color: #11224e;
 }
 
 .cart-totals {
@@ -6167,10 +6167,10 @@ Cart Area CSS
 .cart-totals ul li {
   border: 1px solid #eaedff;
   padding: 10px 15px;
-  color: #212529;
+  color: #111111;
   overflow: hidden;
   font-weight: 700;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 15px;
 }
 .cart-totals ul li:first-child {
@@ -6183,7 +6183,7 @@ Cart Area CSS
   float: right;
   color: #57647c;
   font-weight: normal;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 14px;
 }
 
@@ -6195,7 +6195,7 @@ Checkout Area CSS
   background: #ffffff;
   padding: 18px 20px 15px;
   margin-bottom: 65px;
-  border-top: 3px solid #ff4800;
+  border-top: 3px solid #ea560d;
   position: relative;
 }
 .user-actions::before {
@@ -6208,20 +6208,20 @@ Checkout Area CSS
   background: #eeeeee;
 }
 .user-actions i {
-  color: #ff4800;
+  color: #ea560d;
   margin-right: 2px;
 }
 .user-actions span {
   display: inline-block;
   font-weight: 600;
-  color: #ff4800;
+  color: #ea560d;
 }
 .user-actions span a {
   display: inline-block;
-  color: #212529;
+  color: #111111;
 }
 .user-actions span a:hover, .user-actions span a:focus {
-  color: #ff4800;
+  color: #ea560d;
 }
 
 .checkout-area .title {
@@ -6239,7 +6239,7 @@ Checkout Area CSS
   margin-bottom: 7px;
   font-size: 14px;
   font-weight: 600;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .billing-details .form-group label .required {
   color: red;
@@ -6250,7 +6250,7 @@ Checkout Area CSS
   background-color: transparent;
   border-radius: 0;
   transition: 0.5s;
-  color: #212529;
+  color: #111111;
   line-height: normal;
   line-height: initial;
   padding-left: 13px;
@@ -6261,7 +6261,7 @@ Checkout Area CSS
 }
 .billing-details .form-check {
   margin-bottom: 20px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .billing-details .form-check .form-check-label {
   color: #57647c;
@@ -6289,7 +6289,7 @@ Checkout Area CSS
   padding-right: 20px;
   padding-bottom: 15px;
   font-weight: 700;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 15px;
 }
 .order-details .order-table table tbody tr td {
@@ -6300,7 +6300,7 @@ Checkout Area CSS
   padding-right: 20px;
 }
 .order-details .order-table table tbody tr td.product-name {
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 15px;
 }
 .order-details .order-table table tbody tr td.product-name a {
@@ -6309,14 +6309,14 @@ Checkout Area CSS
   font-weight: 500;
 }
 .order-details .order-table table tbody tr td.product-name a:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .order-details .order-table table tbody tr td.order-subtotal, .order-details .order-table table tbody tr td.order-shipping, .order-details .order-table table tbody tr td.total-price {
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 15px;
 }
 .order-details .order-table table tbody tr td.order-subtotal span, .order-details .order-table table tbody tr td.order-shipping span, .order-details .order-table table tbody tr td.total-price span {
-  color: #212529;
+  color: #111111;
   font-weight: 600;
 }
 .order-details .order-table table tbody tr td.shipping-price, .order-details .order-table table tbody tr td.order-subtotal-price, .order-details .order-table table tbody tr td.product-subtotal {
@@ -6338,7 +6338,7 @@ Checkout Area CSS
   padding-left: 27px;
   cursor: pointer;
   display: block;
-  color: #212529;
+  color: #111111;
   position: relative;
   margin-bottom: 8px;
   font-weight: 600;
@@ -6358,7 +6358,7 @@ Checkout Area CSS
   content: "";
   width: 12px;
   height: 12px;
-  background: #ff4800;
+  background: #ea560d;
   position: absolute;
   top: 6px;
   left: 3px;
@@ -6436,13 +6436,13 @@ Topbar Wrap Area CSS
   font-weight: 600;
 }
 .topbar-content span a {
-  color: #ff4800;
-  border-bottom: 1px solid #ff4800;
+  color: #ea560d;
+  border-bottom: 1px solid #ea560d;
   display: inline-block;
 }
 .topbar-content span a:hover {
-  color: #4ac728;
-  border-bottom: 1px solid #4ac728;
+  color: #11224e;
+  border-bottom: 1px solid #11224e;
 }
 
 .topbar-action-list {
@@ -6481,11 +6481,11 @@ Topbar Wrap Area CSS
   position: absolute;
   left: 0;
   top: 5px;
-  color: #ff4800;
+  color: #ea560d;
   font-size: 12.5px;
 }
 .topbar-action-list li a:hover {
-  color: #4ac728;
+  color: #11224e;
 }
 
 /*================================================
@@ -6507,48 +6507,48 @@ Navbar Area CSS
   padding-right: 30px;
 }
 .navbar-area-with-position-relative .main-nav .navbar .navbar-nav .nav-item a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area-with-position-relative .main-nav .navbar .navbar-nav .nav-item a:hover, .navbar-area-with-position-relative .main-nav .navbar .navbar-nav .nav-item a:focus, .navbar-area-with-position-relative .main-nav .navbar .navbar-nav .nav-item a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area-with-position-relative .main-nav .navbar .navbar-nav .nav-item:hover a, .navbar-area-with-position-relative .main-nav .navbar .navbar-nav .nav-item:focus a, .navbar-area-with-position-relative .main-nav .navbar .navbar-nav .nav-item.active a {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area-with-position-relative .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area-with-position-relative .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .navbar-area-with-position-relative .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus, .navbar-area-with-position-relative .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area-with-position-relative .main-nav .navbar .others-options .cart-btn {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area-with-position-relative .main-nav .navbar .others-options .cart-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area-with-position-relative .main-nav .navbar .others-options .btn-primary {
-  background-color: #ff4800;
+  background-color: #ea560d;
   color: #ffffff;
 }
 .navbar-area-with-position-relative .main-nav .navbar .others-options .btn-primary:hover {
   color: #ffffff !important;
-  background-color: #4ac728 !important;
+  background-color: #11224e !important;
 }
 .navbar-area-with-position-relative .main-nav .navbar .others-options .option-item {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area-with-position-relative .main-nav .navbar .others-options .option-item .search-btn {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area-with-position-relative .main-nav .navbar .others-options .option-item .search-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 .navbar-area-with-position-relative .main-nav .navbar .others-options .option-item .close-btn {
-  color: #212529;
+  color: #111111;
 }
 .navbar-area-with-position-relative .main-nav .navbar .others-options .option-item .close-btn:hover {
-  color: #ff4800;
+  color: #ea560d;
 }
 
 /*================================================
@@ -6604,7 +6604,7 @@ AI Main Banner Area CSS
   margin-left: 5px;
   font-size: 14.5px;
   font-weight: 600;
-  color: #212529;
+  color: #111111;
   cursor: pointer;
 }
 .ai-main-banner-content .banner-btn li .video-btn i {
@@ -6734,7 +6734,7 @@ Fun Facts Area CSS
   margin-bottom: 0;
 }
 .single-funfacts-card h3 .odometer-auto-theme {
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
 }
 .single-funfacts-card p {
   color: #ffffff;
@@ -6833,7 +6833,7 @@ Top Featured Area CSS
   visibility: visible;
 }
 .top-featured-card:hover .learn-btn {
-  color: #ff4800;
+  color: #ea560d;
 }
 
 .top-featured-btn {
@@ -6899,11 +6899,11 @@ AI About Area CSS
 }
 .ai-about-content .about-btn .btn-primary {
   background-color: transparent;
-  border: 2px solid #ff4800;
+  border: 2px solid #ea560d;
   color: #57647c;
 }
 .ai-about-content .about-btn .btn-primary:hover {
-  border: 2px solid #4ac728;
+  border: 2px solid #11224e;
 }
 
 .ai-about-image {
@@ -7021,11 +7021,11 @@ AI Services Area CSS
   margin-bottom: 15.5px;
 }
 .single-services-card .read-btn {
-  background: #FF4800;
+  background: #ea560d;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  border-bottom: 1px solid #FF4800;
+  border-bottom: 1px solid #ea560d;
   font-size: 15px;
   font-weight: 600;
 }
@@ -7137,8 +7137,8 @@ AI Pricing Area CSS
   text-align: center;
   font-size: 40px;
   font-weight: bold;
-  color: #ff4800;
-  font-family: "Red Hat Display";
+  color: #ea560d;
+  font-family: "Red Hat Display", 'Montserrat';
   margin-top: 22px;
   margin-bottom: 22px;
 }
@@ -7182,11 +7182,11 @@ AI Pricing Area CSS
 }
 .ai-pricing-card .pricing-btn .btn-primary {
   background-color: transparent;
-  border: 2px solid #ff4800;
+  border: 2px solid #ea560d;
   color: #57647c;
 }
 .ai-pricing-card .pricing-btn .btn-primary:hover, .ai-pricing-card .pricing-btn .btn-primary:focus {
-  background-color: #ff4800 !important;
+  background-color: #ea560d !important;
   color: #ffffff !important;
   box-shadow: unset !important;
 }
@@ -7207,8 +7207,8 @@ AI Pricing Area CSS
   transform: translateY(-5px);
 }
 .ai-pricing-card:hover .pricing-btn .btn-primary {
-  background-color: #ff4800;
-  border: 2px solid #ff4800;
+  background-color: #ea560d;
+  border: 2px solid #ea560d;
   color: #ffffff;
 }
 
@@ -7270,7 +7270,7 @@ AI Blog Area CSS
   display: inline-block;
   background: rgba(255, 72, 0, 0.05);
   border-radius: 30px;
-  color: #ff4800;
+  color: #ea560d;
   padding: 10px 25px;
   font-weight: 600;
 }
@@ -7284,12 +7284,12 @@ AI Blog Area CSS
   transition: 0.5s;
 }
 .ai-blog-card .entry-post-content h3 a {
-  color: #212529;
+  color: #111111;
   position: relative;
   display: inline;
   transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
   padding: 0.1% 0px;
-  background-image: linear-gradient(270deg, #ff4800 0%, #ff4800 100%);
+  background-image: linear-gradient(270deg, #ea560d 0%, #ea560d 100%);
   background-size: 0px 2px;
   background-position: 0px 95%;
   background-repeat: no-repeat;
@@ -7301,7 +7301,7 @@ AI Blog Area CSS
   top: 12px;
   height: 3.5px;
   width: 35px;
-  background-color: #ff4800;
+  background-color: #ea560d;
   z-index: -1;
   border-radius: 15px;
   opacity: 0;
@@ -7331,14 +7331,14 @@ AI Blog Area CSS
   transform: translateY(-50%);
   height: 8px;
   width: 8px;
-  background-color: #ff4800;
+  background-color: #ea560d;
   border-radius: 50%;
 }
 .ai-blog-card .entry-post-content .entry-meta li a {
   color: #57647c;
 }
 .ai-blog-card .entry-post-content .entry-meta li a:hover {
-  color: #ff4800;
+  color: #ea560d;
   text-decoration-line: underline;
 }
 .ai-blog-card .entry-post-content .entry-meta li:last-child {
@@ -7351,7 +7351,7 @@ AI Blog Area CSS
   padding-left: 50px;
 }
 .ai-blog-card:hover .entry-post-content h3 a {
-  color: #ff4800;
+  color: #ea560d;
   background-size: 100% 2px;
 }
 .ai-blog-card:hover .entry-post-content h3::before {
@@ -7419,7 +7419,7 @@ AI Subscribe Area CSS
   position: absolute;
   right: 0;
   top: 0;
-  background-color: #ff4800;
+  background-color: #ea560d;
   color: #ffffff;
   border: none;
   height: 55px;
@@ -7427,12 +7427,12 @@ AI Subscribe Area CSS
   border-radius: 70px;
   transition: 0.5s;
   line-height: 55px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 15px;
   font-weight: 700;
 }
 .ai-subscribe-content .newsletter-form button:hover {
-  background-color: #4ac728;
+  background-color: #11224e;
   color: #ffffff;
 }
 .ai-subscribe-content .newsletter-form .newsletter-checkbox-btn {
@@ -7484,7 +7484,7 @@ AI Subscribe Area CSS
   content: "";
   width: 100%;
   height: 100%;
-  background: #212529;
+  background: #111111;
   display: block;
   transform: scale(0);
   opacity: 1;
@@ -7496,11 +7496,11 @@ AI Subscribe Area CSS
   color: #57647c;
 }
 .ai-subscribe-content .newsletter-form .newsletter-checkbox-btn .cbx:hover span:first-child {
-  border-color: #ff4800;
+  border-color: #ea560d;
 }
 .ai-subscribe-content .newsletter-form .newsletter-checkbox-btn .inp-cbx:checked + .cbx span:first-child {
-  background: #ff4800;
-  border-color: #ff4800;
+  background: #ea560d;
+  border-color: #ea560d;
   animation: wave 0.4s ease;
 }
 .ai-subscribe-content .newsletter-form .newsletter-checkbox-btn .inp-cbx:checked + .cbx span:first-child svg {
@@ -7617,7 +7617,7 @@ ML Main Banner Area CSS
   position: absolute;
   right: 0;
   top: 0;
-  background-color: #ff4800;
+  background-color: #ea560d;
   color: #ffffff;
   border: none;
   height: 55px;
@@ -7625,12 +7625,12 @@ ML Main Banner Area CSS
   border-radius: 70px;
   transition: 0.5s;
   line-height: 55px;
-  font-family: "Red Hat Display";
+  font-family: "Red Hat Display", 'Montserrat';
   font-size: 15px;
   font-weight: 700;
 }
 .ml-main-banner-content .banner-form button:hover {
-  background-color: #4ac728;
+  background-color: #11224e;
   color: #ffffff;
 }
 .ml-main-banner-content .banner-btn {
@@ -7904,13 +7904,13 @@ Unique Testimonials Area CSS
   display: inline-block;
   background: rgba(255, 72, 0, 0.05);
   border-radius: 30px;
-  color: #ff4800;
+  color: #ea560d;
   padding: 10px 25px;
   font-weight: 600;
   margin-bottom: 22px;
 }
 .unique-testimonials-box p {
-  color: #212529;
+  color: #111111;
   margin-bottom: 0;
   font-size: 22.8px;
   position: relative;
@@ -7949,7 +7949,7 @@ Unique Testimonials Area CSS
   border: 5px solid #ffffff;
 }
 .unique-testimonials-box::before {
-  color: #ff4800;
+  color: #ea560d;
   position: absolute;
   left: 0;
   right: 0;
@@ -8002,7 +8002,7 @@ Unique Testimonials Area CSS
   height: 12px;
 }
 .unique-testimonials-slides .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #ff4800;
+  background-color: #ea560d;
 }
 
 /*================================================
@@ -8029,7 +8029,7 @@ Creativity Area CSS
 }
 .creativity-content .skill-bar .progress-title {
   font-size: 16.5px;
-  color: #212529;
+  color: #111111;
   font-weight: bold;
 }
 .creativity-content .skill-bar .progress-number-mark {
@@ -8048,9 +8048,9 @@ Creativity Area CSS
   transition: 0.5s;
 }
 .creativity-content .skill-bar .progress-number-mark:hover {
-  background-color: #ff4800;
+  background-color: #ea560d;
   color: #ffffff;
-  border: 1px solid #ff4800;
+  border: 1px solid #ea560d;
 }
 .creativity-content .skill-bar .progress-content-outter {
   background-color: #E3E9FF;
@@ -8158,7 +8158,7 @@ AI Team Area CSS
   transition: 0.5s;
 }
 .ai-team-card .team-image .social a:hover {
-  color: #212529;
+  color: #111111;
 }
 .ai-team-card .team-content {
   margin-top: 30px;

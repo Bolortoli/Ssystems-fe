@@ -12,6 +12,9 @@ import FreeTrialForm from "../components/Common/FreeTrialForm";
 import Footer from "../components/Layouts/Footer";
 import ContactFormContent from "../components/HomeOne/ContactFormContent";
 import axios from "axios";
+import PartnerSlider from "../components/HomeOne/PartnerSlider";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 // import { useRouter } from "next/router";
 import "dotenv/config";
 
@@ -26,7 +29,7 @@ const Index = (props) => {
       <About data={props.content.translation_data} />
       <Services cardsData={props.content.solution_cards} data={props.content.translation_data} />
       <Webinar data={props.content.translation_data} />
-      <PartnerContent partners={props.content.partners} data={props.content.translation_data} />
+      <PartnerSlider partners={props.content.partners} data={props.content.translation_data} />
       <FeedbackSlider data={props.content.translation_data} />
       <BlogPost data={props.content.translation_data} blogs={props.content.blogs} />
       <ContactFormContent data={props.content.translation_data} />
@@ -39,8 +42,9 @@ const Index = (props) => {
 };
 
 export async function getServerSideProps(context) {
-  // try {
+  try {
   const { locale } = context;
+  console.log(locale)
 
   const responseHome = await axios.get(
     `${process.env.CMS_ENDPOINT_LOCAL}/items/home_content?fields=*.*.*.*`
@@ -75,6 +79,7 @@ export async function getServerSideProps(context) {
   let blog_translation = responseBLogs.data.data.map(d => {
     let categories = d.category.map(cat => {
       let categoryTranslation = cat.blog_category_id.translations.find(trans => trans.languages_code == locale)
+      // let categoryTranslation = cat.blog_category_id.translations.find(trans => trans.languages_code == locale)
 
       return {
         id: cat.id,
@@ -101,17 +106,18 @@ export async function getServerSideProps(context) {
         partners: responsePartners.data,
         blogs: blog_translation
       },
-      message: "success"
+      message: "success",
+      ...(await serverSideTranslations(locale, ['common']))
     },
   };
-  // } catch (error) {
-  //   console.error("Error fetching data:", error);
-  //   return {
-  //     props: {
-  //       message: JSON.stringify(error)
-  //     }
-  //   }
-  // }
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return {
+      props: {
+        message: JSON.stringify(error)
+      }
+    }
+  }
 }
 
 export default Index;
