@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import FeaturedServices from "./FeaturedServices";
+import FunFacts from "./FunFacts";
 
 const MainBanner = ({ data }) => {
   if (!data || data.length === 0) {

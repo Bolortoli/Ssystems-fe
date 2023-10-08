@@ -6,7 +6,7 @@ const FeaturedServices = () => {
     <>
       <div className="featured-services-area">
         <div className="container">
-          <div className="row justify-content-center">
+          {/* <div className="row justify-content-center">
             <div
               className="col-lg-4 col-md-6 col-sm-6"
               data-aos="fade-in"
@@ -68,7 +68,7 @@ const FeaturedServices = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

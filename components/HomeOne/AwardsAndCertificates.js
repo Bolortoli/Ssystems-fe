@@ -3,14 +3,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from 'swiper';
 
 
-const PartnerSlider = ({ partners, data }) => {
+const AwardsAndCertificates = ({ awards, data }) => {
 
   return (
     <>
       <div className="partner-section ptb-110">
         <div className="container">
           <div className="section-title">
-            <h2>{data.section5_title}</h2>
+            <h2>{data.awards_title}</h2>
+            <p>{data.awards_text}</p>
           </div>
 
           <Swiper
@@ -39,38 +40,38 @@ const PartnerSlider = ({ partners, data }) => {
             }}
             className="partner-slides"
           >
-            {partners.data.map(d => (
+            {awards.data.map(d => (
               <SwiperSlide>
                 <div className="single-partner-item">
-                  <a href={d.website_link} target="_blank" rel="noreferrer">
-                    <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${d.logo}`} alt="image" />
+                  <a href={d.link} target="_blank" rel="noreferrer">
+                    <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${d.image}`} alt="image" />
                   </a>
                 </div>
               </SwiperSlide>
             ))}
-            {partners.data.map(d => (
+            {awards.data.map(d => (
               <SwiperSlide>
                 <div className="single-partner-item">
-                  <a href={d.website_link} target="_blank" rel="noreferrer">
-                    <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${d.logo}`} alt="image" />
+                  <a href={d.link} target="_blank" rel="noreferrer">
+                    <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${d.image}`} alt="image" />
                   </a>
                 </div>
               </SwiperSlide>
             ))}
-            {partners.data.map(d => (
+            {awards.data.map(d => (
               <SwiperSlide>
                 <div className="single-partner-item">
-                  <a href={d.website_link} target="_blank" rel="noreferrer">
-                    <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${d.logo}`} alt="image" />
+                  <a href={d.link} target="_blank" rel="noreferrer">
+                    <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${d.image}`} alt="image" />
                   </a>
                 </div>
               </SwiperSlide>
             ))}
-            {partners.data.map(d => (
+            {awards.data.map(d => (
               <SwiperSlide>
                 <div className="single-partner-item">
-                  <a href={d.website_link} target="_blank" rel="noreferrer">
-                    <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${d.logo}`} alt="image" />
+                  <a href={d.link} target="_blank" rel="noreferrer">
+                    <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${d.image}`} alt="image" />
                   </a>
                 </div>
               </SwiperSlide>
@@ -94,4 +95,4 @@ const PartnerSlider = ({ partners, data }) => {
   );
 };
 
-export default PartnerSlider;
+export default AwardsAndCertificates;

@@ -11,12 +11,14 @@ import BlogPost from "../components/Common/BlogPost";
 import FreeTrialForm from "../components/Common/FreeTrialForm";
 import Footer from "../components/Layouts/Footer";
 import ContactFormContent from "../components/HomeOne/ContactFormContent";
+import AwardsAndCertificates from "../components/HomeOne/AwardsAndCertificates";
 import axios from "axios";
 import PartnerSlider from "../components/HomeOne/PartnerSlider";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 // import { useRouter } from "next/router";
 import "dotenv/config";
+import FunFacts from "../components/HomeOne/FunFacts";
 
 const Index = (props) => {
 
@@ -26,10 +28,12 @@ const Index = (props) => {
     <>
       <Navbar />
       <MainBanner data={props.content.translation_data} />
+      <FunFacts data={props.content.translation_data} />
       <About data={props.content.translation_data} />
+      <PartnerSlider partners={props.content.partners} data={props.content.translation_data} />
       <Services cardsData={props.content.solution_cards} data={props.content.translation_data} />
       <Webinar data={props.content.translation_data} />
-      <PartnerSlider partners={props.content.partners} data={props.content.translation_data} />
+      <AwardsAndCertificates awards={props.content.awards} data={props.content.translation_data} />
       <FeedbackSlider data={props.content.translation_data} />
       <BlogPost data={props.content.translation_data} blogs={props.content.blogs} />
       <ContactFormContent data={props.content.translation_data} />
@@ -43,73 +47,78 @@ const Index = (props) => {
 
 export async function getServerSideProps(context) {
   try {
-  const { locale } = context;
-  console.log(locale)
+    const { locale } = context;
+    console.log(locale)
 
-  const responseHome = await axios.get(
-    `${process.env.CMS_ENDPOINT_LOCAL}/items/home_content?fields=*.*.*.*`
-  )
+    const responseHome = await axios.get(
+      `${process.env.CMS_ENDPOINT_LOCAL}/items/home_content?fields=*.*.*.*`
+    )
 
-  const responsePartners = await axios.get(
-    `${process.env.CMS_ENDPOINT_LOCAL}/items/partners`
-  )
+    const responsePartners = await axios.get(
+      `${process.env.CMS_ENDPOINT_LOCAL}/items/partners`
+    )
 
-  const responseBLogs = await axios.get(
-    `${process.env.CMS_ENDPOINT_LOCAL}/items/blog?fields=*.*.*.*&filter[featured_on_home][_eq]=true&limit=3`
-  )
+    const responseAwards = await axios.get(
+      `${process.env.CMS_ENDPOINT_LOCAL}/items/awards`
+    )
 
-  if (!responseHome || !responsePartners) return {
-    props: {
-      message: "error"
-    }
-  };
+    const responseBLogs = await axios.get(
+      `${process.env.CMS_ENDPOINT_LOCAL}/items/blog?fields=*.*.*.*&filter[featured_on_home][_eq]=true&limit=3`
+    )
 
-  const data = responseHome.data;
+    if (!responseHome || !responsePartners) return {
+      props: {
+        message: "error"
+      }
+    };
 
-  const translation_data = data?.data?.translations?.find(
-    (d) => d.languages_code.code === locale
-  );
+    const data = responseHome.data;
 
-  const solution_cards = []
+    const translation_data = data?.data?.translations?.find(
+      (d) => d.languages_code.code === locale
+    );
 
-  data.data.solution_cards.forEach(card => {
-    solution_cards.push(card.solutions_card_id.translations.find(translation => translation.languages_code == locale))
-  })
+    const solution_cards = []
 
-  let blog_translation = responseBLogs.data.data.map(d => {
-    let categories = d.category.map(cat => {
-      let categoryTranslation = cat.blog_category_id.translations.find(trans => trans.languages_code == locale)
-      // let categoryTranslation = cat.blog_category_id.translations.find(trans => trans.languages_code == locale)
+    data.data.solution_cards.forEach(card => {
+      solution_cards.push(card.solutions_card_id.translations.find(translation => translation.languages_code == locale))
+    })
+
+    let blog_translation = responseBLogs.data.data.map(d => {
+      let categories = d.category.map(cat => {
+        let categoryTranslation = cat.blog_category_id.translations.find(trans => trans.languages_code == locale)
+        // let categoryTranslation = cat.blog_category_id.translations.find(trans => trans.languages_code == locale)
+
+        return {
+          id: cat.id,
+          name: categoryTranslation.name,
+          short_description: categoryTranslation.short_description,
+          icon: cat.blog_category_id.icon
+        }
+      })
+      let content = d.translations.find(trans => trans.languages_code.code == locale)
 
       return {
-        id: cat.id,
-        name: categoryTranslation.name,
-        short_description: categoryTranslation.short_description,
-        icon: cat.blog_category_id.icon
+        id: d.id,
+        categories,
+        cover_image: d?.cover_image?.id,
+        content
       }
     })
-    let content = d.translations.find(trans => trans.languages_code.code == locale)
 
     return {
-      id: d.id,
-      categories,
-      cover_image: d?.cover_image?.id,
-      content
-    }
-  })
-
-  return {
-    props: {
-      content: {
-        translation_data,
-        solution_cards,
-        partners: responsePartners.data,
-        blogs: blog_translation
+      props: {
+        content: {
+          translation_data,
+          solution_cards,
+          partners: responsePartners.data,
+          awards: responseAwards.data,
+          blogs: blog_translation
+        },
+        message: "success",
+        ...(await serverSideTranslations(locale, ['common']))
       },
-      message: "success",
-      ...(await serverSideTranslations(locale, ['common']))
-    },
-  };
+    };
   } catch (error) {
     console.error("Error fetching data:", error);
     return {

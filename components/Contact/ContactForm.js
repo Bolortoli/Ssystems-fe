@@ -3,18 +3,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 const MySwal = withReactContent(Swal);
-import baseUrl from "../../utils/baseUrl";
-
-const alertContent = () => {
-  MySwal.fire({
-    title: "Congratulations!",
-    text: "Your message was successfully send and will back to you soon",
-    icon: "success",
-    timer: 2000,
-    timerProgressBar: true,
-    showConfirmButton: false,
-  });
-};
+import "dotenv/config";
 
 // Form initial state
 const INITIAL_STATE = {
@@ -34,19 +23,41 @@ const ContactForm = () => {
     // console.log(contact)
   };
 
+  const alertSuccess = () => {
+    MySwal.fire({
+      title: "Congratulations!",
+      text: "Your message was successfully send and will back to you soon",
+      icon: "success",
+      timer: 2000,
+      timerProgressBar: true,
+      showConfirmButton: false,
+    });
+  };
+
+  const alertError = () => {
+    MySwal.fire({
+      title: "Oops!",
+      text: "There are some errors occured! Please try again! ",
+      icon: "error",
+      timer: 2000,
+      timerProgressBar: true,
+      showConfirmButton: false,
+    });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // try {
-    //   const url = `${baseUrl}/api/contact`;
-    //   const { name, email, number, subject, text } = contact;
-    //   const payload = { name, email, number, subject, text };
-    //   const response = await axios.post(url, payload);
-    //   console.log(response);
-    //   setContact(INITIAL_STATE);
-    //   alertContent();
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    try {
+      const { name, email, number, subject, text } = contact;
+      const payload = { name, email, number, subject, text };
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/items/contact_form`, payload);
+      console.log(response);
+      setContact(INITIAL_STATE);
+      alertSuccess();
+    } catch (error) {
+      alertError()
+      console.log(error);
+    }
   };
 
   return (
