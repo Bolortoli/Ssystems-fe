@@ -48,7 +48,6 @@ const Index = (props) => {
 export async function getServerSideProps(context) {
   try {
     const { locale } = context;
-    console.log(locale)
 
     const responseHome = await axios.get(
       `${process.env.CMS_ENDPOINT_LOCAL}/items/home_content?fields=*.*.*.*`
@@ -81,7 +80,7 @@ export async function getServerSideProps(context) {
     const solution_cards = []
 
     data.data.solution_cards.forEach(card => {
-      solution_cards.push(card.solutions_card_id.translations.find(translation => translation.languages_code == locale))
+      solution_cards.push({...card.solutions_card_id.translations.find(translation => translation.languages_code == locale), icon: card.solutions_card_id.icon.id})
     })
 
     let blog_translation = responseBLogs.data.data.map(d => {

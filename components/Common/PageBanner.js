@@ -2,23 +2,20 @@ import React, { Component } from "react";
 import Link from "next/link";
 
 const PageBanner = ({
-  pageTitle,
-  homePageUrl,
-  homePageText,
-  activePageText,
   bgImgClass,
+  data,
+  coverImage
 }) => {
   return (
     <>
-      <div className={`page-title-area ${bgImgClass}`}>
+      <div className={`page-title-area ${bgImgClass}`} style={{backgroundImage: `url(${coverImage})`}}>
         <div className="container">
           <div className="page-title-content">
-            <h2>{pageTitle}</h2>
+            <h2>{data.title}</h2>
             <ul>
               <li>
-                <Link href={homePageUrl}>{homePageText}</Link>
+                <span>{data.description}</span>
               </li>
-              <li>{activePageText}</li>
             </ul>
           </div>
         </div>

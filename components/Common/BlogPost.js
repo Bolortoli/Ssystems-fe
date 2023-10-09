@@ -6,8 +6,6 @@ const BlogPost = ({ data, blogs }) => {
     return <>Loading...</>;
   }
 
-  console.log(blogs)
-
   return (
     <>
       <section className="blog-area ptb-110">

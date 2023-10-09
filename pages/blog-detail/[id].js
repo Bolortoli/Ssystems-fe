@@ -30,7 +30,7 @@ const BlogDetails = ({ data }) => {
 
 export async function getServerSideProps(context) {
 
-  // try {
+  try {
     const { params } = context;
     const { id } = params;
     const { locale } = context;
@@ -82,13 +82,13 @@ export async function getServerSideProps(context) {
         }
       }
     };
-  // } catch (error) {
-  //   return {
-  //     props: {
-  //       message: "error"
-  //     }
-  //   };
-  // }
+  } catch (error) {
+    return {
+      props: {
+        message: "error"
+      }
+    };
+  }
 
 }
 
