@@ -20,9 +20,6 @@ const Team = ({ data, members }) => {
                 className="col-lg-3 col-sm-6"
                 onClick={()=> window.open(member.social, "_blank")}
                 style={{cursor: 'pointer'}}
-              // data-aos="fade-in"
-              // data-aos-duration="120"
-              // data-aos-delay="200"
               >
                 <div className="single-team-box">
                   <div className="image">
