@@ -35,7 +35,7 @@ export default class Services extends Component {
 
     return (
       <div key={this.state.data.detail_information}>
-        <div className="services-section bg-f2f6f9 ptb-110">
+        <div className="services-section ptb-110">
           <div className="container">
             <div className="section-title">
               <h2>{this.state.data.page_title}</h2>
@@ -65,131 +65,34 @@ export default class Services extends Component {
                     {this.state.data.detail_information.data.map(d => (
                       <div id={d.serviceName} className="tabs-item">
                         <div className="table-responsive">
-                          <table className="table table-hover table-borderless">
+                          <table className="table table-hover">
                             <thead>
                               <tr>
                                 {Object.keys(d.detailData[0]).map(key => (<th scope="col">{key}</th>))}
-                                {/* <th scope="col">Contact</th> */}
+                                <th scope="col"></th>
                               </tr>
                             </thead>
                             <tbody>
                               {d.detailData.map((row) => (
                                 <>
                                   <tr key={row.id}>
-                                    {Object.keys(row).map(key => (<td>{row[`${key}`]}</td>))}
+                                    {Object.keys(row).map((key, index) => (<td
+                                      style={{ lineHeight: '50px', color: index == 0 ? '#ea560d' : '#111111', fontWeight: index == 0 ? 'bold' : 'normal' }}>
+                                      {row[`${key}`]}
+                                    </td>)
+                                    )}
+                                    <td style={{ lineHeight: '50px', width: '5px' }}>
+                                      <Link href={`/contact`} className="btn btn-primary">
+                                        {"⟶"}
+                                      </Link>
+                                    </td>
                                   </tr>
-                                  {/* <tr>
-                                    <Link href={`/contact`}>
-                                      <i className="flaticon-robot-1"></i>
-                                      Contact
-                                    </Link>
-                                  </tr> */}
                                 </>
                               ))}
                             </tbody>
                           </table>
                         </div>
                       </div>))}
-
-                    <div id="tab2" className="tabs-item">
-                      <div className="image">
-                        <img src="/images/services-img1.png" alt="image" />
-                      </div>
-
-                      <div className="content">
-                        <p>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration in
-                          some form, by injected humour, or randomized words which
-                          don't look even slightly believable. If you are going to
-                          use a passage.
-                        </p>
-
-                        <Link href="/service-details" className="btn btn-primary">
-                          Read More
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div id="tab3" className="tabs-item">
-                      <div className="image">
-                        <img src="/images/services-img1.png" alt="image" />
-                      </div>
-
-                      <div className="content">
-                        <p>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration in
-                          some form, by injected humour, or randomized words which
-                          don't look even slightly believable. If you are going to
-                          use a passage.
-                        </p>
-
-                        <Link href="/service-details" className="btn btn-primary">
-                          Read More
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div id="tab4" className="tabs-item">
-                      <div className="image">
-                        <img src="/images/services-img1.png" alt="image" />
-                      </div>
-
-                      <div className="content">
-                        <p>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration in
-                          some form, by injected humour, or randomized words which
-                          don't look even slightly believable. If you are going to
-                          use a passage.
-                        </p>
-
-                        <Link href="/service-details" className="btn btn-primary">
-                          Read More
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div id="tab5" className="tabs-item">
-                      <div className="image">
-                        <img src="/images/services-img1.png" alt="image" />
-                      </div>
-
-                      <div className="content">
-                        <p>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration in
-                          some form, by injected humour, or randomized words which
-                          don't look even slightly believable. If you are going to
-                          use a passage.
-                        </p>
-
-                        <Link href="/service-details" className="btn btn-primary">
-                          Read More
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div id="tab6" className="tabs-item">
-                      <div className="image">
-                        <img src="/images/services-img1.png" alt="image" />
-                      </div>
-
-                      <div className="content">
-                        <p>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration in
-                          some form, by injected humour, or randomized words which
-                          don't look even slightly believable. If you are going to
-                          use a passage.
-                        </p>
-
-                        <Link href="/service-details" className="btn btn-primary">
-                          Read More
-                        </Link>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>

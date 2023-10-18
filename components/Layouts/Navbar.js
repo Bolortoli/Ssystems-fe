@@ -188,31 +188,31 @@ const Navbar = () => {
                   </li>
 
                   <li className="nav-item">
-                    <Link href="#" className={`nav-link`}>
+                    <Link href="/about" className={`nav-link`}>
                       About Us
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href="#" className={`nav-link`}>
+                    <Link href="/careers" className={`nav-link`}>
                       Careers
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href="#" className={`nav-link`}>
+                    <Link href="/contact" className={`nav-link`}>
                       Contact Us
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href="#" className={`nav-link`}>
+                    <Link href="faq" className={`nav-link`}>
                       FAQs
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href="#" className={`nav-link`}>
+                    <Link href="/blog" className={`nav-link`}>
                       Newsroom
                     </Link>
                   </li>

@@ -1,15 +1,14 @@
 import React from "react";
 import ContactForm from "../Contact/ContactForm";
 
-const FaqForm = () => {
+const FaqForm = ({content, image}) => {
   return (
     <>
       <div className="faq-contact">
         <div className="section-title">
-          <h2>Do You Have Any Questions</h2>
+          <h2>{content.title}</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            {content.text}
           </p>
         </div>
 
@@ -17,7 +16,7 @@ const FaqForm = () => {
           <div className="row align-items-center">
             <div className="col-lg-5 col-md-12">
               <div className="faq-contact-image">
-                <img src="/images/contact.png" alt="image" />
+                <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${image}`} alt="image" />
               </div>
             </div>
 

@@ -2,7 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
 
-const CustomerFeedback = () => {
+const CustomerFeedback = ({ data }) => {
   return (
     <>
       <div className="testimonials-section ptb-110">
@@ -11,7 +11,7 @@ const CustomerFeedback = () => {
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-6">
                 <div className="content">
-                  <h2>Our Customer Review</h2>
+                  <h2>{data.review_title}</h2>
                 </div>
               </div>
 

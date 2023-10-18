@@ -1,111 +1,35 @@
 import React from "react";
 import Link from "next/link";
 
-const ProfessionalSolutions = () => {
+const ProfessionalSolutions = ({ data, solutions, image }) => {
   return (
     <>
-      <div className="solutions-area ptb-110">
+      <div className="solutions-area ptb-110" style={{backgroundImage: `url(${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${image})`}}>
         <div className="container">
           <div className="section-title">
-            <h2>We Offer Professional Solutions</h2>
+            <h2>{data.solutions_title}</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              {data.solutions_text}
             </p>
           </div>
 
           <div className="row">
-            <div className="col-lg-4 col-sm-6 col-md-6">
-              <div className="single-solutions-box">
-                <div className="icon">
-                  <i className="flaticon-income"></i>
-                </div>
-                <h3>
-                  <Link href="/projects-details">Data Analysts</Link>
-                </h3>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
-              </div>
-            </div>
 
-            <div className="col-lg-4 col-md-6 col-sm-6">
-              <div className="single-solutions-box active">
-                <div className="icon">
-                  <i className="flaticon-automatic"></i>
+            {solutions.map((sol, index) => (
+              <div className="col-lg-4 col-sm-6 col-md-6">
+                <div className={index == 0 ? "single-solutions-box active" : "single-solutions-box"}>
+                  {/* <div className="icon">
+                    <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${sol.icon}`} alt="image" style={{ width: 50, height: 50 }} />
+                  </div> */}
+                  <h3>
+                    <Link href={`/service-detail/${sol.id}`}>{sol.title}</Link>
+                  </h3>
+                  <p>
+                    {sol.description}
+                  </p>
                 </div>
-                <h3>
-                  <Link href="/projects-details">Automatic Optimization</Link>
-                </h3>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
               </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 col-sm-6">
-              <div className="single-solutions-box">
-                <div className="icon">
-                  <i className="flaticon-locked"></i>
-                </div>
-                <h3>
-                  <Link href="/projects-details">Security & Surveillance</Link>
-                </h3>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 col-sm-6">
-              <div className="single-solutions-box">
-                <div className="icon">
-                  <i className="flaticon-molecular"></i>
-                </div>
-                <h3>
-                  <Link href="/projects-details">
-                    Healthcare & Manufacturing
-                  </Link>
-                </h3>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 col-sm-6">
-              <div className="single-solutions-box">
-                <div className="icon">
-                  <i className="flaticon-gear"></i>
-                </div>
-                <h3>
-                  <Link href="/projects-details">Software Engineers</Link>
-                </h3>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 col-sm-6">
-              <div className="single-solutions-box">
-                <div className="icon">
-                  <i className="flaticon-ceo"></i>
-                </div>
-                <h3>
-                  <Link href="/projects-details">IT Professionals</Link>
-                </h3>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

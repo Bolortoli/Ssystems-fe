@@ -1,67 +1,13 @@
 import React from "react";
+import { useRouter } from "next/router";
+import axios from "axios";
 
-const AboutUsContent = ({ data, image }) => {
+const AboutContact = ({ data }) => {
+
   return (
     <>
-      <div className="why-choose-us-area ptb-110" style={{ paddingBottom: 50 }}>
+      <section className="about-area" style={{ paddingBottom: 100 }}>
         <div className="container">
-          <div className="row">
-
-            <div className="col-lg-6 col-md-12">
-              <div className="why-choose-us-image text-center">
-                <img style={{ maxWidth: "90%" }} src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${image}`} alt="image" />
-              </div>
-            </div>
-
-            <div className="col-lg-6 col-md-12">
-              <div className="why-choose-us-content">
-                <h2>{data.title}</h2>
-                <p>
-                  {data.about_text}
-                </p>
-
-                <div className="row">
-                  <div className="col-lg-6 col-md-6 col-sm-6">
-                    <div className="single-why-choose-us-box">
-                      <h3>{data.about1_title}</h3>
-                      <p>
-                        {data.about1_text}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="col-lg-6 col-md-6 col-sm-6">
-                    <div className="single-why-choose-us-box">
-                      <h3>{data.about2_title}</h3>
-                      <p>
-                        {data.about2_text}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="col-lg-6 col-md-6 col-sm-6">
-                    <div className="single-why-choose-us-box">
-                      <h3>{data.about3_title}</h3>
-                      <p>
-                        {data.about3_text}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="col-lg-6 col-md-6 col-sm-6">
-                    <div className="single-why-choose-us-box">
-                      <h3>{data.about4_title}</h3>
-                      <p>
-                        {data.about4_text}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="container" style={{maxWidth: "80%"}}>
           {/* <div className="row align-items-center">
 
 
@@ -123,9 +69,35 @@ const AboutUsContent = ({ data, image }) => {
             </div>
           </div>
         </div>
-      </div>
+
+        {/* Shape Images */}
+        <div className="shape-img1">
+          <img src="/images/shape/shape1.png" alt="image" />
+        </div>
+        <div className="shape-img2">
+          <img src="/images/shape/shape2.svg" alt="image" />
+        </div>
+        <div className="shape-img3">
+          <img src="/images/shape/shape3.png" alt="image" />
+        </div>
+        <div className="shape-img4">
+          <img src="/images/shape/shape4.svg" alt="image" />
+        </div>
+        <div className="shape-img5">
+          <img src="/images/shape/shape5.svg" alt="image" />
+        </div>
+        <div className="shape-img6">
+          <img src="/images/shape/shape6.png" alt="image" />
+        </div>
+        <div className="dot-shape1">
+          <img src="/images/shape/dot1.png" alt="image" />
+        </div>
+        <div className="dot-shape2">
+          <img src="/images/shape/dot2.png" alt="image" />
+        </div>
+      </section>
     </>
   );
 };
 
-export default AboutUsContent;
+export default AboutContact;
