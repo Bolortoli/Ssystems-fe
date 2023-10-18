@@ -25,7 +25,7 @@ const BlogPost = ({ data, blogs }) => {
               >
                 <div className="single-blog-post">
                   <div className="entry-thumbnail">
-                    <Link href={`/blog-detail/${blog.id}`}>
+                    <Link href={`/newsroom-detail/${blog.id}`}>
                       <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${blog.cover_image}`} alt="image" />
                     </Link>
                   </div>
@@ -38,7 +38,7 @@ const BlogPost = ({ data, blogs }) => {
                     </div>
 
                     <h3>
-                      <Link href={`/blog-detail/${blog.id}`}>
+                      <Link href={`/newsroom-detail/${blog.id}`}>
                         {blog.content.title}
                       </Link>
                     </h3>
@@ -46,7 +46,7 @@ const BlogPost = ({ data, blogs }) => {
                       {blog.content.short_description}
                     </p>
 
-                    <Link href={`/blog-detail/${blog.id}`} className="learn-more-btn">
+                    <Link href={`/newsroom-detail/${blog.id}`} className="learn-more-btn">
                       Read More <i className="flaticon-add"></i>
                     </Link>
                   </div>

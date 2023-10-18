@@ -19,7 +19,7 @@ const BlogThreeGrid = ({ data }) => {
             <div className="col-lg-3 col-md-4" style={{ marginBottom: 30 }}>
               <div className="single-blog-post">
                 <div className="entry-thumbnail">
-                  <Link href={`/blog-detail/${blog.id}`}>
+                  <Link href={`/newsroom-detail/${blog.id}`}>
                     <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${blog?.cover_image}`} alt="image" />
                   </Link>
                 </div>
@@ -32,7 +32,7 @@ const BlogThreeGrid = ({ data }) => {
                   </div>
 
                   <h3 style={{ fontSize: '16px' }}>
-                    <Link href={`/blog-detail/${blog.id}`}>
+                    <Link href={`/newsroom-detail/${blog.id}`}>
                       {blog.content.title}
                     </Link>
                   </h3>

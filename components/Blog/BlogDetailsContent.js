@@ -83,10 +83,10 @@ const BlogDetailsContent = ({ data }) => {
                 <div className="related-blogs" style={{ display: 'flex', marginTop: 15, justifyContent: 'spac'}}>
 
                   <h5 style={{ flex: 1, }}>
-                    <Link href={`/blog-detail/${data.related_blogs[0]?.id}`}>{data.related_blogs[0]?.title}</Link>
+                    <Link href={`/newsroom-detail/${data.related_blogs[0]?.id}`}>{data.related_blogs[0]?.title}</Link>
                   </h5>
                   <h5 class="text-end" style={{ flex: 1, }}>
-                    <Link href={`/blog-detail/${data.related_blogs[1]?.id}`}>{data.related_blogs[1]?.title}</Link>
+                    <Link href={`/newsroom-detail/${data.related_blogs[1]?.id}`}>{data.related_blogs[1]?.title}</Link>
                   </h5>
                 </div>
               </div>
