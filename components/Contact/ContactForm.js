@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 const MySwal = withReactContent(Swal);
 import "dotenv/config";
+import { useTranslation } from 'next-i18next';
 
 // Form initial state
 const INITIAL_STATE = {
@@ -15,6 +16,7 @@ const INITIAL_STATE = {
 };
 
 const ContactForm = () => {
+  const { t } = useTranslation();
   const [contact, setContact] = useState(INITIAL_STATE);
 
   const handleChange = (e) => {
@@ -24,8 +26,8 @@ const ContactForm = () => {
 
   const alertSuccess = () => {
     MySwal.fire({
-      title: "Congratulations!",
-      text: "Your message was successfully send and will back to you soon",
+      title: t('forms.successTitle'),
+      text: t('forms.successMessage'),
       icon: "success",
       timer: 2000,
       timerProgressBar: true,
@@ -35,8 +37,8 @@ const ContactForm = () => {
 
   const alertError = () => {
     MySwal.fire({
-      title: "Oops!",
-      text: "There are some errors occured! Please try again! ",
+      title: t('forms.errorTitle'),
+      text: t('forms.errorMessage'),
       icon: "error",
       timer: 2000,
       timerProgressBar: true,
@@ -66,7 +68,7 @@ const ContactForm = () => {
               <input
                 type="text"
                 name="name"
-                placeholder="Name"
+                placeholder={t('forms.name')}
                 className="form-control"
                 value={contact.name}
                 onChange={handleChange}
@@ -79,7 +81,7 @@ const ContactForm = () => {
               <input
                 type="text"
                 name="email"
-                placeholder="Email"
+                placeholder={t('forms.email')}
                 className="form-control"
                 value={contact.email}
                 onChange={handleChange}
@@ -92,7 +94,7 @@ const ContactForm = () => {
               <input
                 type="text"
                 name="number"
-                placeholder="Phone number"
+                placeholder={t('forms.phone')}
                 className="form-control"
                 value={contact.number}
                 onChange={handleChange}
@@ -105,7 +107,7 @@ const ContactForm = () => {
               <input
                 type="text"
                 name="subject"
-                placeholder="Subject"
+                placeholder={t('forms.subject')}
                 className="form-control"
                 value={contact.subject}
                 onChange={handleChange}
@@ -119,7 +121,7 @@ const ContactForm = () => {
                 name="text"
                 cols="30"
                 rows="6"
-                placeholder="Write your message..."
+                placeholder={t('forms.message')}
                 className="form-control"
                 value={contact.text}
                 onChange={handleChange}
@@ -129,7 +131,7 @@ const ContactForm = () => {
           </div>
           <div className="col-lg-12 col-sm-12">
             <button type="submit" className="btn btn-primary">
-              Send Message
+              {t('utils.submit')}
             </button>
           </div>
         </div>

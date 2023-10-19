@@ -4,6 +4,7 @@ import BlogThreeGrid from "../components/Blog/BlogThreeGrid";
 import Footer from "../components/Layouts/Footer";
 import axios from "axios"
 import "dotenv/config";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Blog = (props) => {
 
@@ -72,7 +73,8 @@ export async function getServerSideProps(context) {
         content: {
           global_config,
           blogs: translation
-        }
+        },
+        ...(await serverSideTranslations(locale, ['common']))
       }
     }
 

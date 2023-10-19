@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { useTranslation } from 'next-i18next';
 
 const Services = ({ cardsData, data }) => {
-
-  if (cardsData == undefined || cardsData == null) {
-    return <>Loading...</>;
-  }
+  const { t } = useTranslation();
 
   return (
     <>
@@ -33,7 +31,7 @@ const Services = ({ cardsData, data }) => {
                   </p>
 
                   <Link href={`/service-detail/${card.id}`} className="link-btn">
-                    Read More
+                    {t('utils.readMore')}
                   </Link>
                 </div>
               </div>

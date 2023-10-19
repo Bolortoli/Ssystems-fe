@@ -83,8 +83,7 @@ const Navbar = ({ services, why }) => {
                       href="#"
                       className={`nav-link ${currentPath == "/" && "active"}`}
                     >
-                      Home
-                      {/* {t('page')} */}
+                      {t('page.home')}
                     </Link>
                   </li>
 

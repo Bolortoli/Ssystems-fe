@@ -15,7 +15,6 @@ import AwardsAndCertificates from "../components/HomeOne/AwardsAndCertificates";
 import axios from "axios";
 import PartnerSlider from "../components/HomeOne/PartnerSlider";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import {NotFoundError} from 'next/error';
 
 // import { useRouter } from "next/router";
 import "dotenv/config";

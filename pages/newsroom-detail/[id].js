@@ -6,6 +6,7 @@ import Footer from "../../components/Layouts/Footer";
 import axios from "axios";
 import { useRouter } from "next/router";
 import "dotenv/config";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const BlogDetails = (props) => {
 
@@ -81,7 +82,8 @@ export async function getServerSideProps(context) {
           global_config,
           related_blogs,
           categories
-        }
+        },
+        ...(await serverSideTranslations(locale, ['common']))
       }
     };
   } catch (error) {

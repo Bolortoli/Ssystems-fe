@@ -4,11 +4,13 @@ import BlogCommentsArea from "./BlogCommentsArea";
 import BlogSidebar from "./BlogSidebar";
 import { useRouter } from "next/router";
 import axios from "axios";
+import { useTranslation } from 'next-i18next';
 
 const BlogDetailsContent = ({ data }) => {
 
   const { locale } = useRouter()
   const router = useRouter()
+  const { t } = useTranslation();
 
   const date = new Date(data?.date_created)
 
@@ -31,7 +33,7 @@ const BlogDetailsContent = ({ data }) => {
                   </p>
 
                   <p>
-                    Posted On: {`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}
+                    {t('utils.postedDate')}: {`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}
                   </p>
 
 

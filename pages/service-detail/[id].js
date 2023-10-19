@@ -4,6 +4,7 @@ import Footer from "../../components/Layouts/Footer";
 import PageBanner from "../../components/Common/PageBanner";
 import ServiceDetailsContent from "../../components/ServiceDetails/ServiceDetailsContent";
 import axios from "axios";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const ProjectsDetails = (props) => {
   return (
@@ -52,7 +53,8 @@ export async function getServerSideProps(context) {
           id: data.data.id,
           cover_image: data.data.cover_image.id,
           global_config,
-        }
+        },
+        ...(await serverSideTranslations(locale, ['common']))
       }
     };
   } catch (error) {

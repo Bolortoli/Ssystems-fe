@@ -4,6 +4,7 @@ import PageBanner from "../components/Common/PageBanner";
 import FaqContent from "../components/Faq/FaqContent";
 import Footer from "../components/Layouts/Footer";
 import axios from "axios";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Faq = (props) => {
 
@@ -77,7 +78,8 @@ export async function getServerSideProps(context) {
           image: responseFaqContent.data.data.image.id,
           translationContact,
           contactImage: responseContact.data.data.image.id
-        }
+        },
+        ...(await serverSideTranslations(locale, ['common']))
       }
     }
   } catch (error) {

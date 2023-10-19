@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useTranslation } from 'next-i18next';
 
 const NavbarFour = ({ services, why }) => {
   // Add active class
   const [currentPath, setCurrentPath] = useState("");
   const router = useRouter();
   const { locale } = useRouter();
+  const { t } = useTranslation();
 
 
   useEffect(() => {
@@ -77,7 +79,7 @@ const NavbarFour = ({ services, why }) => {
                       href="/"
                       className={`nav-link ${currentPath == "/" && "active"}`}
                     >
-                      Home
+                      {t('page.home')}
                     </Link>
                   </li>
 
@@ -87,7 +89,7 @@ const NavbarFour = ({ services, why }) => {
                       className="nav-link"
                       onClick={(e) => e.preventDefault()}
                     >
-                      Services <i className="fas fa-chevron-down"></i>
+                      {t('page.services')} <i className="fas fa-chevron-down"></i>
                     </Link>
 
                     <ul className="dropdown-menu">
@@ -111,7 +113,7 @@ const NavbarFour = ({ services, why }) => {
                       className={`nav-link ${currentPath == "/service-pricing" && "active"
                         }`}
                     >
-                      Pricing
+                      {t('page.pricing')}
                     </Link>
                   </li>
 
@@ -121,7 +123,7 @@ const NavbarFour = ({ services, why }) => {
                       className={`nav-link ${currentPath == "/about" && "active"
                         }`}
                     >
-                      About
+                      {t('page.about')}
                     </Link>
                   </li>
 
@@ -131,7 +133,7 @@ const NavbarFour = ({ services, why }) => {
                       className={`nav-link ${currentPath == "/newsroom" && "active"
                         }`}
                     >
-                      Newsroom
+                      {t('page.newsroom')}
                     </Link>
                   </li>
 
@@ -141,7 +143,7 @@ const NavbarFour = ({ services, why }) => {
                       className={`nav-link ${currentPath == "/contact" && "active"
                         }`}
                     >
-                      Contact
+                      {t('page.contact')}
                     </Link>
                   </li>
 
@@ -151,7 +153,7 @@ const NavbarFour = ({ services, why }) => {
                       className={`nav-link ${currentPath == "/careers" && "active"
                         }`}
                     >
-                      Careers
+                      {t('page.careers')}
                     </Link>
                   </li>
 
@@ -161,7 +163,7 @@ const NavbarFour = ({ services, why }) => {
                       className={`nav-link ${currentPath == "/faq" && "active"
                         }`}
                     >
-                      FAQ
+                      {t('page.faq')}
                     </Link>
                   </li>
 
@@ -171,7 +173,7 @@ const NavbarFour = ({ services, why }) => {
                       className="nav-link"
                       onClick={(e) => e.preventDefault()}
                     >
-                      Why Ssystems <i className="fas fa-chevron-down"></i>
+                      {t('page.why')} <i className="fas fa-chevron-down"></i>
                     </Link>
 
                     <ul className="dropdown-menu">

@@ -1,3 +1,35 @@
 {
-  "page": "pagess"
+  "page": {
+    "home": "Home",
+    "services": "Services",
+    "pricing": "Pricing",
+    "about": "About",
+    "newsroom": "Newsroom",
+    "contact": "Contact",
+    "careers": "Careers",
+    "faq": "FAQ",
+    "why": "Why SSystems?"
+  },
+  "utils": {
+    "readMore": "Read more",
+    "submit": "Submit",
+    "contacts": "Contacts",
+    "address": "Address",
+    "email": "E-mail",
+    "phone": "Phone",
+    "fax": "Fax",
+    "quickLinks": "Quick Links",
+    "postedDate": "Posted on"
+  },
+  "forms": {
+    "name": "Full name",
+    "email": "E-mail",
+    "phone": "Phone number",
+    "subject": "Subject",
+    "message": "Write your message..",
+    "successTitle": "Congratulations!",
+    "successMessage": "We will contact you back right after reveived your message",
+    "errorTitle": "Oops!",
+    "errorMessage": "Please try again or just write an email for us :)"
+  }
 }

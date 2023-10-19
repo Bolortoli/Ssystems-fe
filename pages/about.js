@@ -8,7 +8,7 @@ import CustomerFeedback from "../components/HomeFive/CustomerFeedback";
 import Team from "../components/Common/Team";
 import Footer from "../components/Layouts/Footer";
 import axios from "axios";
-import AboutContact from "../components/AboutTwo/AboutContent"
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const AboutTwo = (props) => {
 
@@ -83,7 +83,8 @@ export async function getServerSideProps(context) {
           aboutImage: data.data.section1_image.id,
           serviceImage: data.data.services_background_image.id,
           teamMembers: team_members
-        }
+        },
+        ...(await serverSideTranslations(locale, ['common']))
       }
     };
   } catch (error) {

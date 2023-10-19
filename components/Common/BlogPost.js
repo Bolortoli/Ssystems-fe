@@ -1,10 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import { useTranslation } from 'next-i18next';
 
 const BlogPost = ({ data, blogs }) => {
-  if (data == undefined || data == null) {
-    return <>Loading...</>;
-  }
+  const { t } = useTranslation();
 
   return (
     <>
@@ -47,7 +46,7 @@ const BlogPost = ({ data, blogs }) => {
                     </p>
 
                     <Link href={`/newsroom-detail/${blog.id}`} className="learn-more-btn">
-                      Read More <i className="flaticon-add"></i>
+                      {t('utils.readMore')} <i className="flaticon-add"></i>
                     </Link>
                   </div>
                 </div>

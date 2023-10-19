@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useTranslation } from 'next-i18next';
 
 const NavbarTwo = ({ services, why }) => {
   // Add active class
   const [currentPath, setCurrentPath] = useState("");
   const { locale } = useRouter();
   const router = useRouter();
+  const { t } = useTranslation();
 
   useEffect(() => {
     setCurrentPath(router.asPath);
@@ -81,7 +83,7 @@ const NavbarTwo = ({ services, why }) => {
                       href="/"
                       className={`nav-link ${currentPath == "/" && "active"}`}
                     >
-                      Home
+                      {t('page.home')}
                     </Link>
 
                   </li>
@@ -92,7 +94,7 @@ const NavbarTwo = ({ services, why }) => {
                       className="nav-link"
                       onClick={(e) => e.preventDefault()}
                     >
-                      Service <i className="fas fa-chevron-down"></i>
+                      {t('page.services')} <i className="fas fa-chevron-down"></i>
                     </Link>
 
                     <ul className="dropdown-menu">
@@ -116,7 +118,7 @@ const NavbarTwo = ({ services, why }) => {
                       className={`nav-link ${currentPath == "/service-pricing" && "active"
                         }`}
                     >
-                      Pricing
+                      {t('page.pricing')}
                     </Link>
                   </li>
 
@@ -126,7 +128,7 @@ const NavbarTwo = ({ services, why }) => {
                       className={`nav-link ${currentPath == "/about" && "active"
                         }`}
                     >
-                      About
+                      {t('page.about')}
                     </Link>
                   </li>
 
@@ -136,7 +138,7 @@ const NavbarTwo = ({ services, why }) => {
                       className={`nav-link ${currentPath == "/newsroom" && "active"
                         }`}
                     >
-                      Newsroom
+                      {t('page.newsroom')}
                     </Link>
                   </li>
 
@@ -146,7 +148,7 @@ const NavbarTwo = ({ services, why }) => {
                       className={`nav-link ${currentPath == "/contact" && "active"
                         }`}
                     >
-                      Contact
+                      {t('page.contact')}
                     </Link>
                   </li>
 
@@ -156,7 +158,7 @@ const NavbarTwo = ({ services, why }) => {
                       className={`nav-link ${currentPath == "/careers" && "active"
                         }`}
                     >
-                      Careers
+                      {t('page.careers')}
                     </Link>
                   </li>
 
@@ -166,7 +168,7 @@ const NavbarTwo = ({ services, why }) => {
                       className={`nav-link ${currentPath == "/faq" && "active"
                         }`}
                     >
-                      FAQ
+                      {t('page.faq')}
                     </Link>
                   </li>
 
@@ -176,7 +178,8 @@ const NavbarTwo = ({ services, why }) => {
                       className="nav-link"
                       onClick={(e) => e.preventDefault()}
                     >
-                      Why Ssystems <i className="fas fa-chevron-down"></i>
+                      {t('page.why')}
+                      <i className="fas fa-chevron-down"></i>
                     </Link>
 
                     <ul className="dropdown-menu">

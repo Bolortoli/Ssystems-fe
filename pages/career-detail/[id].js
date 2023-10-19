@@ -4,6 +4,7 @@ import CareerDetailsContent from "../../components/Careers/CareerDetailsContent"
 import Footer from "../../components/Layouts/Footer";
 import axios from "axios";
 import "dotenv/config";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const CareerDetails = (props) => {
 
@@ -46,7 +47,8 @@ export async function getServerSideProps(context) {
           id: data.data.id,
           date_created: data.data.date_created,
           global_config,
-        }
+        },
+        ...(await serverSideTranslations(locale, ['common']))
       }
     };
   } catch (error) {

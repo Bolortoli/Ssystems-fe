@@ -5,6 +5,7 @@ import Footer from "../components/Layouts/Footer";
 import axios from "axios"
 import "dotenv/config";
 import ContactFormContent from "../components/Careers/ContactFormContent";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Blog = (props) => {
 
@@ -64,7 +65,8 @@ export async function getServerSideProps(context) {
           translation,
           contentTranslation,
           image: contentData.data.data.image.id,
-        }
+        },
+        ...(await serverSideTranslations(locale, ['common']))
       }
     }
   } catch (error) {

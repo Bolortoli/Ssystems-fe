@@ -5,6 +5,7 @@ import ContactFormContent from "../components/Contact/ContactFormContent";
 import Footer from "../components/Layouts/Footer";
 import axios from "axios"
 import "dotenv/config";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Contact = (props) => {
   return (
@@ -61,7 +62,8 @@ export async function getServerSideProps(context) {
           translation,
           global_config,
           image: response.data.data.image.id
-        }
+        },
+        ...(await serverSideTranslations(locale, ['common']))
       }
     }
 

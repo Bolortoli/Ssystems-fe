@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import { useTranslation } from 'react-i18next';
 import "dotenv/config";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const ServicePricing = (props) => {
 
@@ -46,7 +47,8 @@ export async function getServerSideProps(context) {
         content: {
           translationData,
           global_config,
-        }
+        },
+        ...(await serverSideTranslations(locale, ['common']))
       }
     };
   } catch (error) {

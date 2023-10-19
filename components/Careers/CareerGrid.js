@@ -1,9 +1,10 @@
 import React, { Component, useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import "dotenv/config";
+import { useTranslation } from 'next-i18next';
 
-const CareerGrid = ({ data, image, content }) => {
+const CareerGrid = ({ data, content }) => {
+  const { t } = useTranslation();
 
   return (
     <>
@@ -27,7 +28,7 @@ const CareerGrid = ({ data, image, content }) => {
                     <div className="entry-post-content" style={{ padding: 15 }}>
                       <div className="entry-meta">
                         <ul >
-                          <li style={{ fontSize: 14 }} >{`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}</li>
+                          <li style={{ fontSize: 14 }} >{t('utils.postedDate')}: {`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}</li>
                         </ul>
                       </div>
                       <h3 style={{ fontSize: '16px' }}>

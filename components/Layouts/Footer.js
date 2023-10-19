@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import Link from "next/link";
+import { useTranslation } from 'next-i18next';
 
 const Footer = ({ data }) => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   return (
     <>
@@ -56,7 +58,7 @@ const Footer = ({ data }) => {
                 data-aos-duration="120"
                 data-aos-delay="200"
               >
-                <h3>Services</h3>
+                <h3>{t('page.services')}</h3>
 
                 <ul className="footer-services-list">
                   {data.servicesTranslation.map(service => (
@@ -75,23 +77,23 @@ const Footer = ({ data }) => {
                 data-aos-duration="120"
                 data-aos-delay="300"
               >
-                <h3>Quick Links</h3>
+                <h3>{t('utils.quickLinks')}</h3>
 
                 <ul className="quick-links-list">
                   <li>
-                    <Link href="/about">About Us</Link>
+                    <Link href="/about">{t('page.about')}</Link>
                   </li>
                   <li>
-                    <Link href="/newsroom">Newsroom</Link>
+                    <Link href="/newsroom">{t('page.newsroom')}</Link>
                   </li>
                   <li>
-                    <Link href="/contact">Contact</Link>
+                    <Link href="/contact">{t('page.contact')}</Link>
                   </li>
                   <li>
-                    <Link href="/faq">FAQ</Link>
+                    <Link href="/faq">{t('page.faq')}</Link>
                   </li>
                   <li>
-                    <Link href="/service-pricing">Pricing</Link>
+                    <Link href="/service-pricing">{t('page.pricing')}</Link>
                   </li>
                 </ul>
               </div>
@@ -104,23 +106,23 @@ const Footer = ({ data }) => {
                 data-aos-duration="120"
                 data-aos-delay="400"
               >
-                <h3>Contacts</h3>
+                <h3>{t('utils.contacts')}</h3>
 
                 <ul className="footer-contact-list">
                   <li>
-                    <span>Address:</span>
+                    <span>{t('utils.address')}:</span>
                     {data.address}
                   </li>
                   <li>
-                    <span>Email:</span>
-                    {data.address}
+                    <span>{t('utils.email')}:</span>
+                    {data.email}
                   </li>
                   <li>
-                    <span>Phone:</span>
+                    <span>{t('utils.phone')}:</span>
                     {data.phone}
                   </li>
                   <li>
-                    <span>Fax:</span>
+                    <span>{t('utils.fax')}:</span>
                     {data.fax}
                   </li>
                 </ul>
