@@ -7,7 +7,6 @@ const NavbarTwo = ({ services, why }) => {
   const [currentPath, setCurrentPath] = useState("");
   const { locale } = useRouter();
   const router = useRouter();
-  // console.log(router.asPath)
 
   useEffect(() => {
     setCurrentPath(router.asPath);

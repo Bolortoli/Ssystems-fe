@@ -7,8 +7,6 @@ import "dotenv/config";
 
 const Blog = (props) => {
 
-  console.log(props.content)
-
   return (
     <>
       <NavbarFour services={props.content.global_config.servicesTranslation} why={props.content.global_config.whyTranslation} />

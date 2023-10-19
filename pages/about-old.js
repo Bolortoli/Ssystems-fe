@@ -15,39 +15,9 @@ import axios from "axios"
 
 const About = () => {
 
-  const { locale } = useRouter();
-
-  console.log(locale)
-  const [aboutUsdata, setAboutUsData] = useState(null)
-
-  const fetchData = async () => {
-    try {
-      const data = (await axios.get(`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/items/aboutus?fields=*.*.*`).catch(e => console.log(e)))?.data
-      console.log(data)
-      setAboutUsData(data)
-    } catch (error) {
-      console.log(error)
-    }
-
-  }
-
-  useEffect(() => {
-    fetchData()
-  }, [])
-
   return (
     <>
       <NavbarFour />
-
-      {/* <PageBanner
-        pageTitle="About Us"
-        homePageUrl="/"
-        homePageText="Home"
-        activePageText="About Us"
-        bgImgClass="item-bg1"
-      /> */}
-
-      <AboutContact data={aboutUsdata} />
 
       <Services />
 

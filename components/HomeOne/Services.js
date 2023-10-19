@@ -3,8 +3,6 @@ import Link from "next/link";
 
 const Services = ({ cardsData, data }) => {
 
-  console.log(cardsData)
-
   if (cardsData == undefined || cardsData == null) {
     return <>Loading...</>;
   }

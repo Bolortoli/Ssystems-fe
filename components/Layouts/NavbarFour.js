@@ -6,7 +6,6 @@ const NavbarFour = ({ services, why }) => {
   // Add active class
   const [currentPath, setCurrentPath] = useState("");
   const router = useRouter();
-  // console.log(router.asPath)
   const { locale } = useRouter();
 
 

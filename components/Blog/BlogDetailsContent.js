@@ -45,9 +45,6 @@ const BlogDetailsContent = ({ data }) => {
 
                 <div className="article-footer">
                   <div className="article-tags">
-                    {/* <span>
-                      <i className="fas fa-bookmark"></i>
-                    </span> */}
 
                     {data.categories.map(category => (
                       <span id={category.id}>{category.name}</span>
@@ -61,16 +58,6 @@ const BlogDetailsContent = ({ data }) => {
                           <i className="fab fa-facebook-f"></i>
                         </a>
                       </li>
-                      {/* <li>
-                        <a href="#" target="_blank" rel="noreferrer">
-                          <i className="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" target="_blank" rel="noreferrer">
-                          <i className="fab fa-linkedin-in"></i>
-                        </a>
-                      </li> */}
                       <li>
                         <a href={data.global_config.youtube_link} target="_blank" rel="noreferrer">
                           <i className="fab fa-youtube"></i>
@@ -80,7 +67,7 @@ const BlogDetailsContent = ({ data }) => {
                   </div>
                 </div>
 
-                <div className="related-blogs" style={{ display: 'flex', marginTop: 15, justifyContent: 'spac'}}>
+                <div className="related-blogs" style={{ display: 'flex', marginTop: 15, justifyContent: 'spac' }}>
 
                   <h5 style={{ flex: 1, }}>
                     <Link href={`/newsroom-detail/${data.related_blogs[0]?.id}`}>{data.related_blogs[0]?.title}</Link>

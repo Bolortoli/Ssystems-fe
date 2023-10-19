@@ -12,7 +12,6 @@ import AboutContact from "../components/AboutTwo/AboutContent"
 
 const AboutTwo = (props) => {
 
-  console.log(props.content)
 
   return (
     <>

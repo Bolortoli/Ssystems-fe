@@ -20,7 +20,6 @@ const ContactForm = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setContact((prevState) => ({ ...prevState, [name]: value }));
-    // console.log(contact)
   };
 
   const alertSuccess = () => {
@@ -51,12 +50,10 @@ const ContactForm = () => {
       const { name, email, number, subject, text } = contact;
       const payload = { name, email, number, subject, text };
       const response = await axios.post(`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/items/contact_form`, payload);
-      console.log(response);
       setContact(INITIAL_STATE);
       alertSuccess();
     } catch (error) {
       alertError()
-      console.log(error);
     }
   };
 

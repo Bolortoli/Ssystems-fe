@@ -22,8 +22,6 @@ import FunFacts from "../components/HomeOne/FunFacts";
 
 const Index = (props) => {
 
-  // console.log(props)
-
   return (
     <>
       <NavbarTwo services={props.content.global_config.servicesTranslation} why={props.content.global_config.whyTranslation} />
