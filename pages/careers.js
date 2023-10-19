@@ -14,7 +14,7 @@ const Blog = (props) => {
 
       <CareerGrid data={props.content.translation} content={props.content.contentTranslation} />
 
-      <ContactFormContent data={props.content.contentTranslation}  image={props.content.image} />
+      <ContactFormContent data={props.content.contentTranslation} image={props.content.image} />
 
       <Footer data={props.content.global_config} />
 
@@ -23,50 +23,58 @@ const Blog = (props) => {
 };
 
 export async function getServerSideProps(context) {
+  try {
+    const { locale } = context;
 
-  const { locale } = context;
+    const responseCareers = await axios.get(
+      `${process.env.CMS_ENDPOINT_LOCAL}/items/careers?fields=*.*.*&filter[status][_eq]=published`
+    )
 
-  const responseCareers = await axios.get(
-    `${process.env.CMS_ENDPOINT_LOCAL}/items/careers?fields=*.*.*&filter[status][_eq]=published`
-  )
+    const contentData = await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/careers_content?fields=*.*.*`)
 
-  const contentData = await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/careers_content?fields=*.*.*`)
+    const global_config = await getGlobalConfigs(locale)
 
-  const global_config = await getGlobalConfigs(locale)
+    if (!global_config) {
+      return {
+        notFound: true,
+        props: {
+          message: "error"
+        }
+      }
+    }
 
-  if (!responseCareers) {
+    let translation = responseCareers.data.data.map(d => {
+      let content = d.translations.find(trans => trans.languages_code.code == locale)
+
+      return {
+        id: d.id,
+        created: d.date_created,
+        content
+      }
+    })
+
+    const contentTranslation = contentData?.data?.data.translations?.find(d => d.languages_code.code == locale)
+
+
     return {
+      props: {
+        message: "success",
+        content: {
+          global_config,
+          translation,
+          contentTranslation,
+          image: contentData.data.data.image.id,
+        }
+      }
+    }
+  } catch (error) {
+    return {
+      notFound: true,
       props: {
         message: "error"
       }
-    }
+    };
   }
-
-  let translation = responseCareers.data.data.map(d => {
-    let content = d.translations.find(trans => trans.languages_code.code == locale)
-
-    return {
-      id: d.id,
-      created: d.date_created,
-      content
-    }
-  })
-
-  const contentTranslation = contentData?.data?.data.translations?.find(d => d.languages_code.code == locale)
-
-
-  return {
-    props: {
-      message: "success",
-      content: {
-        global_config,
-        translation,
-        contentTranslation,
-        image: contentData.data.data.image.id,
-      }
-    }
-  }
-
 }
 
 

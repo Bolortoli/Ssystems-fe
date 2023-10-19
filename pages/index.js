@@ -15,6 +15,7 @@ import AwardsAndCertificates from "../components/HomeOne/AwardsAndCertificates";
 import axios from "axios";
 import PartnerSlider from "../components/HomeOne/PartnerSlider";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import {NotFoundError} from 'next/error';
 
 // import { useRouter } from "next/router";
 import "dotenv/config";
@@ -42,12 +43,14 @@ const Index = (props) => {
 };
 
 export async function getServerSideProps(context) {
+
   try {
     const { locale } = context;
 
     const global_config = await getGlobalConfigs(locale)
 
     if (!global_config) return {
+      notFound: true,
       props: {
         message: "error"
       }
@@ -70,6 +73,7 @@ export async function getServerSideProps(context) {
     )
 
     if (!responseHome || !responsePartners) return {
+      notFound: true,
       props: {
         message: "error"
       }
@@ -126,6 +130,7 @@ export async function getServerSideProps(context) {
   } catch (error) {
     console.error("Error fetching data:", error);
     return {
+      notFound: true,
       props: {
         message: JSON.stringify(error)
       }

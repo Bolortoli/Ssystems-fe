@@ -39,6 +39,7 @@ export async function getServerSideProps(context) {
     const global_config = await getGlobalConfigs(locale)
 
     if (!global_config) return {
+      notFound: true,
       props: {
         message: "error"
       }
@@ -87,6 +88,7 @@ export async function getServerSideProps(context) {
     };
   } catch (error) {
     return {
+      notFound: true,
       props: {
         message: "error"
       }

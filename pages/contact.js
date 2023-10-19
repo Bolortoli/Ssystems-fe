@@ -29,38 +29,49 @@ const Contact = (props) => {
 
 export async function getServerSideProps(context) {
 
-  const { locale } = context;
+  try {
+    const { locale } = context;
 
-  const global_config = await getGlobalConfigs(locale)
-  if (!global_config) return {
-    props: {
-      message: "error"
-    }
-  };
-
-  const response = await axios.get(
-    `${process.env.CMS_ENDPOINT_LOCAL}/items/contact?fields=*.*.*.*`
-  )
-
-  if (!response) {
-    return {
+    const global_config = await getGlobalConfigs(locale)
+    if (!global_config) return {
+      notFound: true,
       props: {
         message: "error"
       }
-    }
-  }
+    };
 
-  let translation = response.data.data.translations.filter(t => t.languages_code.code == locale)[0]
+    const response = await axios.get(
+      `${process.env.CMS_ENDPOINT_LOCAL}/items/contact?fields=*.*.*.*`
+    )
 
-  return {
-    props: {
-      message: "success",
-      content: {
-        translation,
-        global_config,
-        image: response.data.data.image.id
+    if (!response) {
+      return {
+        props: {
+          message: "error"
+        }
       }
     }
+
+    let translation = response.data.data.translations.filter(t => t.languages_code.code == locale)[0]
+
+    return {
+      props: {
+        message: "success",
+        content: {
+          translation,
+          global_config,
+          image: response.data.data.image.id
+        }
+      }
+    }
+
+  } catch (error) {
+    return {
+      notFound: true,
+      props: {
+        message: "error"
+      }
+    };
   }
 }
 

@@ -28,64 +28,74 @@ const Faq = (props) => {
 };
 
 export async function getServerSideProps(context) {
-  const { locale } = context;
+  try {
+    const { locale } = context;
 
-  const global_config = await getGlobalConfigs(locale)
+    const global_config = await getGlobalConfigs(locale)
 
-  if (!global_config) return {
-    props: {
-      message: "error"
-    }
-  };
-
-  const responseFaq = await axios.get(
-    `${process.env.CMS_ENDPOINT_LOCAL}/items/faq?fields=*.*.*`
-  )
-
-  const responseFaqContent = await axios.get(
-    `${process.env.CMS_ENDPOINT_LOCAL}/items/faq_content?fields=*.*.*`
-  )
-
-  const responseContact = await axios.get(
-    `${process.env.CMS_ENDPOINT_LOCAL}/items/contact?fields=*.*.*.*`
-  )
-
-
-  if (!responseFaq) {
-    return {
+    if (!global_config) return {
+      notFound: true,
       props: {
         message: "error"
       }
-    }
-  }
-  let translationContact = responseContact.data.data.translations.find(t => t.languages_code.code == locale)
+    };
 
-  let translationContent = responseFaqContent.data.data.translations.find(t => t.languages_code.code == locale)
+    const responseFaq = await axios.get(
+      `${process.env.CMS_ENDPOINT_LOCAL}/items/faq?fields=*.*.*`
+    )
 
-  let translationFaq = responseFaq.data.data.map(d => {
-    let content = d.translations.find(trans => trans.languages_code.code == locale)
+    const responseFaqContent = await axios.get(
+      `${process.env.CMS_ENDPOINT_LOCAL}/items/faq_content?fields=*.*.*`
+    )
 
-    return {
-      id: d.id,
-      question: content.question,
-      answer: content.answer
-    }
-  })
+    const responseContact = await axios.get(
+      `${process.env.CMS_ENDPOINT_LOCAL}/items/contact?fields=*.*.*.*`
+    )
 
-  return {
-    props: {
-      message: "success",
-      content: {
-        faqs: translationFaq,
-        global_config,
-        translationContent,
-        image: responseFaqContent.data.data.image.id,
-        translationContact,
-        contactImage: responseContact.data.data.image.id
+
+    if (!responseFaq) {
+      return {
+        notFound: true,
+        props: {
+          message: "error"
+        }
       }
     }
-  }
+    let translationContact = responseContact.data.data.translations.find(t => t.languages_code.code == locale)
 
+    let translationContent = responseFaqContent.data.data.translations.find(t => t.languages_code.code == locale)
+
+    let translationFaq = responseFaq.data.data.map(d => {
+      let content = d.translations.find(trans => trans.languages_code.code == locale)
+
+      return {
+        id: d.id,
+        question: content.question,
+        answer: content.answer
+      }
+    })
+
+    return {
+      props: {
+        message: "success",
+        content: {
+          faqs: translationFaq,
+          global_config,
+          translationContent,
+          image: responseFaqContent.data.data.image.id,
+          translationContact,
+          contactImage: responseContact.data.data.image.id
+        }
+      }
+    }
+  } catch (error) {
+    return {
+      notFound: true,
+      props: {
+        message: "error"
+      }
+    };
+  }
 }
 
 async function getGlobalConfigs(locale) {

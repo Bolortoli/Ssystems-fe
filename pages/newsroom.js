@@ -20,58 +20,69 @@ const Blog = (props) => {
 };
 
 export async function getServerSideProps(context) {
+  try {
+    const { locale } = context;
 
-  const { locale } = context;
+    const global_config = await getGlobalConfigs(locale)
 
-  const global_config = await getGlobalConfigs(locale)
-
-  if (!global_config) return {
-    props: {
-      message: "error"
-    }
-  };
-
-  const responseBlog = await axios.get(
-    `${process.env.CMS_ENDPOINT_LOCAL}/items/blog?fields=*.*.*.*`
-  )
-
-  if (!responseBlog) {
-    return {
+    if (!global_config) return {
+      notFound: true,
       props: {
         message: "error"
       }
-    }
-  }
+    };
 
-  let translation = responseBlog.data.data.map(d => {
-    let categories = d.category.map(cat => {
-      let categoryTranslation = cat.blog_category_id.translations.find(trans => trans.languages_code == locale)
+    const responseBlog = await axios.get(
+      `${process.env.CMS_ENDPOINT_LOCAL}/items/blog?fields=*.*.*.*`
+    )
+
+    if (!responseBlog) {
+      return {
+        notFound: true,
+        props: {
+          message: "error"
+        }
+      }
+    }
+
+    let translation = responseBlog.data.data.map(d => {
+      let categories = d.category.map(cat => {
+        let categoryTranslation = cat.blog_category_id.translations.find(trans => trans.languages_code == locale)
+
+        return {
+          id: cat.id,
+          name: categoryTranslation.name,
+          short_description: categoryTranslation.short_description,
+          icon: cat.blog_category_id.icon
+        }
+      })
+      let content = d.translations.find(trans => trans.languages_code.code == locale)
 
       return {
-        id: cat.id,
-        name: categoryTranslation.name,
-        short_description: categoryTranslation.short_description,
-        icon: cat.blog_category_id.icon
+        id: d.id,
+        categories,
+        cover_image: d?.cover_image?.id,
+        content
       }
     })
-    let content = d.translations.find(trans => trans.languages_code.code == locale)
 
     return {
-      id: d.id,
-      categories,
-      cover_image: d?.cover_image?.id,
-      content
-    }
-  })
-
-  return {
-    props: {
-      message: "success",
-      content: {
-        global_config,
-        blogs: translation
+      props: {
+        message: "success",
+        content: {
+          global_config,
+          blogs: translation
+        }
       }
     }
+
+  } catch (error) {
+    return {
+      notFound: true,
+      props: {
+        message: "error"
+      }
+    };
   }
 }
 
