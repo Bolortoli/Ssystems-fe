@@ -112,6 +112,16 @@ const NavbarTwo = ({ services, why }) => {
 
                   <li className="nav-item">
                     <Link
+                      href="/service-pricing"
+                      className={`nav-link ${currentPath == "/service-pricing" && "active"
+                        }`}
+                    >
+                      Pricing
+                    </Link>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link
                       href="/about"
                       className={`nav-link ${currentPath == "/about" && "active"
                         }`}

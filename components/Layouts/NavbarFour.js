@@ -74,7 +74,7 @@ const NavbarFour = ({ services, why }) => {
                 <ul className="navbar-nav">
                   <li className="nav-item">
                     <Link
-                      href="#"
+                      href="/"
                       className={`nav-link ${currentPath == "/" && "active"}`}
                     >
                       Home
@@ -103,6 +103,16 @@ const NavbarFour = ({ services, why }) => {
                         </li>
                       ))}
                     </ul>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link
+                      href="/service-pricing"
+                      className={`nav-link ${currentPath == "/service-pricing" && "active"
+                        }`}
+                    >
+                      Pricing
+                    </Link>
                   </li>
 
                   <li className="nav-item">

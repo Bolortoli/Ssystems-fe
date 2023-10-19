@@ -8,13 +8,13 @@ import axios from "axios";
 import { useTranslation } from 'react-i18next';
 import "dotenv/config";
 
-const ServicesTwo = (props) => {
+const ServicePricing = (props) => {
 
   return (
     <>
-      <NavbarFour />
+      <NavbarFour services={props.content.global_config.servicesTranslation} why={props.content.global_config.whyTranslation} />
       
-      <Services data={props.data.translationData} />
+      <Services data={props.content.translationData} />
 
       <Footer data={props.content.global_config} />
 
@@ -43,7 +43,7 @@ export async function getServerSideProps(context) {
 
     return {
       props: {
-        data: {
+        content: {
           translationData,
           global_config,
         }
@@ -104,4 +104,4 @@ async function getGlobalConfigs(locale) {
   }
 }
 
-export default ServicesTwo;
+export default ServicePricing;

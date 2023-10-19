@@ -11,14 +11,6 @@ const Faq = (props) => {
     <>
       <NavbarFour services={props.content.global_config.servicesTranslation} why={props.content.global_config.whyTranslation} />
 
-      {/* <PageBanner
-        pageTitle="Frequently Asked Questions"
-        homePageUrl="/"
-        homePageText="Home"
-        activePageText="Faq"
-        bgImgClass="item-bg1"
-      /> */}
-
       <FaqContent faq={props.content.faqs} content={props.content.translationContent} image={props.content.image} contact={props.content.translationContact} contactImage={props.content.contactImage} />
 
       <Footer data={props.content.global_config} />
