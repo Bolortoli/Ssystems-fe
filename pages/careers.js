@@ -16,7 +16,8 @@ const Blog = (props) => {
 
       <ContactFormContent data={props.content.contentTranslation}  image={props.content.image} />
 
-      <Footer />
+      <Footer data={props.content.global_config} />
+
     </>
   );
 };

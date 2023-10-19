@@ -19,7 +19,8 @@ const ProjectsDetails = (props) => {
 
       <ServiceDetailsContent data={props.content.translationData} />
 
-      <Footer />
+      <Footer data={props.content.global_config} />
+
     </>
   );
 };

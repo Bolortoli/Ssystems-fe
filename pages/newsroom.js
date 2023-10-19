@@ -13,7 +13,8 @@ const Blog = (props) => {
 
       <BlogThreeGrid data={props.content.blogs} />
 
-      <Footer />
+      <Footer data={props.content.global_config} />
+
     </>
   );
 };

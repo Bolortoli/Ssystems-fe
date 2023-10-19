@@ -35,7 +35,7 @@ const Index = (props) => {
       <FeedbackSlider data={props.content.translation_data} />
       <BlogPost data={props.content.translation_data} blogs={props.content.blogs} />
       <ContactFormContent data={props.content.translation_data} />
-      <Footer />
+      <Footer data={props.content.global_config} />
 
     </>
   );

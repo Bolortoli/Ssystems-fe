@@ -21,7 +21,8 @@ const Faq = (props) => {
 
       <FaqContent faq={props.content.faqs} content={props.content.translationContent} image={props.content.image} contact={props.content.translationContact} contactImage={props.content.contactImage} />
 
-      <Footer />
+      <Footer data={props.content.global_config} />
+
     </>
   );
 };

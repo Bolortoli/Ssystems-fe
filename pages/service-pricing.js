@@ -16,7 +16,8 @@ const ServicesTwo = (props) => {
       
       <Services data={props.data.translationData} />
 
-      <Footer />
+      <Footer data={props.content.global_config} />
+
     </>
   );
 };

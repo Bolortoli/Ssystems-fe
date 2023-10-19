@@ -25,7 +25,8 @@ const AboutTwo = (props) => {
 
       <PartnerSlider data={props.content.translationData} partners={props.content.partners} />
 
-      <Footer />
+      <Footer data={props.content.global_config} />
+
     </>
   );
 };

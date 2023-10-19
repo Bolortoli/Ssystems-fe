@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Link from "next/link";
 
-const Footer = () => {
+const Footer = ({ data }) => {
   const currentYear = new Date().getFullYear();
   return (
     <>
@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-3 col-md-6 col-sm-6">
-              <div 
+              <div
                 className="single-footer-widget"
                 data-aos="fade-in"
                 data-aos-duration="120"
@@ -20,30 +20,28 @@ const Footer = () => {
                     <img src="/images/white-logo.png" alt="image" />
                   </Link>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud.
+                    {data.footer_text}
                   </p>
                 </div>
 
                 <ul className="social">
                   <li>
-                    <a href="https://www.facebook.com/" target="_blank">
+                    <a href={data.facebook_link} target="_blank">
                       <i className="flaticon-facebook-letter-logo"></i>
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href="https://twitter.com/" target="_blank">
                       <i className="flaticon-twitter"></i>
                     </a>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <a href="https://www.instagram.com/" target="_blank">
                       <i className="flaticon-instagram-logo"></i>
                     </a>
-                  </li>
+                  </li> */}
                   <li>
-                    <a href="https://www.youtube.com/" target="_blank">
+                    <a href={data.youtube_link} target="_blank">
                       <i className="flaticon-youtube-play-button"></i>
                     </a>
                   </li>
@@ -52,7 +50,7 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-3 col-md-6 col-sm-6">
-              <div 
+              <div
                 className="single-footer-widget"
                 data-aos="fade-in"
                 data-aos-duration="120"
@@ -61,27 +59,17 @@ const Footer = () => {
                 <h3>Services</h3>
 
                 <ul className="footer-services-list">
-                  <li>
-                    <Link href="/service-details">Product Engineering</Link>
-                  </li>
-                  <li>
-                    <Link href="/service-details">UX/UI Design</Link>
-                  </li>
-                  <li>
-                    <Link href="/service-details">Big Data Analysis</Link>
-                  </li>
-                  <li>
-                    <Link href="/service-details">Desktop Applications</Link>
-                  </li>
-                  <li>
-                    <Link href="/service-details">Mobile Applications</Link>
-                  </li>
+                  {data.servicesTranslation.map(service => (
+                    <li>
+                      <Link href={`/service-detail/${service.id}`}>{service.title}</Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
 
             <div className="col-lg-3 col-md-6 col-sm-6">
-              <div 
+              <div
                 className="single-footer-widget"
                 data-aos="fade-in"
                 data-aos-duration="120"
@@ -94,23 +82,23 @@ const Footer = () => {
                     <Link href="/about">About Us</Link>
                   </li>
                   <li>
-                    <Link href="/blog">Blog</Link>
+                    <Link href="/newsroom">Newsroom</Link>
                   </li>
                   <li>
                     <Link href="/contact">Contact</Link>
                   </li>
                   <li>
-                    <Link href="/services">Services</Link>
+                    <Link href="/faq">FAQ</Link>
                   </li>
                   <li>
-                    <Link href="/pricing">Pricing</Link>
+                    <Link href="/service-pricing">Pricing</Link>
                   </li>
                 </ul>
               </div>
             </div>
 
             <div className="col-lg-3 col-md-6 col-sm-6">
-              <div 
+              <div
                 className="single-footer-widget"
                 data-aos="fade-in"
                 data-aos-duration="120"
@@ -121,18 +109,19 @@ const Footer = () => {
                 <ul className="footer-contact-list">
                   <li>
                     <span>Address:</span>
-                    2750 Quadra Street <br /> Victoria, Canada
+                    {data.address}
                   </li>
                   <li>
                     <span>Email:</span>
-                    bariton@gmail.com
+                    {data.address}
                   </li>
                   <li>
-                    <span>Phone: +44 587 154756</span>
-                    
+                    <span>Phone:</span>
+                    {data.phone}
                   </li>
                   <li>
-                    <span>Fax: +44 785 4578964</span>
+                    <span>Fax:</span>
+                    {data.fax}
                   </li>
                 </ul>
               </div>

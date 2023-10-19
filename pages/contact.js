@@ -21,7 +21,8 @@ const Contact = (props) => {
 
       <ContactFormContent data={props.content} />
 
-      <Footer />
+      <Footer data={props.content.global_config} />
+
     </>
   );
 };

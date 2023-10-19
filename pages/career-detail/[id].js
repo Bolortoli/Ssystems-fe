@@ -13,7 +13,7 @@ const CareerDetails = (props) => {
 
       <CareerDetailsContent data={props.content} />
 
-      <Footer />
+      <Footer data={props.content.global_config} />
     </>
   );
 };
