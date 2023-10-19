@@ -198,8 +198,8 @@ const NavbarTwo = ({ services, why }) => {
                     <Link
                       href={
                         locale == "mn-MN"
-                          ? `/en-US${router.route}`
-                          : `/mn-MN${router.route}`
+                          ? `/en-US${router.asPath}`
+                          : `/mn-MN${router.asPath}`
                       }
                       className={`nav-link`}
                       locale={locale == "mn-MN" ? `en-US` : `mn-MN`}
