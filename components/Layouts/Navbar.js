@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTranslation } from 'next-i18next';
 
-const Navbar = () => {
+const Navbar = ({ services, why }) => {
   // Add active class
   const [currentPath, setCurrentPath] = useState("");
   const router = useRouter();
@@ -83,7 +83,7 @@ const Navbar = () => {
                       href="#"
                       className={`nav-link ${currentPath == "/" && "active"}`}
                     >
-                      Home 
+                      Home
                       {/* {t('page')} */}
                     </Link>
                   </li>
@@ -98,341 +98,93 @@ const Navbar = () => {
                     </Link>
 
                     <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <Link
-                          href="/about/"
-                          className={`nav-link ${currentPath == "/about/" && "active"
-                            }`}
-                        >
-                          Co location
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/about-two/"
-                          className={`nav-link ${currentPath == "/about-two/" && "active"
-                            }`}
-                        >
-                          Storage
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/team/"
-                          className={`nav-link ${currentPath == "/team/" && "active"
-                            }`}
-                        >
-                          Dedicated server
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/pricing/"
-                          className={`nav-link ${currentPath == "/pricing/" && "active"
-                            }`}
-                        >
-                          Profesional consulting & service maintennace
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/feedback/"
-                          className={`nav-link ${currentPath == "/feedback/" && "active"
-                            }`}
-                        >
-                          Internet
-                        </Link>
-                      </li>
-
-                      {/* <li className="nav-item">
-                        <Link
-                          href="/partner/"
-                          className={`nav-link ${
-                            currentPath == "/partner/" && "active"
-                          }`}
-                        >
-                          Partners
-                        </Link>
-                      </li> */}
-
-                      {/* <li className="nav-item">
-                        <Link
-                          href="/faq/"
-                          className={`nav-link ${
-                            currentPath == "/faq/" && "active"
-                          }`}
-                        >
-                          Faq
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/coming-soon/"
-                          className={`nav-link ${
-                            currentPath == "/coming-soon/" && "active"
-                          }`}
-                        >
-                          Coming Soon
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link href="/404/">404 Error</Link>
-                      </li> */}
+                      {services.map(service => (
+                        <li className="nav-item">
+                          <Link
+                            href={`/service-detail/${service.id}`}
+                            className={`nav-link ${currentPath == `/service-detail/${service.id}` && "active"
+                              }`}
+                          >
+                            {service.title}
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </li>
 
                   <li className="nav-item">
-                    <Link href="/about" className={`nav-link`}>
-                      About Us
+                    <Link
+                      href="/about/"
+                      className={`nav-link ${currentPath == "/about/" && "active"
+                        }`}
+                    >
+                      About
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href="/careers" className={`nav-link`}>
+                    <Link
+                      href="/newsroom/"
+                      className={`nav-link ${currentPath == "/newsroom/" && "active"
+                        }`}
+                    >
+                      Newsroom
+                    </Link>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link
+                      href="/contact/"
+                      className={`nav-link ${currentPath == "/contact/" && "active"
+                        }`}
+                    >
+                      Contact
+                    </Link>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link
+                      href="/careers/"
+                      className={`nav-link ${currentPath == "/careers/" && "active"
+                        }`}
+                    >
                       Careers
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href="/contact" className={`nav-link`}>
-                      Contact Us
+                    <Link
+                      href="/faq/"
+                      className={`nav-link ${currentPath == "/faq/" && "active"
+                        }`}
+                    >
+                      FAQ
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href="faq" className={`nav-link`}>
-                      FAQs
+                    <Link
+                      href="#"
+                      className="nav-link"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      Why Ssystems <i className="fas fa-chevron-down"></i>
                     </Link>
+
+                    <ul className="dropdown-menu">
+                      {why.map(w => (
+                        <li className="nav-item">
+                          <Link
+                            href={`/why-we/${w.id}`}
+                            className={`nav-link ${currentPath == `/why-we/${w.id}` && "active"
+                              }`}
+                          >
+                            {w.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
                   </li>
-
-                  <li className="nav-item">
-                    <Link href="/blog" className={`nav-link`}>
-                      Newsroom
-                    </Link>
-                  </li>
-
-                  {/* <li className="nav-item">
-                    <Link
-                      href="/services/"
-                      className={`nav-link ${
-                        currentPath == "/services/" && "active"
-                      }`}
-                    >
-                      Services <i className="fas fa-chevron-down"></i>
-                    </Link>
-
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <Link
-                          href="/services/"
-                          className={`nav-link ${
-                            currentPath == "/services/" && "active"
-                          }`}
-                        >
-                          Services Style One
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/services-two/"
-                          className={`nav-link ${
-                            currentPath == "/services-two/" && "active"
-                          }`}
-                        >
-                          Services Style Two
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/services-three/"
-                          className={`nav-link ${
-                            currentPath == "/services-three/" && "active"
-                          }`}
-                        >
-                          Services Style Three
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/services-four/"
-                          className={`nav-link ${
-                            currentPath == "/services-four/" && "active"
-                          }`}
-                        >
-                          Services Style Four
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/service-details/"
-                          className={`nav-link ${
-                            currentPath == "/service-details/" && "active"
-                          }`}
-                        >
-                          Service Details
-                        </Link>
-                      </li>
-                    </ul>
-                  </li> */}
-
-                  {/* <li className="nav-item">
-                    <Link
-                      href="/projects/"
-                      className={`nav-link ${
-                        currentPath == "/projects/" && "active"
-                      }`}
-                    >
-                      Projects <i className="fas fa-chevron-down"></i>
-                    </Link>
-
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <Link
-                          href="/projects/"
-                          className={`nav-link ${
-                            currentPath == "/projects/" && "active"
-                          }`}
-                        >
-                          Projects
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/projects-details/"
-                          className={`nav-link ${
-                            currentPath == "/projects-details/" && "active"
-                          }`}
-                        >
-                          Projects Details
-                        </Link>
-                      </li>
-                    </ul>
-                  </li> */}
-
-                  {/* <li className="nav-item">
-                    <Link
-                      href="/shop/"
-                      className={`nav-link ${
-                        currentPath == "/shop/" && "active"
-                      }`}
-                    >
-                      Shop <i className="fas fa-chevron-down"></i>
-                    </Link>
-
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <Link
-                          href="/shop/"
-                          className={`nav-link ${
-                            currentPath == "/shop/" && "active"
-                          }`}
-                        >
-                          Shop
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/single-products/"
-                          className={`nav-link ${
-                            currentPath == "/single-products/" && "active"
-                          }`}
-                        >
-                          Single Products
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/cart/"
-                          className={`nav-link ${
-                            currentPath == "/cart/" && "active"
-                          }`}
-                        >
-                          Cart
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/checkout/"
-                          className={`nav-link ${
-                            currentPath == "/checkout/" && "active"
-                          }`}
-                        >
-                          Checkout
-                        </Link>
-                      </li>
-                    </ul>
-                  </li> */}
-
-                  {/* <li className="nav-item">
-                    <Link
-                      href="/blog/"
-                      className={`nav-link ${
-                        currentPath == "/blog/" && "active"
-                      }`}
-                    >
-                      Blog <i className="fas fa-chevron-down"></i>
-                    </Link>
-
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <Link
-                          href="/blog/"
-                          className={`nav-link ${
-                            currentPath == "/blog/" && "active"
-                          }`}
-                        >
-                          Blog Grid
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/blog2/"
-                          className={`nav-link ${
-                            currentPath == "/blog2/" && "active"
-                          }`}
-                        >
-                          Blog Right Sidebar
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/blog-details/"
-                          className={`nav-link ${
-                            currentPath == "/blog-details/" && "active"
-                          }`}
-                        >
-                          Blog Details
-                        </Link>
-                      </li>
-                    </ul>
-                  </li> */}
-
-                  {/* <li className="nav-item">
-                    <Link
-                      href="/contact/"
-                      className={`nav-link ${
-                        currentPath == "/contact/" && "active"
-                      }`}
-                    >
-                      Contact
-                    </Link>
-                  </li> */}
 
                   <li className="nav-item">
                     <Link
@@ -448,25 +200,6 @@ const Navbar = () => {
                     </Link>
                   </li>
                 </ul>
-
-                {/* others-options */}
-                <div className="others-options">
-                  {/* <Link href="/cart" className="cart-btn">
-                    <i className="flaticon-commerce-and-shopping"></i>
-                    <span>1</span>
-                  </Link> */}
-
-                  {/* <div className="option-item">
-                    <i
-                      className="search-btn flaticon-search"
-                      onClick={handleToggleSearchModal}
-                    ></i>
-                  </div> */}
-
-                  <Link href="/contact" className="btn btn-primary">
-                    Contact Us
-                  </Link>
-                </div>
               </div>
             </nav>
           </div>

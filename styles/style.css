@@ -2354,7 +2354,7 @@ Blog Area CSS
   transition: 0.5s;
   border-radius: 5px;
   background-color: #f4faff;
-  min-height: 400px;
+  /* min-height: 400px; */
   max-height: 100%;
 }
 .single-blog-post .entry-thumbnail a img {

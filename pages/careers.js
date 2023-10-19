@@ -1,25 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import NavbarFour from "../components/Layouts/NavbarFour";
-import PageBanner from "../components/Common/PageBanner";
-import FaqContent from "../components/Faq/FaqContent";
+import CareerGrid from "../components/Careers/CareerGrid";
 import Footer from "../components/Layouts/Footer";
-import axios from "axios";
+import axios from "axios"
+import "dotenv/config";
+import ContactFormContent from "../components/Careers/ContactFormContent";
 
-const Faq = (props) => {
+const Blog = (props) => {
 
   return (
     <>
       <NavbarFour services={props.content.global_config.servicesTranslation} why={props.content.global_config.whyTranslation} />
 
-      {/* <PageBanner
-        pageTitle="Frequently Asked Questions"
-        homePageUrl="/"
-        homePageText="Home"
-        activePageText="Faq"
-        bgImgClass="item-bg1"
-      /> */}
+      <CareerGrid data={props.content.translation} content={props.content.contentTranslation} />
 
-      <FaqContent faq={props.content.faqs} content={props.content.translationContent} image={props.content.image} contact={props.content.translationContact} contactImage={props.content.contactImage} />
+      <ContactFormContent data={props.content.contentTranslation}  image={props.content.image} />
 
       <Footer />
     </>
@@ -27,65 +22,52 @@ const Faq = (props) => {
 };
 
 export async function getServerSideProps(context) {
+
   const { locale } = context;
+
+  const responseCareers = await axios.get(
+    `${process.env.CMS_ENDPOINT_LOCAL}/items/careers?fields=*.*.*&filter[status][_eq]=published`
+  )
+
+  const contentData = await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/careers_content?fields=*.*.*`)
 
   const global_config = await getGlobalConfigs(locale)
 
-  if (!global_config) return {
-    props: {
-      message: "error"
-    }
-  };
-
-  const responseFaq = await axios.get(
-    `${process.env.CMS_ENDPOINT_LOCAL}/items/faq?fields=*.*.*`
-  )
-
-  const responseFaqContent = await axios.get(
-    `${process.env.CMS_ENDPOINT_LOCAL}/items/faq_content?fields=*.*.*`
-  )
-
-  const responseContact = await axios.get(
-    `${process.env.CMS_ENDPOINT_LOCAL}/items/contact?fields=*.*.*.*`
-  )
-
-
-  if (!responseFaq) {
+  if (!responseCareers) {
     return {
       props: {
         message: "error"
       }
     }
   }
-  let translationContact = responseContact.data.data.translations.find(t => t.languages_code.code == locale)
 
-  let translationContent = responseFaqContent.data.data.translations.find(t => t.languages_code.code == locale)
-
-  let translationFaq = responseFaq.data.data.map(d => {
+  let translation = responseCareers.data.data.map(d => {
     let content = d.translations.find(trans => trans.languages_code.code == locale)
 
     return {
       id: d.id,
-      question: content.question,
-      answer: content.answer
+      created: d.date_created,
+      content
     }
   })
+
+  const contentTranslation = contentData?.data?.data.translations?.find(d => d.languages_code.code == locale)
+
 
   return {
     props: {
       message: "success",
       content: {
-        faqs: translationFaq,
         global_config,
-        translationContent,
-        image: responseFaqContent.data.data.image.id,
-        translationContact,
-        contactImage: responseContact.data.data.image.id
+        translation,
+        contentTranslation,
+        image: contentData.data.data.image.id,
       }
     }
   }
 
 }
+
 
 async function getGlobalConfigs(locale) {
   try {
@@ -131,4 +113,4 @@ async function getGlobalConfigs(locale) {
   }
 }
 
-export default Faq;
+export default Blog;

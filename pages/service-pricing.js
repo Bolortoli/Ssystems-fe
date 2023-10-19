@@ -13,14 +13,7 @@ const ServicesTwo = (props) => {
   return (
     <>
       <NavbarFour />
-      {/* <PageBanner
-        pageTitle="Services Two"
-        homePageUrl="/"
-        homePageText="Home"
-        activePageText="Services Two"
-        bgImgClass="item-bg2"
-      /> */}
-
+      
       <Services data={props.data.translationData} />
 
       <Footer />
@@ -68,8 +61,28 @@ async function getGlobalConfigs(locale) {
   try {
 
     const data = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/global_config?fields=*.*`).catch(e => console.log(e))).data
+    const services = await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/solutions_card?fields=*.*`)
+    const whySsystems = await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/why_ssystems?fields=*.*`)
 
-    const translationData = data?.data?.translations?.filter(d => d.languages_code == locale)[0]
+    const translationData = data?.data?.translations?.find(d => d.languages_code == locale)
+
+    const servicesTranslation = services.data.data.map(service => {
+      let translate = service.translations.find(t => t.languages_code == locale)
+
+      return {
+        id: service.id,
+        title: translate.title
+      }
+    })
+
+    const whyTranslation = whySsystems.data.data.map(why => {
+      let translate = why.translations.find(t => t.languages_code == locale)
+
+      return {
+        id: why.id,
+        title: translate.title
+      }
+    })
 
     return {
       date_created: data.data.date_created,
@@ -79,7 +92,9 @@ async function getGlobalConfigs(locale) {
       phone: data.data.phone,
       footer_text: translationData.footer_text,
       address: translationData.address,
-      languages_code: translationData.languages_code
+      languages_code: translationData.languages_code,
+      servicesTranslation,
+      whyTranslation
     };
   } catch (error) {
     return null

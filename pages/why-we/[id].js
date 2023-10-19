@@ -1,27 +1,24 @@
 import React from "react";
-import NavbarFour from "../../components/Layouts/NavbarFour";
-import PageBanner from "../../components/Common/PageBanner";
-import BlogDetailsContent from "../../components/Blog/BlogDetailsContent";
+import NavbarTwo from "../../components/Layouts/NavbarTwo";
 import Footer from "../../components/Layouts/Footer";
+import PageBanner from "../../components/Common/PageBanner";
+import ServiceDetailsContent from "../../components/ServiceDetails/ServiceDetailsContent";
 import axios from "axios";
-import { useRouter } from "next/router";
-import "dotenv/config";
 
-const BlogDetails = (props) => {
-
+const ProjectsDetails = (props) => {
+  
   return (
     <>
-      <NavbarFour services={props.content.global_config.servicesTranslation} why={props.content.global_config.whyTranslation} />
+      <NavbarTwo services={props.content.global_config.servicesTranslation} why={props.content.global_config.whyTranslation} />
 
-      {/* <PageBanner
-        pageTitle="Blog Details"
-        homePageUrl="/"
-        homePageText="Home"
-        activePageText="Blog Details"
-        bgImgClass="item-bg3"
-      /> */}
 
-      <BlogDetailsContent data={props.content} />
+      <PageBanner
+        bgImgClass="item-bg2"
+        data={props.content.translationData}
+        coverImage={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${props.content.cover_image}`}
+      />
+
+      <ServiceDetailsContent data={props.content.translationData} />
 
       <Footer />
     </>
@@ -43,31 +40,9 @@ export async function getServerSideProps(context) {
       }
     };
 
-    const data = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/blog/${id}?fields=*.*.*.*`).catch(e => console.log(e))).data
-
-    const blogs = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/blog?fields=*.*`).catch(e => console.log(e))).data
-
-    let related_blogs = [blogs.data[Math.floor((Math.random()*blogs.data.length))], blogs.data[Math.floor((Math.random()*blogs.data.length))]]
-
-    related_blogs = related_blogs.map(blog => {
-      let translation = blog.translations.filter(d => d.languages_code == locale)[0]
-
-      return {
-        id: blog.id,
-        title: translation.title
-      }
-    })
+    const data = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/why_ssystems/${id}?fields=*.*.*`).catch(e => console.log(e))).data
 
     const translationData = data?.data?.translations?.filter(d => d.languages_code.code == locale)[0]
-
-    const categories = data.data.category.map(c => {
-      let categoryTranslation = c.blog_category_id.translations.find(trans => trans.languages_code == locale)
-
-      return {
-        id: c.id,
-        name: categoryTranslation.name,
-      }
-    })
 
     return {
       props: {
@@ -75,10 +50,7 @@ export async function getServerSideProps(context) {
           translationData,
           id: data.data.id,
           cover_image: data.data.cover_image.id,
-          date_created: data.data.date_created,
           global_config,
-          related_blogs,
-          categories
         }
       }
     };
@@ -136,4 +108,4 @@ async function getGlobalConfigs(locale) {
   }
 }
 
-export default BlogDetails;
+export default ProjectsDetails;

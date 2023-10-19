@@ -8,16 +8,16 @@ import axios from "axios";
 const ProjectsDetails = (props) => {
   return (
     <>
-      <NavbarTwo />
+      <NavbarTwo services={props.content.global_config.servicesTranslation} why={props.content.global_config.whyTranslation} />
 
 
       <PageBanner
         bgImgClass="item-bg2"
-        data={props.data.translationData}
-        coverImage={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${props.data.cover_image}`}
+        data={props.content.translationData}
+        coverImage={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${props.content.cover_image}`}
       />
 
-      <ServiceDetailsContent data={props.data.translationData} />
+      <ServiceDetailsContent data={props.content.translationData} />
 
       <Footer />
     </>
@@ -45,7 +45,7 @@ export async function getServerSideProps(context) {
 
     return {
       props: {
-        data: {
+        content: {
           translationData,
           id: data.data.id,
           cover_image: data.data.cover_image.id,
@@ -67,8 +67,28 @@ async function getGlobalConfigs(locale) {
   try {
 
     const data = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/global_config?fields=*.*`).catch(e => console.log(e))).data
+    const services = await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/solutions_card?fields=*.*`)
+    const whySsystems = await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/why_ssystems?fields=*.*`)
 
-    const translationData = data?.data?.translations?.filter(d => d.languages_code == locale)[0]
+    const translationData = data?.data?.translations?.find(d => d.languages_code == locale)
+
+    const servicesTranslation = services.data.data.map(service => {
+      let translate = service.translations.find(t => t.languages_code == locale)
+
+      return {
+        id: service.id,
+        title: translate.title
+      }
+    })
+
+    const whyTranslation = whySsystems.data.data.map(why => {
+      let translate = why.translations.find(t => t.languages_code == locale)
+
+      return {
+        id: why.id,
+        title: translate.title
+      }
+    })
 
     return {
       date_created: data.data.date_created,
@@ -78,7 +98,9 @@ async function getGlobalConfigs(locale) {
       phone: data.data.phone,
       footer_text: translationData.footer_text,
       address: translationData.address,
-      languages_code: translationData.languages_code
+      languages_code: translationData.languages_code,
+      servicesTranslation,
+      whyTranslation
     };
   } catch (error) {
     return null

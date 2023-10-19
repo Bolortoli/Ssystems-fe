@@ -85,7 +85,7 @@ const BlogDetailsContent = ({ data }) => {
                   <h5 style={{ flex: 1, }}>
                     <Link href={`/newsroom-detail/${data.related_blogs[0]?.id}`}>{data.related_blogs[0]?.title}</Link>
                   </h5>
-                  <h5 class="text-end" style={{ flex: 1, }}>
+                  <h5 className="text-end" style={{ flex: 1, }}>
                     <Link href={`/newsroom-detail/${data.related_blogs[1]?.id}`}>{data.related_blogs[1]?.title}</Link>
                   </h5>
                 </div>

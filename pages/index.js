@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../components/Layouts/Navbar";
+import NavbarTwo from "../components/Layouts/NavbarTwo";
 import MainBanner from "../components/HomeOne/MainBanner";
 import About from "../components/HomeOne/About";
 import Services from "../components/HomeOne/Services";
@@ -26,7 +26,7 @@ const Index = (props) => {
 
   return (
     <>
-      <Navbar />
+      <NavbarTwo services={props.content.global_config.servicesTranslation} why={props.content.global_config.whyTranslation} />
       <MainBanner data={props.content.translation_data} />
       <FunFacts data={props.content.translation_data} />
       <About data={props.content.translation_data} />
@@ -37,10 +37,8 @@ const Index = (props) => {
       <FeedbackSlider data={props.content.translation_data} />
       <BlogPost data={props.content.translation_data} blogs={props.content.blogs} />
       <ContactFormContent data={props.content.translation_data} />
-
-      {/* <FreeTrialForm data={props.content.translation_data} /> */}
       <Footer />
-      {/* <PricingCard data={props.content.translation_data} /> */}
+
     </>
   );
 };
@@ -49,6 +47,14 @@ export async function getServerSideProps(context) {
   try {
     const { locale } = context;
 
+    const global_config = await getGlobalConfigs(locale)
+
+    if (!global_config) return {
+      props: {
+        message: "error"
+      }
+    };
+    
     const responseHome = await axios.get(
       `${process.env.CMS_ENDPOINT_LOCAL}/items/home_content?fields=*.*.*.*`
     )
@@ -80,7 +86,7 @@ export async function getServerSideProps(context) {
     const solution_cards = []
 
     data.data.solution_cards.forEach(card => {
-      solution_cards.push({...card.solutions_card_id.translations.find(translation => translation.languages_code == locale), icon: card.solutions_card_id.icon.id})
+      solution_cards.push({ ...card.solutions_card_id.translations.find(translation => translation.languages_code == locale), icon: card.solutions_card_id.icon.id })
     })
 
     let blog_translation = responseBLogs.data.data.map(d => {
@@ -109,6 +115,7 @@ export async function getServerSideProps(context) {
       props: {
         content: {
           translation_data,
+          global_config,
           solution_cards,
           partners: responsePartners.data,
           awards: responseAwards.data,
@@ -125,6 +132,51 @@ export async function getServerSideProps(context) {
         message: JSON.stringify(error)
       }
     }
+  }
+}
+
+
+async function getGlobalConfigs(locale) {
+  try {
+
+    const data = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/global_config?fields=*.*`).catch(e => console.log(e))).data
+    const services = await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/solutions_card?fields=*.*`)
+    const whySsystems = await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/why_ssystems?fields=*.*`)
+
+    const translationData = data?.data?.translations?.find(d => d.languages_code == locale)
+
+    const servicesTranslation = services.data.data.map(service => {
+      let translate = service.translations.find(t => t.languages_code == locale)
+
+      return {
+        id: service.id,
+        title: translate.title
+      }
+    })
+
+    const whyTranslation = whySsystems.data.data.map(why => {
+      let translate = why.translations.find(t => t.languages_code == locale)
+
+      return {
+        id: why.id,
+        title: translate.title
+      }
+    })
+
+    return {
+      date_created: data.data.date_created,
+      facebook_link: data.data.facebook_link,
+      youtube_link: data.data.youtube_link,
+      email: data.data.email,
+      phone: data.data.phone,
+      footer_text: translationData.footer_text,
+      address: translationData.address,
+      languages_code: translationData.languages_code,
+      servicesTranslation,
+      whyTranslation
+    };
+  } catch (error) {
+    return null
   }
 }
 

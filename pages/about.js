@@ -16,27 +16,15 @@ const AboutTwo = (props) => {
 
   return (
     <>
-      <NavbarFour />
-
-      {/* <PageBanner
-        pageTitle="About Us"
-        homePageUrl="/"
-        homePageText="Home"
-        activePageText="About Us"
-        bgImgClass="item-bg2"
-      /> */}
+      <NavbarFour services={props.content.global_config.servicesTranslation} why={props.content.global_config.whyTranslation} />
 
       <AboutUsContent data={props.content.translationData} image={props.content.aboutImage} />
-
-      {/* <AboutContact data={props.content.translationData} /> */}
 
       <ProfessionalSolutions data={props.content.translationData} solutions={props.content.solutions} image={props.content.serviceImage} />
 
       <Team data={props.content.translationData} members={props.content.teamMembers}/>
 
       <PartnerSlider data={props.content.translationData} partners={props.content.partners} />
-
-      {/* <CustomerFeedback data={props.content.translationData} /> */}
 
       <Footer />
     </>
@@ -111,8 +99,28 @@ async function getGlobalConfigs(locale) {
   try {
 
     const data = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/global_config?fields=*.*`).catch(e => console.log(e))).data
+    const services = await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/solutions_card?fields=*.*`)
+    const whySsystems = await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/why_ssystems?fields=*.*`)
 
-    const translationData = data?.data?.translations?.filter(d => d.languages_code == locale)[0]
+    const translationData = data?.data?.translations?.find(d => d.languages_code == locale)
+
+    const servicesTranslation = services.data.data.map(service => {
+      let translate = service.translations.find(t => t.languages_code == locale)
+
+      return {
+        id: service.id,
+        title: translate.title
+      }
+    })
+
+    const whyTranslation = whySsystems.data.data.map(why => {
+      let translate = why.translations.find(t => t.languages_code == locale)
+
+      return {
+        id: why.id,
+        title: translate.title
+      }
+    })
 
     return {
       date_created: data.data.date_created,
@@ -122,7 +130,9 @@ async function getGlobalConfigs(locale) {
       phone: data.data.phone,
       footer_text: translationData.footer_text,
       address: translationData.address,
-      languages_code: translationData.languages_code
+      languages_code: translationData.languages_code,
+      servicesTranslation,
+      whyTranslation
     };
   } catch (error) {
     return null

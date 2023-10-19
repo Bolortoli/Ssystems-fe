@@ -3,44 +3,45 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import "dotenv/config";
 
-const BlogThreeGrid = ({ data }) => {
+const CareerGrid = ({ data, image, content }) => {
 
   return (
     <>
       <section className="blog-area ptb-110">
         <div className="container">
+
+          <div className="section-title">
+            <h2>{content.title}</h2>
+            <p>
+              {content.description}
+            </p>
+          </div>
           <div className="row">
 
-            {data.map(blog => (
-            <div className="col-lg-3 col-md-4" style={{ marginBottom: 30 }}>
-              <div className="single-blog-post" style={{minHeight: 400}}>
-                <div className="entry-thumbnail">
-                  <Link href={`/newsroom-detail/${blog.id}`}>
-                    <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${blog?.cover_image}`} alt="image" />
-                  </Link>
-                </div>
+            {data.map(career => {
+              const date = new Date(career.created)
 
-                <div className="entry-post-content" style={{ padding: 15 }}>
-                  <div className="entry-meta">
-                    <ul >
-                      {blog.categories.map(cat => (<li style={{ fontSize: 14 }} >{cat.name}</li>))}
-                    </ul>
+              return (
+                <div className="col-lg-3 col-md-4" style={{ marginBottom: 30 }}>
+                  <div className="single-blog-post" style={{ minHeight: 200 }}>
+                    <div className="entry-post-content" style={{ padding: 15 }}>
+                      <div className="entry-meta">
+                        <ul >
+                          <li style={{ fontSize: 14 }} >{`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}</li>
+                        </ul>
+                      </div>
+                      <h3 style={{ fontSize: '16px' }}>
+                        <Link href={`/career-detail/${career.id}`}>
+                          {career.content.title}
+                        </Link>
+                      </h3>
+                      <p>
+                        {career.content.short_description}
+                      </p>
+                    </div>
                   </div>
-
-                  <h3 style={{ fontSize: '16px' }}>
-                    <Link href={`/newsroom-detail/${blog.id}`}>
-                      {blog.content.title}
-                    </Link>
-                  </h3>
-
-                  <p>
-                    {blog.content.short_description}
-                  </p>
-                </div>
-
-              </div>
-
-            </div>))}
+                </div>)
+            })}
           </div>
         </div>
 
@@ -79,4 +80,4 @@ const BlogThreeGrid = ({ data }) => {
     </>
   );
 };
-export default BlogThreeGrid;
+export default CareerGrid;
