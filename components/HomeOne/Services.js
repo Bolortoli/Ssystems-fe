@@ -10,7 +10,7 @@ const Services = ({ cardsData, data }) => {
       <div className="main-services-area ptb-110">
         <div className="container">
           <div className="section-title">
-            <h2 style={{fontWeight: 400}}>{data.section3_title}</h2>
+            <h2 style={{fontWeight: 400 }}>{data.section3_title}</h2>
             <p>{data.section3_text}</p>
           </div>
           <div className="row justify-content-center">
