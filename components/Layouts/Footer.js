@@ -19,7 +19,7 @@ const Footer = ({ data }) => {
               >
                 <div className="logo">
                   <Link href="/">
-                    <img src="/images/white-logo.png" alt="image" />
+                    <img src="/images/white-logo.png" alt="image" style={{ maxWidth: 110 }} />
                   </Link>
                   <p>
                     {data.footer_text}

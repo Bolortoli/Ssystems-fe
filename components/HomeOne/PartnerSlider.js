@@ -7,14 +7,15 @@ const PartnerSlider = ({ partners, data }) => {
 
   return (
     <>
-      <div className="partner-section ptb-110">
-        <div className="container">
+      <div className="partner-section" style={{paddingTop: 110, paddingBottom: 0}}>
+        <div className="container" style={{maxWidth: '50%'}}>
           <div className="section-title">
             <h2 style={{fontWeight: 400, fontSize: 30}}>{data.section5_title}</h2>
           </div>
 
           <Swiper
             spaceBetween={30}
+            // width={'50%'}
             modules={[Autoplay]}
             loop={true}
             speed={500}
@@ -28,13 +29,13 @@ const PartnerSlider = ({ partners, data }) => {
                 slidesPerView: 3,
               },
               576: {
-                slidesPerView: 4,
+                slidesPerView: partners.data.length < 4 ? partners.data.length : 4,
               },
               768: {
-                slidesPerView: 5,
+                slidesPerView: partners.data.length < 5 ? partners.data.length : 5,
               },
               1200: {
-                slidesPerView: 6,
+                slidesPerView: partners.data.length < 6 ? partners.data.length : 6,
               },
             }}
             className="partner-slides"
