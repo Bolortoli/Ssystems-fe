@@ -34,7 +34,7 @@ const Webinar = ({ data }) => {
               backgroundImage: `url(${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.section4_image.id})`,
               borderRadius: 10,
             }}>
-              {/* <img style={{borderRadius: 10}} src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.section4_image.id}`} alt="image" /> */}
+              <img style={{borderRadius: 10}} src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.section4_image.id}`} alt="image" />
 
               <div
                 onClick={() => setToggler(!toggler)}

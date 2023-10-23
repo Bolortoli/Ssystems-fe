@@ -1835,8 +1835,8 @@ Webinar Area CSS
 .webinar-content {
   margin-left: auto;
   max-width: 555px;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   padding-right: 87px;
 }
 .webinar-content h2 {
@@ -1870,7 +1870,7 @@ Webinar Area CSS
   width: 90px;
   height: 90px;
   line-height: 90px;
-  background-color: #ea560d;
+  background-color: #11224e;
   border-radius: 50%;
   color: #ffffff;
   z-index: 1;
@@ -1892,7 +1892,7 @@ Webinar Area CSS
   bottom: 0;
   left: 0;
   border-radius: 50%;
-  border: 1px solid #ea560d;
+  border: 1px solid #11224e;
 }
 .webinar-video-image .video-btn::before {
   animation: ripple 2s linear infinite;
@@ -1901,7 +1901,7 @@ Webinar Area CSS
   animation: ripple 2s linear 1s infinite;
 }
 .webinar-video-image .video-btn:hover, .webinar-video-image .video-btn:focus {
-  background-color: #11224e;
+  background-color: #ea560d;
   color: #ffffff;
 }
 
@@ -4931,7 +4931,7 @@ Fun Facts Area CSS
   text-align: center;
 }
 .single-funfacts h3 {
-  color: #ea560d;
+  color: #11224e;
   margin-bottom: 0;
   font-size: 32px;
   font-weight: 700;

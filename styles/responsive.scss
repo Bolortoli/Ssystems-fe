@@ -217,6 +217,7 @@ $value_seven: 1550px;
     .webinar-video-image {
         width: auto;
         height: auto;
+        max-height: 50vh;
         background-image: unset;
 
         img {
@@ -2409,6 +2410,7 @@ $value_seven: 1550px;
         width: auto;
         height: auto;
         background-image: unset;
+        max-height: 50vh;
 
         img {
             display: block;
