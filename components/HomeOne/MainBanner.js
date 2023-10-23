@@ -13,18 +13,19 @@ const MainBanner = ({ data }) => {
       <div
         className="main-banner"
         style={{
-          height: '600px',
+          height: '100vh',
           backgroundImage: `url(${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.hero_image.id})`,
         }}
       >
         <div className="d-table">
           <div className="d-table-cell">
-            <div className="container-fluid" style={{ marginTop: '100px' }}>
+            <div className="container-fluid" style={{ marginTop: '120px' }}>
               <div className="main-banner-content">
                 <h1
                   data-aos="fade-up"
                   data-aos-duration="120"
                   data-aos-delay="100"
+                  style={{fontWeight: 400, fontSize: 45}}
                 >
                   {data.hero_heading}
                 </h1>
@@ -33,6 +34,7 @@ const MainBanner = ({ data }) => {
                   data-aos="fade-up"
                   data-aos-duration="120"
                   data-aos-delay="200"
+                  style={{fontSize: 14}}
                 >
                   {data.hero_description}
                 </p>

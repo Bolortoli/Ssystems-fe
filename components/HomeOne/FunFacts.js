@@ -4,14 +4,14 @@ import Link from "next/link";
 const FunFacts = ({ data }) => {
   return (
     <>
-      <div className="fun-facts-area" style={{ paddingTop: "110px" }}>
+      <div className="fun-facts-area" style={{ paddingTop: "110px", paddingBottom: "110px" }}>
         <div className="container">
-          <div className="section-title">
+          {/* <div className="section-title">
             <h2>{data.fun_fact_title}</h2>
             <p>
               {data.fun_fact_text}
             </p>
-          </div>
+          </div> */}
 
           <div className="row">
             <div className="col-lg-3 col-6 col-sm-3 col-md-3">
@@ -83,7 +83,7 @@ const FunFacts = ({ data }) => {
         </div>
 
         {/* Shape Images  */}
-        <div className="shape-img1">
+        {/* <div className="shape-img1">
           <img src="/images/map.png" alt="image" />
         </div>
         <div className="shape-img3">
@@ -103,7 +103,7 @@ const FunFacts = ({ data }) => {
         </div>
         <div className="dot-shape2">
           <img src="/images/shape/dot3.png" alt="image" />
-        </div>
+        </div> */}
       </div>
     </>
   );

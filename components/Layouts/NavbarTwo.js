@@ -53,11 +53,13 @@ const NavbarTwo = ({ services, why }) => {
                   src="/images/white-logo.png"
                   className="main-logo"
                   alt="logo"
+                  style={{ maxWidth: 110 }}
                 />
                 <img
                   src="/images/black-logo.png"
                   className="optional-logo"
                   alt="logo"
+                  style={{ maxWidth: 110 }}
                 />
               </Link>
 
@@ -85,7 +87,16 @@ const NavbarTwo = ({ services, why }) => {
                     >
                       {t('page.home')}
                     </Link>
+                  </li>
 
+                  <li className="nav-item">
+                    <Link
+                      href="/about"
+                      className={`nav-link ${currentPath == "/about" && "active"
+                        }`}
+                    >
+                      {t('page.about')}
+                    </Link>
                   </li>
 
                   <li className="nav-item">
@@ -109,27 +120,16 @@ const NavbarTwo = ({ services, why }) => {
                           </Link>
                         </li>
                       ))}
+                      <li className="nav-item">
+                        <Link
+                          href="/service-pricing"
+                          className={`nav-link ${currentPath == "/service-pricing" && "active"
+                            }`}
+                        >
+                          {t('page.pricing')}
+                        </Link>
+                      </li>
                     </ul>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      href="/service-pricing"
-                      className={`nav-link ${currentPath == "/service-pricing" && "active"
-                        }`}
-                    >
-                      {t('page.pricing')}
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      href="/about"
-                      className={`nav-link ${currentPath == "/about" && "active"
-                        }`}
-                    >
-                      {t('page.about')}
-                    </Link>
                   </li>
 
                   <li className="nav-item">
@@ -142,15 +142,6 @@ const NavbarTwo = ({ services, why }) => {
                     </Link>
                   </li>
 
-                  <li className="nav-item">
-                    <Link
-                      href="/contact"
-                      className={`nav-link ${currentPath == "/contact" && "active"
-                        }`}
-                    >
-                      {t('page.contact')}
-                    </Link>
-                  </li>
 
                   <li className="nav-item">
                     <Link
@@ -174,6 +165,16 @@ const NavbarTwo = ({ services, why }) => {
 
                   <li className="nav-item">
                     <Link
+                      href="/contact"
+                      className={`nav-link ${currentPath == "/contact" && "active"
+                        }`}
+                    >
+                      {t('page.contact')}
+                    </Link>
+                  </li>
+
+                  {/* <li className="nav-item">
+                    <Link
                       href="#"
                       className="nav-link"
                       onClick={(e) => e.preventDefault()}
@@ -195,7 +196,7 @@ const NavbarTwo = ({ services, why }) => {
                         </li>
                       ))}
                     </ul>
-                  </li>
+                  </li> */}
 
                   <li className="nav-item">
                     <Link

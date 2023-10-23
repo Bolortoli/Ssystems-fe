@@ -20,7 +20,7 @@ const Webinar = ({ data }) => {
         <div className="row m-0">
           <div className="col-lg-6 p-0">
             <div className="webinar-content">
-              <h2>{data.section4_title}</h2>
+              <h2 style={{fontWeight: 400, fontSize: 30}}>{data.section4_title}</h2>
               <p>{data.section4_text}</p>
 
               <Link href="#" className="btn btn-primary">
@@ -32,8 +32,9 @@ const Webinar = ({ data }) => {
           <div className="col-lg-6 p-0">
             <div className="webinar-video-image" style={{
               backgroundImage: `url(${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.section4_image.id})`,
+              borderRadius: 10,
             }}>
-              <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.section4_image.id}`} alt="image" />
+              {/* <img style={{borderRadius: 10}} src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.section4_image.id}`} alt="image" /> */}
 
               <div
                 onClick={() => setToggler(!toggler)}

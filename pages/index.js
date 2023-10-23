@@ -27,10 +27,10 @@ const Index = (props) => {
       <NavbarTwo services={props.content.global_config.servicesTranslation} why={props.content.global_config.whyTranslation} />
       <MainBanner data={props.content.translation_data} />
       <FunFacts data={props.content.translation_data} />
-      <About data={props.content.translation_data} />
+      <Webinar data={props.content.translation_data} />
+      {/* <About data={props.content.translation_data} /> */}
       <PartnerSlider partners={props.content.partners} data={props.content.translation_data} />
       <Services cardsData={props.content.solution_cards} data={props.content.translation_data} />
-      <Webinar data={props.content.translation_data} />
       <AwardsAndCertificates awards={props.content.awards} data={props.content.translation_data} />
       <FeedbackSlider data={props.content.translation_data} />
       <BlogPost data={props.content.translation_data} blogs={props.content.blogs} />
@@ -93,7 +93,6 @@ export async function getServerSideProps(context) {
     let blog_translation = responseBLogs.data.data.map(d => {
       let categories = d.category.map(cat => {
         let categoryTranslation = cat.blog_category_id.translations.find(trans => trans.languages_code == locale)
-        // let categoryTranslation = cat.blog_category_id.translations.find(trans => trans.languages_code == locale)
 
         return {
           id: cat.id,

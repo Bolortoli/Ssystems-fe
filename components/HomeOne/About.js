@@ -16,6 +16,7 @@ const About = ({ data }) => {
                 <img
                   src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.second_section_image1.id}`}
                   alt="image"
+                  style={{borderRadius: 10}}
                 />
                 <img
                   src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.second_section_image2.id}`}
@@ -28,7 +29,7 @@ const About = ({ data }) => {
               <div
                 className="about-content"
               >
-                <h2>{data.second_section_title}</h2>
+                <h2 style={{fontWeight: 400}}>{data.second_section_title}</h2>
                 <p>{data.second_section_text}</p>
 
                 <Link href="/about" className="btn btn-primary">

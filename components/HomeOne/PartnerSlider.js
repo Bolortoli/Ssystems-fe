@@ -10,7 +10,7 @@ const PartnerSlider = ({ partners, data }) => {
       <div className="partner-section ptb-110">
         <div className="container">
           <div className="section-title">
-            <h2>{data.section5_title}</h2>
+            <h2 style={{fontWeight: 400}}>{data.section5_title}</h2>
           </div>
 
           <Swiper
