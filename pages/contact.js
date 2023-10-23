@@ -30,7 +30,7 @@ const Contact = (props) => {
 
 export async function getServerSideProps(context) {
 
-  try {
+  // try {
     const { locale } = context;
 
     const global_config = await getGlobalConfigs(locale)
@@ -67,14 +67,14 @@ export async function getServerSideProps(context) {
       }
     }
 
-  } catch (error) {
-    return {
-      notFound: true,
-      props: {
-        message: "error"
-      }
-    };
-  }
+  // } catch (error) {
+  //   return {
+  //     notFound: true,
+  //     props: {
+  //       message: "error"
+  //     }
+  //   };
+  // }
 }
 
 async function getGlobalConfigs(locale) {
