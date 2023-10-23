@@ -15,7 +15,6 @@ const PartnerSlider = ({ partners, data }) => {
 
           <Swiper
             spaceBetween={30}
-            // width={'50%'}
             modules={[Autoplay]}
             loop={true}
             speed={500}

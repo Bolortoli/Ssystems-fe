@@ -9,7 +9,7 @@ const ContactFormContent = ({ data }) => {
         <div className="container">
           <div className="section-title">
             <span>{data.contact_sub_title}</span>
-            <h2>{data.contact_title}</h2>
+            <h2 style={{fontWeight: 400, fontSize: 30}}>{data.contact_title}</h2>
             <p>
               {data.contact_text}
             </p>

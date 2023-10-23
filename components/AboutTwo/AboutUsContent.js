@@ -15,7 +15,7 @@ const AboutUsContent = ({ data, image }) => {
 
             <div className="col-lg-6 col-md-12">
               <div className="why-choose-us-content">
-                <h2>{data.title}</h2>
+                <h2 style={{fontWeight: 400, fontSize: 30}}>{data.title}</h2>
                 <p>
                   {data.about_text}
                 </p>
@@ -23,7 +23,7 @@ const AboutUsContent = ({ data, image }) => {
                 <div className="row">
                   <div className="col-lg-6 col-md-6 col-sm-6">
                     <div className="single-why-choose-us-box">
-                      <h3>{data.about1_title}</h3>
+                      <h3 style={{fontWeight: 400, fontSize: 18}}>{data.about1_title}</h3>
                       <p>
                         {data.about1_text}
                       </p>
@@ -32,7 +32,7 @@ const AboutUsContent = ({ data, image }) => {
 
                   <div className="col-lg-6 col-md-6 col-sm-6">
                     <div className="single-why-choose-us-box">
-                      <h3>{data.about2_title}</h3>
+                      <h3 style={{fontWeight: 400, fontSize: 18}}>{data.about2_title}</h3>
                       <p>
                         {data.about2_text}
                       </p>
@@ -41,7 +41,7 @@ const AboutUsContent = ({ data, image }) => {
 
                   <div className="col-lg-6 col-md-6 col-sm-6">
                     <div className="single-why-choose-us-box">
-                      <h3>{data.about3_title}</h3>
+                      <h3 style={{fontWeight: 400, fontSize: 18}}>{data.about3_title}</h3>
                       <p>
                         {data.about3_text}
                       </p>
@@ -50,7 +50,7 @@ const AboutUsContent = ({ data, image }) => {
 
                   <div className="col-lg-6 col-md-6 col-sm-6">
                     <div className="single-why-choose-us-box">
-                      <h3>{data.about4_title}</h3>
+                      <h3 style={{fontWeight: 400, fontSize: 18}}>{data.about4_title}</h3>
                       <p>
                         {data.about4_text}
                       </p>
@@ -62,39 +62,12 @@ const AboutUsContent = ({ data, image }) => {
           </div>
         </div>
         <div className="container" style={{maxWidth: "80%"}}>
-          {/* <div className="row align-items-center">
-
-
-            <div className="col-lg-6 col-md-12">
-              <div className="about-content">
-                <h2>asdfasdf</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-12">
-              <div className="about-image">
-                <img src="/images/about/about1.jpg" alt="image" />
-                <img src="/images/about/about2.jpg" alt="image" />
-              </div>
-            </div>
-          </div> */}
 
           <div className="about-inner-area">
             <div className="row">
               <div className="col-lg-4 col-md-6 col-sm-6">
                 <div className="about-text">
-                  <h3>{data.mission1_title}</h3>
+                  <h3 style={{fontWeight: 400, fontSize: 18}}>{data.mission1_title}</h3>
                   <p>
                     {data.mission1_text}
                   </p>
@@ -103,7 +76,7 @@ const AboutUsContent = ({ data, image }) => {
 
               <div className="col-lg-4 col-md-6 col-sm-6">
                 <div className="about-text">
-                  <h3>{data.mission2_title}</h3>
+                  <h3 style={{fontWeight: 400, fontSize: 18}}>{data.mission2_title}</h3>
                   <p>
                     {data.mission2_text}
 
@@ -113,7 +86,7 @@ const AboutUsContent = ({ data, image }) => {
 
               <div className="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
                 <div className="about-text">
-                  <h3>{data.mission3_title}</h3>
+                  <h3 style={{fontWeight: 400, fontSize: 18}}>{data.mission3_title}</h3>
                   <p>
                     {data.mission3_text}
 

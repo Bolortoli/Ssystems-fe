@@ -21,7 +21,7 @@ const AboutTwo = (props) => {
 
       <ProfessionalSolutions data={props.content.translationData} solutions={props.content.solutions} image={props.content.serviceImage} />
 
-      <Team data={props.content.translationData} members={props.content.teamMembers}/>
+      {/* <Team data={props.content.translationData} members={props.content.teamMembers}/> */}
 
       <PartnerSlider data={props.content.translationData} partners={props.content.partners} />
 
@@ -64,7 +64,7 @@ export async function getServerSideProps(context) {
     const solution_cards = []
 
     responseSolutionCards.data.data.forEach(card => {
-      solution_cards.push({...card.translations.find(translation => translation.languages_code.code == locale), icon: card.icon.id})
+      solution_cards.push({...card.translations.find(translation => translation.languages_code.code == locale)})
     })
 
     const team_members = []

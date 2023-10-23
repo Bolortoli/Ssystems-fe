@@ -21,7 +21,7 @@ const Services = ({ cardsData, data }) => {
                     <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${card.icon}`} alt="image" style={{ width: 50, height: 50 }} />
                     <i className="flaticon-robot-1"></i>
                   </div> */}
-                  <h3>
+                  <h3 style={{fontWeight: 400, fontSize: 23}}>
                     <Link href={`/service-detail/${card.id}`}>
                       {card.title}
                     </Link>

@@ -10,7 +10,7 @@ const AwardsAndCertificates = ({ awards, data }) => {
       <div className="partner-section ptb-110">
         <div className="container">
           <div className="section-title">
-            <h2>{data.awards_title}</h2>
+            <h2 style={{fontWeight: 400, fontSize: 30}}>{data.awards_title}</h2>
             <p>{data.awards_text}</p>
           </div>
 

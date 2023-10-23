@@ -62,7 +62,7 @@ function MyApp({ Component, pageProps }) {
   };
 
   const logoStyle = {
-    width: 'auto', // Adjust the width and height to match your logo's dimensions
+    maxWidth: '300px', // Adjust the width and height to match your logo's dimensions
     height: 'auto',
   };
 

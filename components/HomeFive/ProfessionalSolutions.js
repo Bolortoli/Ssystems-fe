@@ -7,7 +7,7 @@ const ProfessionalSolutions = ({ data, solutions, image }) => {
       <div className="solutions-area ptb-110" style={{backgroundImage: `url(${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${image})`}}>
         <div className="container">
           <div className="section-title">
-            <h2>{data.solutions_title}</h2>
+            <h2 style={{fontWeight: 400, fontSize: 30}}>{data.solutions_title}</h2>
             <p>
               {data.solutions_text}
             </p>
@@ -21,7 +21,7 @@ const ProfessionalSolutions = ({ data, solutions, image }) => {
                   {/* <div className="icon">
                     <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${sol.icon}`} alt="image" style={{ width: 50, height: 50 }} />
                   </div> */}
-                  <h3>
+                  <h3 style={{fontWeight: 400}}>
                     <Link href={`/service-detail/${sol.id}`}>{sol.title}</Link>
                   </h3>
                   <p>

@@ -8,9 +8,9 @@ const PartnerSlider = ({ partners, data }) => {
   return (
     <>
       <div className="partner-section ptb-110">
-        <div className="container">
+        <div className="container" style={{maxWidth: '50%'}}>
           <div className="section-title">
-            <h2>{data.partners_title}</h2>
+            <h2 style={{fontWeight: 400, fontSize: 30}}>{data.partners_title}</h2>
           </div>
 
           <Swiper

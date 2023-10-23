@@ -58,7 +58,7 @@ const Footer = ({ data }) => {
                 data-aos-duration="120"
                 data-aos-delay="200"
               >
-                <h3>{t('page.services')}</h3>
+                <h3 style={{ fontWeight: 400 }}>{t('page.services')}</h3>
 
                 <ul className="footer-services-list">
                   {data.servicesTranslation.map(service => (
@@ -77,24 +77,24 @@ const Footer = ({ data }) => {
                 data-aos-duration="120"
                 data-aos-delay="300"
               >
-                <h3>{t('utils.quickLinks')}</h3>
+                <h3 style={{ fontWeight: 400 }}>{t('utils.quickLinks')}</h3>
 
                 <ul className="quick-links-list">
                   <li>
                     <Link href="/about">{t('page.about')}</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="/newsroom">{t('page.newsroom')}</Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link href="/contact">{t('page.contact')}</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="/faq">{t('page.faq')}</Link>
                   </li>
                   <li>
                     <Link href="/service-pricing">{t('page.pricing')}</Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -106,7 +106,7 @@ const Footer = ({ data }) => {
                 data-aos-duration="120"
                 data-aos-delay="400"
               >
-                <h3>{t('utils.contacts')}</h3>
+                <h3 style={{ fontWeight: 400 }}>{t('utils.contacts')}</h3>
 
                 <ul className="footer-contact-list">
                   <li>
@@ -121,10 +121,10 @@ const Footer = ({ data }) => {
                     <span>{t('utils.phone')}:</span>
                     {data.phone}
                   </li>
-                  <li>
+                  {/* <li>
                     <span>{t('utils.fax')}:</span>
                     {data.fax}
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -132,30 +132,6 @@ const Footer = ({ data }) => {
         </div>
 
         <div className="copyright-area">
-          {/* <div className="container">
-            <div className="row align-items-center">
-              <div className="col-lg-6 col-md-6 col-sm-6">
-                <p>
-                  Copyright &copy;{currentYear} Bariton. All Rights Reserved{" "}
-                  <a href="https://envytheme.com/" target="_blank">
-                    EnvyTheme
-                  </a>
-                  .
-                </p>
-              </div>
-
-              <div className="col-lg-6 col-md-6 col-sm-6">
-                <ul>
-                  <li>
-                    <Link href="/privacy-policy">Privacy Policy</Link>
-                  </li>
-                  <li>
-                    <Link href="/terms-conditions">Terms & Conditions</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div> */}
         </div>
 
         <div className="circle-map">

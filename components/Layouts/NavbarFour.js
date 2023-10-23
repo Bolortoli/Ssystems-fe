@@ -117,17 +117,18 @@ const NavbarFour = ({ services, why }) => {
                       ))}
                       <li className="nav-item">
                         <Link
-                          href="/service-pricing"
+                          href="#"
+                          // href="/service-pricing"
                           className={`nav-link ${currentPath == "/service-pricing" && "active"
                             }`}
                         >
-                          {t('page.pricing')}
+                          {t('page.pricing')} (coming soon...)
                         </Link>
                       </li>
                     </ul>
                   </li>
 
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link
                       href="/newsroom"
                       className={`nav-link ${currentPath == "/newsroom" && "active"
@@ -135,9 +136,9 @@ const NavbarFour = ({ services, why }) => {
                     >
                       {t('page.newsroom')}
                     </Link>
-                  </li>
+                  </li> */}
 
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link
                       href="/careers"
                       className={`nav-link ${currentPath == "/careers" && "active"
@@ -145,9 +146,9 @@ const NavbarFour = ({ services, why }) => {
                     >
                       {t('page.careers')}
                     </Link>
-                  </li>
+                  </li> */}
 
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link
                       href="/faq"
                       className={`nav-link ${currentPath == "/faq" && "active"
@@ -155,7 +156,7 @@ const NavbarFour = ({ services, why }) => {
                     >
                       {t('page.faq')}
                     </Link>
-                  </li>
+                  </li> */}
 
                   <li className="nav-item">
                     <Link
@@ -191,7 +192,7 @@ const NavbarFour = ({ services, why }) => {
                     </ul>
                   </li> */}
 
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link
                       href={locale == "mn-MN" ? `/en-US${router.asPath}` : `/mn-MN${router.asPath}`}
                       className={`nav-link`}
@@ -199,7 +200,7 @@ const NavbarFour = ({ services, why }) => {
                     >
                       {locale == "mn-MN" ? `EN` : `MN`}
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </nav>

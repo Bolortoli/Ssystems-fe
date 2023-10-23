@@ -33,7 +33,7 @@ const Index = (props) => {
       <Services cardsData={props.content.solution_cards} data={props.content.translation_data} />
       <AwardsAndCertificates awards={props.content.awards} data={props.content.translation_data} />
       <FeedbackSlider data={props.content.translation_data} />
-      <BlogPost data={props.content.translation_data} blogs={props.content.blogs} />
+      {/* <BlogPost data={props.content.translation_data} blogs={props.content.blogs} /> */}
       <ContactFormContent data={props.content.translation_data} />
       <Footer data={props.content.global_config} />
 
@@ -87,7 +87,7 @@ export async function getServerSideProps(context) {
     const solution_cards = []
 
     data.data.solution_cards.forEach(card => {
-      solution_cards.push({ ...card.solutions_card_id.translations.find(translation => translation.languages_code == locale), icon: card.solutions_card_id.icon.id, id: card.id })
+      solution_cards.push({ ...card.solutions_card_id.translations.find(translation => translation.languages_code == locale), id: card.id })
     })
 
     let blog_translation = responseBLogs.data.data.map(d => {
