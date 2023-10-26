@@ -90,7 +90,7 @@ function MyApp({ Component, pageProps }) {
           <Messenger />
 
           {/* Go Top Button */}
-          <GoTop scrollStepInPx="50" delayInMs="10.50" />
+          {/* <GoTop scrollStepInPx="50" delayInMs="10.50" /> */}
         </IntlProvider>
       )}
     </>
