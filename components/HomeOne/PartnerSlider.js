@@ -8,7 +8,7 @@ const PartnerSlider = ({ partners, data }) => {
   return (
     <>
       <div className="partner-section" style={{paddingTop: 110, paddingBottom: 0}}>
-        <div className="container" style={{maxWidth: '50%'}}>
+        <div className="container" style={{maxWidth: partners.data.length < 5 ? '30%' : '50%'}}>
           <div className="section-title">
             <h2 style={{fontWeight: 400, fontSize: 30}}>{data.section5_title}</h2>
           </div>
@@ -76,18 +76,6 @@ const PartnerSlider = ({ partners, data }) => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
-        <div className="dot-shape1">
-          <img src="/images/shape/dot1.png" alt="image" />
-        </div>
-        <div className="shape-img2">
-          <img src="/images/shape/shape2.svg" alt="image" />
-        </div>
-        <div className="shape-img4">
-          <img src="/images/shape/shape4.svg" alt="image" />
-        </div>
-        <div className="shape-img5">
-          <img src="/images/shape/shape5.svg" alt="image" />
         </div>
       </div>
     </>

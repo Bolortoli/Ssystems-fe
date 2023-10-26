@@ -7,11 +7,11 @@ const AwardsAndCertificates = ({ awards, data }) => {
 
   return (
     <>
-      <div className="partner-section ptb-110">
-        <div className="container">
+      <div className="partner-section" style={{paddingBottom: 0}}>
+        <div className="container" style={{maxWidth: '50%'}}>
           <div className="section-title">
             <h2 style={{fontWeight: 400, fontSize: 30}}>{data.awards_title}</h2>
-            <p>{data.awards_text}</p>
+            {/* <p>{data.awards_text}</p> */}
           </div>
 
           <Swiper
@@ -77,18 +77,6 @@ const AwardsAndCertificates = ({ awards, data }) => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
-        <div className="dot-shape1">
-          <img src="/images/shape/dot1.png" alt="image" />
-        </div>
-        <div className="shape-img2">
-          <img src="/images/shape/shape2.svg" alt="image" />
-        </div>
-        <div className="shape-img4">
-          <img src="/images/shape/shape4.svg" alt="image" />
-        </div>
-        <div className="shape-img5">
-          <img src="/images/shape/shape5.svg" alt="image" />
         </div>
       </div>
     </>

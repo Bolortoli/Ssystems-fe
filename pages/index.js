@@ -28,15 +28,14 @@ const Index = (props) => {
       <MainBanner data={props.content.translation_data} />
       <FunFacts data={props.content.translation_data} />
       <Webinar data={props.content.translation_data} />
-      {/* <About data={props.content.translation_data} /> */}
       <PartnerSlider partners={props.content.partners} data={props.content.translation_data} />
       <Services cardsData={props.content.solution_cards} data={props.content.translation_data} />
       <AwardsAndCertificates awards={props.content.awards} data={props.content.translation_data} />
-      <FeedbackSlider data={props.content.translation_data} />
-      {/* <BlogPost data={props.content.translation_data} blogs={props.content.blogs} /> */}
+      <BlogPost data={props.content.translation_data} blogs={props.content.blogs} />
       <ContactFormContent data={props.content.translation_data} />
       <Footer data={props.content.global_config} />
 
+      {/* <About data={props.content.translation_data} /> */}
     </>
   );
 };
@@ -71,6 +70,9 @@ export async function getServerSideProps(context) {
       `${process.env.CMS_ENDPOINT_LOCAL}/items/blog?fields=*.*.*.*&filter[featured_on_home][_eq]=true&limit=3`
     )
 
+    const services = await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/solutions_card?fields=*.*&filter[status][_eq]=published`)
+
+
     if (!responseHome || !responsePartners) return {
       notFound: true,
       props: {
@@ -84,10 +86,14 @@ export async function getServerSideProps(context) {
       (d) => d.languages_code.code === locale
     );
 
-    const solution_cards = []
+    const solution_cards = services.data.data.map(service => {
+      let translate = service.translations.find(t => t.languages_code == locale)
 
-    data.data.solution_cards.forEach(card => {
-      solution_cards.push({ ...card.solutions_card_id.translations.find(translation => translation.languages_code == locale), id: card.id })
+      return {
+        id: service.id,
+        title: translate.title,
+        description: translate.description
+      }
     })
 
     let blog_translation = responseBLogs.data.data.map(d => {
@@ -139,10 +145,11 @@ export async function getServerSideProps(context) {
 
 async function getGlobalConfigs(locale) {
   try {
+    process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 
     const data = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/global_config?fields=*.*`).catch(e => console.log(e))).data
-    const services = await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/solutions_card?fields=*.*`)
-    const whySsystems = await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/why_ssystems?fields=*.*`)
+    const services = await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/solutions_card?fields=*.*&filter[status][_eq]=published`)
+    const whySsystems = await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/why_ssystems?fields=*.*&filter[status][_eq]=published`)
 
     const translationData = data?.data?.translations?.find(d => d.languages_code == locale)
 

@@ -83,9 +83,9 @@ const Footer = ({ data }) => {
                   <li>
                     <Link href="/about">{t('page.about')}</Link>
                   </li>
-                  {/* <li>
+                  <li>
                     <Link href="/newsroom">{t('page.newsroom')}</Link>
-                  </li> */}
+                  </li>
                   <li>
                     <Link href="/contact">{t('page.contact')}</Link>
                   </li>

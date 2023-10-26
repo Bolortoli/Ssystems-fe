@@ -90,8 +90,30 @@ const NavbarFour = ({ services, why }) => {
                       className={`nav-link ${currentPath == "/about" && "active"
                         }`}
                     >
-                      {t('page.about')}
+                      {t('page.about')} <i className="fas fa-chevron-down"></i>
                     </Link>
+                    <ul className="dropdown-menu">
+                      <li className="nav-item">
+                        <Link
+                          href="/about"
+                          className={`nav-link ${currentPath == "/about" && "active"
+                            }`}
+                        >
+                          {t('page.about')}
+                        </Link>
+                      </li>
+                      {why.map(w => (
+                        <li className="nav-item">
+                          <Link
+                            href={`/why-we/${w.id}`}
+                            className={`nav-link ${currentPath == `/why-we/${w.id}` && "active"
+                              }`}
+                          >
+                            {w.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
                   </li>
 
                   <li className="nav-item">
@@ -115,7 +137,7 @@ const NavbarFour = ({ services, why }) => {
                           </Link>
                         </li>
                       ))}
-                      <li className="nav-item">
+                      {/* <li className="nav-item">
                         <Link
                           href="#"
                           // href="/service-pricing"
@@ -124,11 +146,11 @@ const NavbarFour = ({ services, why }) => {
                         >
                           {t('page.pricing')} (coming soon...)
                         </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </li>
 
-                  {/* <li className="nav-item">
+                  <li className="nav-item">
                     <Link
                       href="/newsroom"
                       className={`nav-link ${currentPath == "/newsroom" && "active"
@@ -136,7 +158,7 @@ const NavbarFour = ({ services, why }) => {
                     >
                       {t('page.newsroom')}
                     </Link>
-                  </li> */}
+                  </li>
 
                   {/* <li className="nav-item">
                     <Link
