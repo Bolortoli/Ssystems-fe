@@ -13,9 +13,9 @@ const Footer = ({ data }) => {
             <div className="col-lg-3 col-md-6 col-sm-6">
               <div
                 className="single-footer-widget"
-                data-aos="fade-in"
-                data-aos-duration="120"
-                data-aos-delay="100"
+                // data-aos="fade-in"
+                // data-aos-duration="120"
+                // data-aos-delay="100"
               >
                 <div className="logo">
                   <Link href="/">
@@ -54,9 +54,9 @@ const Footer = ({ data }) => {
             <div className="col-lg-3 col-md-6 col-sm-6">
               <div
                 className="single-footer-widget"
-                data-aos="fade-in"
-                data-aos-duration="120"
-                data-aos-delay="200"
+                // data-aos="fade-in"
+                // data-aos-duration="120"
+                // data-aos-delay="200"
               >
                 <h3 style={{ fontWeight: 400 }}>{t('page.services')}</h3>
 
@@ -73,9 +73,9 @@ const Footer = ({ data }) => {
             <div className="col-lg-3 col-md-6 col-sm-6">
               <div
                 className="single-footer-widget"
-                data-aos="fade-in"
-                data-aos-duration="120"
-                data-aos-delay="300"
+                // data-aos="fade-in"
+                // data-aos-duration="120"
+                // data-aos-delay="300"
               >
                 <h3 style={{ fontWeight: 400 }}>{t('utils.quickLinks')}</h3>
 
@@ -102,9 +102,9 @@ const Footer = ({ data }) => {
             <div className="col-lg-3 col-md-6 col-sm-6">
               <div
                 className="single-footer-widget"
-                data-aos="fade-in"
-                data-aos-duration="120"
-                data-aos-delay="400"
+                // data-aos="fade-in"
+                // data-aos-duration="120"
+                // data-aos-delay="400"
               >
                 <h3 style={{ fontWeight: 400 }}>{t('utils.contacts')}</h3>
 
