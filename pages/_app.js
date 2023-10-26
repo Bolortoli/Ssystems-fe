@@ -87,7 +87,7 @@ function MyApp({ Component, pageProps }) {
           </Head>
           <Component {...pageProps} />
           {/* <ComingSoon /> */}
-          {/* <Messenger /> */}
+          <Messenger />
 
           {/* Go Top Button */}
           <GoTop scrollStepInPx="50" delayInMs="10.50" />
