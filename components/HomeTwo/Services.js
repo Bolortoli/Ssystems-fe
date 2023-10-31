@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Link from "next/link";
-import { withTranslation } from 'react-i18next';
 
 class Services extends Component {
 
@@ -152,4 +151,4 @@ class Services extends Component {
   }
 }
 
-export default withTranslation()(Services)
+export default Services
