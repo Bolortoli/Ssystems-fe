@@ -7,7 +7,7 @@ const BlogThreeGrid = ({ data }) => {
 
   return (
     <>
-      <section className="blog-area ptb-110" style={{minHeight: '50vh'}}>
+      <section className="blog-area ptb-110" style={{minHeight: '50vh', paddingTop: 110}}>
         <div className="container">
           <div className="row">
 

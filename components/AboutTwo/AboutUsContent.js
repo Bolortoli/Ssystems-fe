@@ -3,7 +3,7 @@ import React from "react";
 const AboutUsContent = ({ data, image }) => {
   return (
     <>
-      <div className="why-choose-us-area ptb-110" style={{ paddingBottom: 50 }}>
+      <div className="why-choose-us-area ptb-110" style={{ paddingTop: 110 }}>
         <div className="container">
           <div className="row">
 

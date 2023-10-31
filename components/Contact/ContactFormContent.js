@@ -5,7 +5,7 @@ import "dotenv/config";
 const ContactFormContent = ({ data }) => {
   return (
     <>
-      <section className="contact-area ptb-110">
+      <section className="contact-area ptb-110" style={{paddingTop: 110}}>
         <div className="container">
           <div className="section-title">
             <span>{data.translation.sub_title}</span>
