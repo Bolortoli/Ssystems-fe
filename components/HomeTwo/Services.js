@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import Link from "next/link";
-import axios from "axios";
-import PricingPlan from "./PricingPlan";
 import { withTranslation } from 'react-i18next';
 
 class Services extends Component {
@@ -34,8 +32,6 @@ class Services extends Component {
   }
 
   render() {
-    const { t } = this.props;
-    const pricingButton = t('page.services')
     return (
       <div key={this.state.data.detail_information}>
         <div className="services-section ptb-110">
