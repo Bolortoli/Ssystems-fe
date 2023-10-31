@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NavbarFour from "../components/Layouts/NavbarFour";
 import PageBanner from "../components/Common/PageBanner";
-import Services from "../components/HomeTwo/Services";
+import Services from "../components/HomeTwo/Services1";
 import Footer from "../components/Layouts/Footer";
 import { useRouter } from "next/router";
 import axios from "axios";
