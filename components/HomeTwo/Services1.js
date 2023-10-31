@@ -81,7 +81,7 @@ const Service = ({ data }) => {
                                       </td>)
                                       )}
                                       <td style={{ lineHeight: '50px', width: '5px' }}>
-                                        <Link href={`/contact`} className="btn btn-primary">
+                                        <Link href={`/contact`} className="btn btn-primary" prefetch={false}>
                                           {"⟶"}
                                         </Link>
                                       </td>
@@ -118,7 +118,7 @@ const Service = ({ data }) => {
                                   </ul>
 
                                   <div className="buy-btn" style={{ marginBottom: 0 }}>
-                                    <Link href="/contact" className="btn btn-primary">
+                                    <Link href="/contact" className="btn btn-primary" prefetch={false}>
                                       {row.button}
                                     </Link>
                                   </div>
