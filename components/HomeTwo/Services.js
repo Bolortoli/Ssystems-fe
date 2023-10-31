@@ -10,22 +10,29 @@ class Services extends Component {
 
   // Tab
   openTabSection = (evt, tabNmae) => {
+    console.log("test1")
     let i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabs-item");
+    console.log("test223")
     for (i = 0; i < tabcontent.length; i++) {
       // tabcontent[i].classList.remove("animate__fadeInUp");
       tabcontent[i].style.display = "none";
-    }
+  }
+    console.log("test2")
 
     tablinks = document.getElementsByTagName("li");
+    console.log("test323")
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace("current", "");
     }
+    console.log("test3")
 
     document.getElementById(tabNmae).style.display = "block";
     // document.getElementById(tabNmae).className +=
     //   " animate__fadeInUp animate__animated";
+    console.log("test4")
     evt.currentTarget.className += "current";
+    console.log("test5")
   };
   componentDidUpdate(prevProps) {
     // do something
