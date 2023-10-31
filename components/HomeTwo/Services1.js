@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Link from "next/link";
 
-const Service = ({ data }) => {
+const Services = ({ data }) => {
 
   // Tab
-  openTabSection = (evt, tabNmae) => {
+  function openTabSection (evt, tabNmae) {
     console.log("test1")
     let i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabs-item");

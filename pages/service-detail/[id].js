@@ -5,7 +5,7 @@ import PageBanner from "../../components/Common/PageBanner";
 import ServiceDetailsContent from "../../components/ServiceDetails/ServiceDetailsContent";
 import axios from "axios";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Services from "../../components/HomeTwo/Services";
+import Services from "../../components/HomeTwo/Services1";
 
 const ProjectsDetails = (props) => {
   return (
