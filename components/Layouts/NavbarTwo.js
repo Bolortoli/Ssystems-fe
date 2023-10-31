@@ -101,21 +101,24 @@ const NavbarTwo = ({ services, why }) => {
                       <li className="nav-item">
                         <Link
                           href="/about"
+                          style={{paddingTop: 0, paddingBottom: 0}}
                           className={`nav-link ${currentPath == "/about" && "active"
                             }`}
                         >
-                          {t('page.about')}
+                          {t('page.introduction')}
                         </Link>
                       </li>
                       {why.map(w => (
                         <li className="nav-item">
                           <Link
                             href={`/why-we/${w.id}`}
+                            style={{paddingTop: 0, paddingBottom: 0}}
                             className={`nav-link ${currentPath == `/why-we/${w.id}` && "active"
                               }`}
                           >
                             {w.title}
                           </Link>
+                          <hr/>
                         </li>
                       ))}
                     </ul>
@@ -135,11 +138,14 @@ const NavbarTwo = ({ services, why }) => {
                         <li className="nav-item">
                           <Link
                             href={`/service-detail/${service.id}`}
+                            style={{paddingTop: 0, paddingBottom: 0}}
                             className={`nav-link ${currentPath == `/service-detail/${service.id}` && "active"
                               }`}
                           >
                             {service.title}
                           </Link>
+                          <hr />
+
                         </li>
                       ))}
                       {/* <li className="nav-item">
@@ -166,7 +172,7 @@ const NavbarTwo = ({ services, why }) => {
                   </li>
 
 
-                  {/* <li className="nav-item">
+                  <li className="nav-item">
                     <Link
                       href="/careers"
                       className={`nav-link ${currentPath == "/careers" && "active"
@@ -174,7 +180,7 @@ const NavbarTwo = ({ services, why }) => {
                     >
                       {t('page.careers')}
                     </Link>
-                  </li> */}
+                  </li>
 
                   {/* <li className="nav-item">
                     <Link

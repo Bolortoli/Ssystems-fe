@@ -20,10 +20,12 @@ const CareerDetailsContent = ({ data }) => {
                 <div className="article-content">
 
                   <h2>{data?.translationData?.title}</h2>
-
-
                   <p>
                     {data?.translationData?.short_description}
+                  </p>
+
+                  <p>
+                    {data?.translationData?.careers_id?.salary_range}
                   </p>
 
                   <p>

@@ -4,15 +4,16 @@
     "services": "Үйлчилгээ",
     "pricing": "Үнэ",
     "about": "Бид",
+    "introduction": "Танилцуулга",
     "newsroom": "Мэдээ",
     "contact": "Холбогдох",
     "careers": "Ажиллах",
     "faq": "Асуулт",
-    "why": "Яагаад Манайх?"
+    "why": "Яагаад S Systems?"
   },
   "utils": {
     "readMore": "Дэлгэрэнгүй",
-    "submit": "Илгээх",
+    "submit": "Мессеж илгээх",
     "contacts": "Холбогдох",
     "address": "Хаяг",
     "email": "Цахим шуудан",

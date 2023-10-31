@@ -163,14 +163,14 @@ textarea.form-control {
 
 .btn-primary {
   color: #ffffff;
-  background-color: #ea560d;
+  background-color: #11224e;
 }
 .btn-primary.disabled, .btn-primary:disabled {
   color: #ffffff;
-  background-color: #ea560d;
+  background-color: #11224e;
 }
 .btn-primary:hover, .btn-primary:focus {
-  background-color: #11224e !important;
+  background-color: #ea560d !important;
   color: #ffffff !important;
   box-shadow: unset !important;
 }
@@ -400,17 +400,17 @@ Navbar Area CSS
 }
 .main-nav .navbar .navbar-nav .nav-item .dropdown-menu {
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-  background: #ffffff;
+  /* background: #ffffff; */
   position: absolute;
   border: none;
   top: 80px;
   left: 0;
-  width: 230px;
+  width: 200px;
   z-index: 99;
   display: block;
   opacity: 0;
   visibility: hidden;
-  border-radius: 0;
+  border-radius: 6;
   transition: all 0.3s ease-in-out;
   padding-top: 20px;
   padding-left: 5px;

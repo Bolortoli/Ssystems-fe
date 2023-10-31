@@ -5,12 +5,12 @@ import PageBanner from "../../components/Common/PageBanner";
 import ServiceDetailsContent from "../../components/ServiceDetails/ServiceDetailsContent";
 import axios from "axios";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Services from "../../components/HomeTwo/Services";
 
 const ProjectsDetails = (props) => {
   return (
     <>
       <NavbarTwo services={props.content.global_config.servicesTranslation} why={props.content.global_config.whyTranslation} />
-
 
       <PageBanner
         bgImgClass="item-bg2"
@@ -19,6 +19,8 @@ const ProjectsDetails = (props) => {
       />
 
       <ServiceDetailsContent data={props.content.translationData} />
+      
+      <Services data={props.content.translationDataPricing} />
 
       <Footer data={props.content.global_config} />
 
@@ -44,6 +46,10 @@ export async function getServerSideProps(context) {
 
     const data = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/solutions_card/${id}?fields=*.*.*`).catch(e => console.log(e))).data
 
+    const dataPricing = (await axios.get(`${process.env.CMS_ENDPOINT_LOCAL}/items/pricing?fields=*.*.*`).catch(e => console.log(e))).data
+
+    const translationDataPricing = dataPricing?.data?.translations?.filter(d => d.languages_code.code == locale)[0]
+
     const translationData = data?.data?.translations?.filter(d => d.languages_code.code == locale)[0]
 
     return {
@@ -53,6 +59,7 @@ export async function getServerSideProps(context) {
           id: data.data.id,
           cover_image: data.data.cover_image.id,
           global_config,
+          translationDataPricing
         },
         ...(await serverSideTranslations(locale, ['common']))
       }

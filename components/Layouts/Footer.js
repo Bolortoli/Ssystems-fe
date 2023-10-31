@@ -10,7 +10,7 @@ const Footer = ({ data }) => {
       <footer className="footer-area">
         <div className="container">
           <div className="row">
-            <div className="col-lg-3 col-md-6 col-sm-6">
+            <div className="col-lg-4 col-md-6 col-sm-6">
               <div
                 className="single-footer-widget"
                 // data-aos="fade-in"
@@ -51,7 +51,7 @@ const Footer = ({ data }) => {
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-6 col-sm-6">
+            <div className="col-lg-4 col-md-6 col-sm-6">
               <div
                 className="single-footer-widget"
                 // data-aos="fade-in"
@@ -70,12 +70,12 @@ const Footer = ({ data }) => {
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-6 col-sm-6">
+            {/* <div className="col-lg-3 col-md-6 col-sm-6">
               <div
                 className="single-footer-widget"
-                // data-aos="fade-in"
-                // data-aos-duration="120"
-                // data-aos-delay="300"
+                data-aos="fade-in"
+                data-aos-duration="120"
+                data-aos-delay="300"
               >
                 <h3 style={{ fontWeight: 400 }}>{t('utils.quickLinks')}</h3>
 
@@ -89,17 +89,17 @@ const Footer = ({ data }) => {
                   <li>
                     <Link href="/contact">{t('page.contact')}</Link>
                   </li>
-                  {/* <li>
+                  <li>
                     <Link href="/faq">{t('page.faq')}</Link>
                   </li>
                   <li>
                     <Link href="/service-pricing">{t('page.pricing')}</Link>
-                  </li> */}
+                  </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
 
-            <div className="col-lg-3 col-md-6 col-sm-6">
+            <div className="col-lg-4 col-md-6 col-sm-6">
               <div
                 className="single-footer-widget"
                 // data-aos="fade-in"

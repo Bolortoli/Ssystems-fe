@@ -8,6 +8,7 @@ import axios from "axios";
 import { useTranslation } from 'react-i18next';
 import "dotenv/config";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import PricingPlan from "../components/HomeTwo/PricingPlan";
 
 const ServicePricing = (props) => {
 

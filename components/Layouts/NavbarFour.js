@@ -99,11 +99,12 @@ const NavbarFour = ({ services, why }) => {
                           className={`nav-link ${currentPath == "/about" && "active"
                             }`}
                         >
-                          {t('page.about')}
+                          {t('page.introduction')}
                         </Link>
                       </li>
                       {why.map(w => (
                         <li className="nav-item">
+                          <hr/>
                           <Link
                             href={`/why-we/${w.id}`}
                             className={`nav-link ${currentPath == `/why-we/${w.id}` && "active"
@@ -135,6 +136,7 @@ const NavbarFour = ({ services, why }) => {
                           >
                             {service.title}
                           </Link>
+                          <hr />
                         </li>
                       ))}
                       {/* <li className="nav-item">
@@ -160,7 +162,7 @@ const NavbarFour = ({ services, why }) => {
                     </Link>
                   </li>
 
-                  {/* <li className="nav-item">
+                  <li className="nav-item">
                     <Link
                       href="/careers"
                       className={`nav-link ${currentPath == "/careers" && "active"
@@ -168,7 +170,7 @@ const NavbarFour = ({ services, why }) => {
                     >
                       {t('page.careers')}
                     </Link>
-                  </li> */}
+                  </li>
 
                   {/* <li className="nav-item">
                     <Link

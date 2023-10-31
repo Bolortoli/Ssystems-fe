@@ -17,16 +17,18 @@ const ContactFormContent = ({ data }) => {
 
           <div className="contact-form">
             <div className="row align-items-center">
-              <div className="col-lg-5 col-md-12">
+              {/* <div className="col-lg-5 col-md-12">
                 <div className="contact-image">
                   <img src={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.contact_image.id}`} alt="image" />
                 </div>
-              </div>
+              </div> */}
 
-              <div className="col-lg-7 col-md-12">
+              <div className="col-lg-2"></div>
+              <div className="col-lg-8 col-md-12">
                 <ContactForm />
                 
               </div>
+              <div className="col-lg-2"></div>
             </div>
           </div>
 

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import NavbarFour from "../components/Layouts/NavbarFour";
+import NavbarTwo from "../components/Layouts/NavbarTwo";
 import CareerGrid from "../components/Careers/CareerGrid";
 import Footer from "../components/Layouts/Footer";
+import PageBanner from "../components/Common/PageBanner";
 import axios from "axios"
 import "dotenv/config";
 import ContactFormContent from "../components/Careers/ContactFormContent";
@@ -11,11 +12,18 @@ const Blog = (props) => {
 
   return (
     <>
-      <NavbarFour services={props.content.global_config.servicesTranslation} why={props.content.global_config.whyTranslation} />
+      <NavbarTwo services={props.content.global_config.servicesTranslation} why={props.content.global_config.whyTranslation} />
+
+      <PageBanner
+        bgImgClass="item-bg2"
+        data={props.content.contentTranslation}
+        coverImage={`${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${props.content.image}`}
+      />
+
 
       <CareerGrid data={props.content.translation} content={props.content.contentTranslation} />
 
-      <ContactFormContent data={props.content.contentTranslation} image={props.content.image} />
+      {/* <ContactFormContent data={props.content.contentTranslation} image={props.content.image} /> */}
 
       <Footer data={props.content.global_config} />
 

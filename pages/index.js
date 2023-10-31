@@ -11,6 +11,7 @@ import BlogPost from "../components/Common/BlogPost";
 import FreeTrialForm from "../components/Common/FreeTrialForm";
 import Footer from "../components/Layouts/Footer";
 import ContactFormContent from "../components/HomeOne/ContactFormContent";
+import Form from "../components/HomeOne/Form";
 import AwardsAndCertificates from "../components/HomeOne/AwardsAndCertificates";
 import axios from "axios";
 import PartnerSlider from "../components/HomeOne/PartnerSlider";
@@ -33,6 +34,7 @@ const Index = (props) => {
       <AwardsAndCertificates awards={props.content.awards} data={props.content.translation_data} />
       <BlogPost data={props.content.translation_data} blogs={props.content.blogs} />
       <ContactFormContent data={props.content.translation_data} />
+      {/* <Form /> */}
       <Footer data={props.content.global_config} />
 
       {/* <About data={props.content.translation_data} /> */}

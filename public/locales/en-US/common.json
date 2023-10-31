@@ -4,6 +4,7 @@
     "services": "Services",
     "pricing": "Pricing",
     "about": "About",
+    "introduction": "Introduction",
     "newsroom": "Newsroom",
     "contact": "Contact",
     "careers": "Careers",
@@ -12,7 +13,7 @@
   },
   "utils": {
     "readMore": "Read more",
-    "submit": "Submit",
+    "submit": "Send a Message",
     "contacts": "Contacts",
     "address": "Address",
     "email": "E-mail",

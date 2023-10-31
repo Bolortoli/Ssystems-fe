@@ -14,7 +14,8 @@ const MainBanner = ({ data }) => {
         className="main-banner"
         style={{
           height: '100vh',
-          backgroundImage: `url(${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.hero_image.id})`,
+          backgroundImage: `url('/images/hero-high-res.png')`,
+          // backgroundImage: `url(${process.env.NEXT_PUBLIC_CMS_ENDPOINT_PUBLIC}/assets/${data.home_content_id.hero_image.id})`,
         }}
       >
         <div className="d-table">
@@ -25,7 +26,7 @@ const MainBanner = ({ data }) => {
                   data-aos="fade-up"
                   data-aos-duration="120"
                   data-aos-delay="100"
-                  style={{fontWeight: 400, fontSize: 45}}
+                  style={{fontWeight: 400, fontSize: 30}}
                 >
                   {data.hero_heading}
                 </h1>

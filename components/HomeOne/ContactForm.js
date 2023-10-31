@@ -73,6 +73,7 @@ const ContactForm = () => {
                 value={contact.name}
                 onChange={handleChange}
                 required
+                style={{border: 1}}
               />
             </div>
           </div>
@@ -129,8 +130,8 @@ const ContactForm = () => {
               />
             </div>
           </div>
-          <div className="col-lg-12 col-sm-12">
-            <button type="submit" className="btn btn-primary">
+          <div className="col-lg-12 col-sm-12" style={{justifyContent: 'center', display: 'flex'}}>
+            <button type="submit" className="btn btn-primary" >
               {t('utils.submit')}
             </button>
           </div>
