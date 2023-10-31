@@ -64,7 +64,7 @@ export async function getServerSideProps(context) {
     const solution_cards = []
 
     responseSolutionCards.data.data.forEach(card => {
-      solution_cards.push({...card.translations.find(translation => translation.languages_code.code == locale)})
+      solution_cards.push({...card.translations.find(translation => translation.languages_code.code == locale), id: card.id})
     })
 
     const team_members = []
