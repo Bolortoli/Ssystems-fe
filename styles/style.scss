@@ -4840,7 +4840,7 @@ Footer Area CSS
 }
 .circle-map {
     position: absolute;
-    top: 20%;
+    top: 10%;
     right: 18%;
     z-index: -1;
 }
@@ -4883,7 +4883,7 @@ Footer Area CSS
                 animation-delay: 2s;
             }
         }
-        &:nth-child(3) {
+        &:nth-child(2) {
             margin-left: 25%;
 
             &::after {

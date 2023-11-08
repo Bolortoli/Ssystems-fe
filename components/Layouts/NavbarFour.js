@@ -127,7 +127,7 @@ const NavbarFour = ({ services, why }) => {
                     </Link>
 
                     <ul className="dropdown-menu">
-                      {services.map(service => (
+                      {services.map((service, index) => (
                         <li className="nav-item">
                           <Link
                             href={`/service-detail/${service.id}`}
@@ -136,7 +136,7 @@ const NavbarFour = ({ services, why }) => {
                           >
                             {service.title}
                           </Link>
-                          <hr />
+                          {index != services.length - 1 ? <hr /> : <></>}
                         </li>
                       ))}
                       {/* <li className="nav-item">

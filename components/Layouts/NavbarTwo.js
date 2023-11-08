@@ -101,7 +101,7 @@ const NavbarTwo = ({ services, why }) => {
                       <li className="nav-item">
                         <Link
                           href="/about"
-                          style={{paddingTop: 0, paddingBottom: 0}}
+                          style={{ paddingTop: 0, paddingBottom: 0 }}
                           className={`nav-link ${currentPath == "/about" && "active"
                             }`}
                         >
@@ -112,13 +112,13 @@ const NavbarTwo = ({ services, why }) => {
                         <li className="nav-item">
                           <Link
                             href={`/why-we/${w.id}`}
-                            style={{paddingTop: 0, paddingBottom: 0}}
+                            style={{ paddingTop: 0, paddingBottom: 0 }}
                             className={`nav-link ${currentPath == `/why-we/${w.id}` && "active"
                               }`}
                           >
                             {w.title}
                           </Link>
-                          <hr/>
+                          <hr />
                         </li>
                       ))}
                     </ul>
@@ -134,18 +134,17 @@ const NavbarTwo = ({ services, why }) => {
                     </Link>
 
                     <ul className="dropdown-menu">
-                      {services.map(service => (
+                      {services.map((service, index) => (
                         <li className="nav-item">
                           <Link
                             href={`/service-detail/${service.id}`}
-                            style={{paddingTop: 0, paddingBottom: 0}}
+                            style={{ paddingTop: 0, paddingBottom: 0 }}
                             className={`nav-link ${currentPath == `/service-detail/${service.id}` && "active"
                               }`}
                           >
                             {service.title}
                           </Link>
-                          <hr />
-
+                          {index != services.length - 1 ? <hr /> : <></>}
                         </li>
                       ))}
                       {/* <li className="nav-item">

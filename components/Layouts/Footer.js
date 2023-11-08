@@ -131,8 +131,8 @@ const Footer = ({ data }) => {
           </div>
         </div>
 
-        <div className="copyright-area">
-        </div>
+        {/* <div className="copyright-area" style={{maxHeight: '0vh'}}>
+        </div> */}
 
         <div className="circle-map">
           <img src="/images/circle-map.png" alt="image" />
@@ -141,7 +141,7 @@ const Footer = ({ data }) => {
         <div className="lines">
           <div className="line"></div>
           <div className="line"></div>
-          <div className="line"></div>
+          {/* <div className="line"></div> */}
         </div>
       </footer>
     </>
