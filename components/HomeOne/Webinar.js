@@ -10,7 +10,7 @@ const Webinar = ({ data }) => {
   }
 
   return (
-    <>
+    <div className="container">
       <FsLightbox
         toggler={toggler}
         sources={[data.home_content_id.video_link]}
@@ -49,7 +49,7 @@ const Webinar = ({ data }) => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

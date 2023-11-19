@@ -6,7 +6,7 @@ import { Autoplay } from 'swiper';
 const PartnerSlider = ({ partners, data }) => {
 
   return (
-    <>
+    <div className="container">
       <div className="partner-section ptb-110">
         <div className="container" style={{maxWidth: partners.data.length < 5 ? '30%' : '50%'}}>
           <div className="section-title">
@@ -78,7 +78,7 @@ const PartnerSlider = ({ partners, data }) => {
           </Swiper>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

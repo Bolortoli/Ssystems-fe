@@ -61,7 +61,7 @@ const AboutUsContent = ({ data, image }) => {
             </div>
           </div>
         </div>
-        <div className="container" style={{maxWidth: "80%"}}>
+        <div className="container" style={{maxWidth: "80%", maxWidth: "1300px"}}>
 
           <div className="about-inner-area">
             <div className="row">

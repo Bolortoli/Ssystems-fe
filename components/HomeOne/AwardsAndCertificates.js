@@ -6,11 +6,12 @@ import { Autoplay } from 'swiper';
 const AwardsAndCertificates = ({ awards, data }) => {
 
   return (
-    <>
-      <div className="partner-section" style={{paddingBottom: 0}}>
-        <div className="container" style={{maxWidth: '50%'}}>
+    <div className="container">
+
+      <div className="partner-section" style={{ paddingBottom: 0 }}>
+        <div className="container" style={{ maxWidth: '50%' }}>
           <div className="section-title">
-            <h2 style={{fontWeight: 400, fontSize: 30}}>{data.awards_title}</h2>
+            <h2 style={{ fontWeight: 400, fontSize: 30 }}>{data.awards_title}</h2>
             {/* <p>{data.awards_text}</p> */}
           </div>
 
@@ -79,7 +80,7 @@ const AwardsAndCertificates = ({ awards, data }) => {
           </Swiper>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
